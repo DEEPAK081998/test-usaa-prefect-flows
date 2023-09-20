@@ -12,6 +12,7 @@ phases:
       - echo "Registering/Updating all datasets"
       - env=${ENVIRONMENT}
       - business_unit=${BUSINESS_UNIT}
+      - bucket_name=${AIRFLOW_S3_BUCKET_NAME}
       - quicksight_projects=""
       - |
         if [ $business_unit = "re" ]; then

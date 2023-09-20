@@ -43,7 +43,7 @@ phases:
               dbt_projects=""
               ;;
             *)
-              dbt_projects=""
+              dbt_projects="re_reporting_dw_fix"
               ;;
           esac
         fi
@@ -55,4 +55,4 @@ phases:
       #   if [ "${RUN_SQLFLUFF_CHECKS}" = "yes" ]; then    
       #     sqlfluff lint dbt --dialect snowflake --rules L043,L045,L058,L042,L034,L032,L015
       #   fi
-      # - python scripts/workflow_common_util --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --s3-path 'dbt/projects/' --projects $dbt_projects --projects-folder-path 'dbt' ${DBT_SCRIPT_EXTRA_ARGS}
+      - python scripts/workflow_common_util --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --s3-path 'dbt/projects/' --projects $dbt_projects --projects-folder-path 'dbt' ${DBT_SCRIPT_EXTRA_ARGS}

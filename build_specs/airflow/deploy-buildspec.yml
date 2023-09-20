@@ -51,7 +51,7 @@ phases:
               airflow_projects=""
               ;;
             *)
-              airflow_projects=""
+              airflow_projects="re_reporting_sandbox"
               ;;
           esac
         fi
@@ -67,5 +67,5 @@ phases:
       #     python scripts/airflow_build --mdp-utils-stack-name ${MDP_UTILS_STACK_NAME} --docker-file-dir airflow/ecs_tasks --projects $airflow_projects ${AIRFLOW_SCRIPT_EXTRA_ARGS}
       #   fi
       # - python scripts/airflow_build --update-variables airflow/common/airflow_variables/${BUSINESS_UNIT}_${ENVIRONMENT}_variables.json  --airflow-stack-name ${AIRFLOW_STACK_NAME} --airflow-resource-logical-id AirflowVer243Resource
-      # - python scripts/airflow_build --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --airflow-stack-name ${AIRFLOW_STACK_NAME} --airflow-resource-logical-id AirflowVer243Resource --update-dynamic-dags --dags-directory airflow/dags_template --update-common-dags --requirements-file airflow/common/requirements/requirements_ver_243.txt --s3-requirements-path airflow/airflow_requirements_ver_243.txt --plugins-directory airflow/common/plugins --s3-plugins-path airflow/airflow_dags_plugins_ver_243.zip --projects $airflow_projects ${AIRFLOW_SCRIPT_EXTRA_ARGS}
+      - python scripts/airflow_build --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --airflow-stack-name ${AIRFLOW_STACK_NAME} --airflow-resource-logical-id AirflowVer243Resource --update-dynamic-dags --dags-directory airflow/dags_template --update-common-dags --requirements-file airflow/common/requirements/requirements_ver_243.txt --s3-requirements-path airflow/airflow_requirements_ver_243.txt --plugins-directory airflow/common/plugins --s3-plugins-path airflow/airflow_dags_plugins_ver_243.zip --projects $airflow_projects ${AIRFLOW_SCRIPT_EXTRA_ARGS} --test
       - aws s3 cp airflow/dags_template s3://${AIRFLOW_S3_BUCKET_NAME}/airflow/dags_template/ --recursive

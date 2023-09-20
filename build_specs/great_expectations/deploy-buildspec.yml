@@ -43,7 +43,7 @@ phases:
               gx_projects=""
               ;;
             *)
-              gx_projects=""
+              gx_projects="great_expectations_sandbox"
               ;;
           esac
         fi
@@ -51,4 +51,4 @@ phases:
       - echo $business_unit
       - echo $bucket_name
       - echo $gx_projects
-      # - python scripts/workflow_common_util --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --s3-path 'great_expectations/projects/' --projects-folder-path 'great_expectations/' --projects $gx_projects ${GX_SCRIPT_EXTRA_ARGS}
+      - python scripts/workflow_common_util --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --s3-path 'great_expectations/projects/' --projects-folder-path 'great_expectations/' --projects $gx_projects ${GX_SCRIPT_EXTRA_ARGS}
