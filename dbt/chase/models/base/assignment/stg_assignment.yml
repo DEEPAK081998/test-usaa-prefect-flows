@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: agent_assignment_statuses
+  - name: current_assignments
+  - name: user_assignments

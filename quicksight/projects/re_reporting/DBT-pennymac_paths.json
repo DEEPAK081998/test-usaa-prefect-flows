@@ -1,0 +1,100 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "6ff994d5-b440-4958-9d4f-a1ebe575a28e",
+    "Name": "DBT-pennymac_paths",
+    "PhysicalTableMap": {
+        "6ff994d5-b440-4958-9d4f-a1ebe575a28e": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "pennymac_paths",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_pagepath",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_users",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_newusers",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_sessions",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_entrances",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_pageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_bouncerate",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "ga_avgtimeonpage",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "ga_uniquepageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_avgsessionduration",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "ga_pageviewspersession",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

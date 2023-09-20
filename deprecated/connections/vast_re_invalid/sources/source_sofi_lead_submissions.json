@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "262726744",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"sofi-lead_submissions\",\"dimensions\":[\"ga:date\",\"ga:source\"],   \"metrics\":[\"ga:sessions\",\"ga:users\",\"ga:newUsers\",\"ga:avgSessionDuration\",\"ga:pageviews\",\"ga:pageviewsPerSession\",  \"ga:uniquePageviews\",\"ga:bounceRate\",\"ga:goal1Completions\"]}]",
+    "window_in_days": 1
+  },
+  "name": "sofi_lead_submissions",
+  "sourceDefinitionName": "Google Analytics"
+}

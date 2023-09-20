@@ -1,0 +1,132 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "2ed42f81-3f7a-4234-be6c-7db9251526e5",
+    "Name": "DBT-sofi_customer_mortgage_clicks",
+    "PhysicalTableMap": {
+        "2ed42f81-3f7a-4234-be6c-7db9251526e5": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "sofi_customer_mortgage_clicks",
+                "InputColumns": [
+                    {
+                        "Name": "partner_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "created",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "url1_",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url1_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "url2_",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url2_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "url3_",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url3_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "url4_",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url4_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "url5_",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url5_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "url1_cat",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url2_cat",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url3_cat",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url4_cat",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "url5_cat",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

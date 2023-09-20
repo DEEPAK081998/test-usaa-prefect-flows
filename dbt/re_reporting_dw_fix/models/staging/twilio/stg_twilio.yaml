@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: base_twilio_messages
+  - name: stg_twilio_messages
+  - name: stg_twilio_aggregated
+  - name: stg_twilio_aggregated_auto
+  - name: stg_link_twilio_pup_lead_client

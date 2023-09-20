@@ -1,0 +1,276 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-09f6cb5c-8a2e-4d07-87df-600c1001a78e",
+  "Name": "SNF-PD-DBT_lakeview_events",
+  "PhysicalTableMap": {
+    "SNF-674555f1-e1c5-4219-aff6-af5b69552781": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LAKEVIEW_EVENT_TOTALS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_TOTALEVENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_UNIQUEEVENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_AVGTIMEONPAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "_AIRBYTE_AB_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_EMITTED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_NORMALIZED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_LAKEVIEW_EVENT_TOTALS_HASHID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VIEW_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_NEWUSERS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTLABEL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_BOUNCERATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTACTION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTCATEGORY",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-27885d85-6e34-455b-bde9-9ba3a261f6f1": {
+      "Alias": "lakeview_event_totals",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTCATEGORY",
+            "NewColumnName": "ga_eventcategory"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTACTION",
+            "NewColumnName": "ga_eventaction"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_BOUNCERATE",
+            "NewColumnName": "ga_bouncerate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTLABEL",
+            "NewColumnName": "ga_eventlabel"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_NEWUSERS",
+            "NewColumnName": "ga_newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEW_ID",
+            "NewColumnName": "view_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_LAKEVIEW_EVENT_TOTALS_HASHID",
+            "NewColumnName": "_airbyte_lakeview_event_totals_hashid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_NORMALIZED_AT",
+            "NewColumnName": "_airbyte_normalized_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_EMITTED_AT",
+            "NewColumnName": "_airbyte_emitted_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_AB_ID",
+            "NewColumnName": "_airbyte_ab_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGTIMEONPAGE",
+            "NewColumnName": "ga_avgtimeonpage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_UNIQUEEVENTS",
+            "NewColumnName": "ga_uniqueevents"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_TOTALEVENTS",
+            "NewColumnName": "ga_totalevents"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SESSIONS",
+            "NewColumnName": "ga_sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "ga_date",
+              "ga_sessions",
+              "ga_totalevents",
+              "ga_uniqueevents",
+              "ga_avgtimeonpage",
+              "_airbyte_ab_id",
+              "_airbyte_emitted_at",
+              "_airbyte_normalized_at",
+              "_airbyte_lakeview_event_totals_hashid",
+              "view_id",
+              "ga_source",
+              "ga_newusers",
+              "ga_adcontent",
+              "ga_eventlabel",
+              "ga_bouncerate",
+              "ga_eventaction",
+              "ga_eventcategory"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-674555f1-e1c5-4219-aff6-af5b69552781"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dvillalon@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "3b4a78f0-6363-4296-9a72-d16db081abc6"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "lakeview-rep60-prod-ga-data",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_users": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_newUsers": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_pagePath": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_sessions": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_entrances": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_pageviews": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_bounceRate": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_avgTimeOnPage": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_uniquePageviews": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_avgSessionDuration": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_pageviewsPerSession": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "lakeview_rep60_prod_ga_data",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_lakeview-data-general.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "170751556",
+    "start_date": "2021-09-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"freedom-event-totals\",\"metrics\":[\"ga:uniqueEvents\", \"ga:totalEvents\", \"ga:sessions\",\"ga:newusers\",\"ga:avgTimeOnPage\",\"ga:bouncerate\"], \"dimensions\":[\"ga:EventLabel\", \"ga:EventCategory\",\"ga:EventAction\",\"ga:date\",\"ga:source\"]}]",
+    "window_in_days": 1
+  },
+  "name": "freedom-event-totals",
+  "sourceDefinitionName": "Google Analytics"
+}

@@ -1,0 +1,228 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-0db038b2-388c-4659-8396-048a3c11b7da",
+  "Name": "SNF-PD-dbt-lakeview_events",
+  "PhysicalTableMap": {
+    "SNF-d3444f8b-6767-46d1-81a5-3e8a092cf26e": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LAKEVIEW_GA_EVENTS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_EVENTLABEL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTACTION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTCATEGORY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_TOTALEVENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_UNIQUEEVENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_BOUNCERATE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_AVGTIMEONPAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "PARTNER",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-076edb4e-cd97-4b25-8f58-bd7387c8505e": {
+      "Alias": "lakeview_ga_events",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER",
+            "NewColumnName": "partner"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_NEWUSERS",
+            "NewColumnName": "ga_newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGTIMEONPAGE",
+            "NewColumnName": "ga_avgtimeonpage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SESSIONS",
+            "NewColumnName": "ga_sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_BOUNCERATE",
+            "NewColumnName": "ga_bouncerate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_UNIQUEEVENTS",
+            "NewColumnName": "ga_uniqueevents"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_TOTALEVENTS",
+            "NewColumnName": "ga_totalevents"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTCATEGORY",
+            "NewColumnName": "ga_eventcategory"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTACTION",
+            "NewColumnName": "ga_eventaction"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTLABEL",
+            "NewColumnName": "ga_eventlabel"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "MoM Unique",
+                "ColumnId": "SNF-58aedf2a-a92f-4f24-9d55-7d0d14e1fc89",
+                "Expression": "periodOverPeriodPercentDifference(sum(ga_newusers),ga_date, MONTH, 1)"
+              }
+            ]
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "ga_date",
+              "ga_eventlabel",
+              "ga_eventaction",
+              "ga_eventcategory",
+              "ga_source",
+              "ga_adcontent",
+              "ga_totalevents",
+              "ga_uniqueevents",
+              "ga_bouncerate",
+              "ga_sessions",
+              "ga_avgtimeonpage",
+              "ga_newusers",
+              "updated_at",
+              "partner",
+              "MoM Unique"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-d3444f8b-6767-46d1-81a5-3e8a092cf26e"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

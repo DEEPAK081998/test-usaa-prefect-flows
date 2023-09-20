@@ -1,0 +1,189 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-c7807d7e-c06b-4c8f-82fc-671ce7568465",
+  "Name": "SNF-pennymac_market_coversions",
+  "PhysicalTableMap": {
+    "SNF-a7fd6940-bc4a-4931-82f4-6834a6e3c270": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PENNYMAC_MARKET_COVERSIONS",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_MEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENTS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "RN",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-a7fd6940-bc4a-4931-82f4-6834a6e3c270": {
+      "Alias": "pennymac_market_coversions",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RN",
+            "NewColumnName": "rn"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENTS",
+            "NewColumnName": "enrollments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_MEDIUM",
+            "NewColumnName": "ga_medium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_CAMPAIGN",
+            "NewColumnName": "ga_campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "CastColumnTypeOperation": {
+            "ColumnName": "enrollments",
+            "NewColumnType": "INTEGER"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "id",
+              "ga_date",
+              "ga_source",
+              "ga_campaign",
+              "ga_medium",
+              "ga_adcontent",
+              "enrollments",
+              "updated_at",
+              "rn"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-a7fd6940-bc4a-4931-82f4-6834a6e3c270"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

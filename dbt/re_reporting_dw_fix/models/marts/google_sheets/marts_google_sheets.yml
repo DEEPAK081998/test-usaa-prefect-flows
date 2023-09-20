@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: warm_transferlog
+    description: Loan Officer warm transfer log.
+    columns:
+      - name: date
+        description: This is the primary key for partner user profiles table.
+        tests: 
+          - not_null
+      - name: partner
+        tests:
+          - not_null
+      - name: contact_made
+        tests:
+          - not_null
+      - name: lo_contact_attempted
+        tests:
+          - not_null
+  - name: partner_opportunities
+    description: Google Sheet data for partner oppurtunities.
+  - name: partner_hierarchy
+    description: Google Sheet data for partner hierarchy
+    
+
+
+        
+              
+          
+          

@@ -1,0 +1,13 @@
+{
+  "schedule": "30 13 * * *",
+  "tags": [
+    "dbt",
+    "chase"
+  ],
+  "dbt_project_path": "s3://mdp-prod-chase-bucket/dbt/projects/chase.zip",
+  "dbt_conn_id": "warehouse_db",
+  "dbt_extra_kwargs": {
+    "full_refresh": true,
+    "threads": 10
+  }
+}

@@ -1,0 +1,6 @@
+coverage==6.3.3
+pytest==7.0.1
+requests==2.27.1
+docker==5.0.3
+browser-cookie3==0.16.1
+sqlfluff==0.13.1

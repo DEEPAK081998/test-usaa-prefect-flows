@@ -1,0 +1,104 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "45e14d32-1be1-4955-b06b-c5fafd7c8633",
+    "Name": "DBT-pmc_dates",
+    "PhysicalTableMap": {
+        "45e14d32-1be1-4955-b06b-c5fafd7c8633": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "pmc_dates",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "registered_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "register_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "lead_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "customer_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "enrolled_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "agent_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_phone",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "la_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "la_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "la_phone",
+                        "Type": "JSON"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

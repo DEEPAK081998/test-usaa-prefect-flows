@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_import_profile_coverage_zips
+  - name: raw_import_profile_languages
+  - name: raw_import_profile_nmlsids
+  - name: raw_import_profile_unavailable_dates

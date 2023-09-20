@@ -1,0 +1,132 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "6697657e-32de-4826-8587-0b3f3565323f"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "kitsap-ga-goals",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_goal1Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal2Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal4Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal7Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal8Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal9Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal10Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal11Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal12Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal13Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "kitsap_ga_goals",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_kitsap-goals-data.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

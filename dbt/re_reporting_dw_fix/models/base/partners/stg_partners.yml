@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: partner_user_profiles
+  - name: partner_user_relationships
+  - name: partner_user_roles

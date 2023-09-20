@@ -1,0 +1,76 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "95722733-3526-4bb0-b8ea-6c4ccf05e4b1",
+    "Name": "DBT-rbc_ga",
+    "PhysicalTableMap": {
+        "95722733-3526-4bb0-b8ea-6c4ccf05e4b1": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "rbc_ga",
+                "InputColumns": [
+                    {
+                        "Name": "ga_users",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "newusers",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "bounces",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "unique_pageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "total_secs_on_site",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "pageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "sessions",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

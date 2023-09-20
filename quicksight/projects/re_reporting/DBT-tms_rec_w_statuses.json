@@ -1,0 +1,292 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "dafaa1b3-6da4-4bb7-98ca-08269bf80e5a",
+    "Name": "DBT-tms_rec_w_statuses",
+    "PhysicalTableMap": {
+        "dafaa1b3-6da4-4bb7-98ca-08269bf80e5a": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "tms_rec_w_statuses",
+                "InputColumns": [
+                    {
+                        "Name": "date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "enrolldate",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "enrollmentweekday",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "inviteddate",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "client_first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "client_last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "client_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "client_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "purchase_location",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sell_location",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "current_location",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "purchase_time_frame",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "prequal",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "avg_price",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "transaction_type",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "price_range_lower_bound",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "price_range_upper_bound",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "hb_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "hb_status_category",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "citizenssalesforceenrollment",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "mlosubmission",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "city",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "created",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "status_category",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_assign_time",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "agent_assign_time_unadjusted",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "mlo_assign_time",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "mlo_assign_time_unadjusted",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "first_contact_time",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "outofnetwork",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentassigments",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "first_contact_delay_from_enrollment",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "agentaccepttime",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "enrolltoaccepttime",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "is_unassigned",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentaccepttimebuckets",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "enrolltoaccepttimebuckets",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "bank_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_aggregate_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "nmlsid",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "outofnetworkbrokerage",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "agentfirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentlastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "event_step",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name":"system_invite_date",
+                        "Type":"DATETIME"
+                    },
+                    {
+                        "Name":"system_enroll_date",
+                        "Type":"DATETIME"
+                    },
+                    {
+                        "Name":"reporting_invite_date",
+                        "Type":"DATETIME"
+                    },
+                    {
+                        "Name":"reporting_enroll_date",
+                        "Type":"DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

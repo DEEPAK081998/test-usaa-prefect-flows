@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: rbc_ga_goals
+  - name: rbc_rep60_prod_ga_data
+  - name: rbc_users_rep60
+  - name: rbc_ga_event

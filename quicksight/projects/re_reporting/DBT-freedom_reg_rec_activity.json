@@ -1,0 +1,124 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "1597fd2d-e914-4ffe-8592-95c4bc5181d3",
+    "Name": "DBT-freedom_reg_rec_activity",
+    "PhysicalTableMap": {
+        "1597fd2d-e914-4ffe-8592-95c4bc5181d3": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "freedom_reg_rec_activity",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "registered_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_pagepath",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_users",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_newusers",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_sessions",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_entrances",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_pageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_bouncerate",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "ga_avgtimeonpage",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "ga_uniquepageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_avgsessionduration",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "ga_pageviewspersession",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "updated",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

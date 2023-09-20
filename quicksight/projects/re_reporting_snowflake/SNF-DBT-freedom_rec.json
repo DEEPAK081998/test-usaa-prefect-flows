@@ -1,0 +1,378 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-a9c0c172-1b8c-407c-9773-122a5989d174",
+  "Name": "SNF-DBT-freedom_rec",
+  "PhysicalTableMap": {
+    "SNF-a9c0c172-1b8c-407c-9773-122a5989d174": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_REC",
+        "InputColumns": [
+          {
+            "Name": "DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "INVITEDDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CLIENT_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_LOCATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SELL_LOCATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CURRENT_LOCATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_TIME_FRAME",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PREQUAL",
+            "Type": "BIT"
+          },
+          {
+            "Name": "AVG_PRICE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TRANSACTION_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PRICE_RANGE_LOWER_BOUND",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PRICE_RANGE_UPPER_BOUND",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "HB_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CATEGORY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LENDERCLOSEDWITH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CITIZENSSALESFORCEENROLLMENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLOSUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANK_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-a9c0c172-1b8c-407c-9773-122a5989d174": {
+      "Alias": "freedom_rec",
+      "Source": {
+        "PhysicalTableId": "SNF-a9c0c172-1b8c-407c-9773-122a5989d174"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_ID",
+            "NewColumnName": "bank_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CITY",
+            "NewColumnName": "city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIP",
+            "NewColumnName": "zip"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLOSUBMISSION",
+            "NewColumnName": "mlosubmission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CITIZENSSALESFORCEENROLLMENT",
+            "NewColumnName": "citizenssalesforceenrollment"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LENDERCLOSEDWITH",
+            "NewColumnName": "lenderclosedwith"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CATEGORY",
+            "NewColumnName": "category"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HB_STATUS",
+            "NewColumnName": "hb_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRICE_RANGE_UPPER_BOUND",
+            "NewColumnName": "price_range_upper_bound"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRICE_RANGE_LOWER_BOUND",
+            "NewColumnName": "price_range_lower_bound"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTION_TYPE",
+            "NewColumnName": "transaction_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AVG_PRICE",
+            "NewColumnName": "avg_price"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PREQUAL",
+            "NewColumnName": "prequal"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_TIME_FRAME",
+            "NewColumnName": "purchase_time_frame"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENT_LOCATION",
+            "NewColumnName": "current_location"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SELL_LOCATION",
+            "NewColumnName": "sell_location"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_LOCATION",
+            "NewColumnName": "purchase_location"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_PHONE",
+            "NewColumnName": "lo_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_EMAIL",
+            "NewColumnName": "lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NAME",
+            "NewColumnName": "lo_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONE",
+            "NewColumnName": "agent_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_PHONE",
+            "NewColumnName": "client_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_EMAIL",
+            "NewColumnName": "client_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_LAST_NAME",
+            "NewColumnName": "client_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_FIRST_NAME",
+            "NewColumnName": "client_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITEDDATE",
+            "NewColumnName": "inviteddate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE",
+            "NewColumnName": "date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

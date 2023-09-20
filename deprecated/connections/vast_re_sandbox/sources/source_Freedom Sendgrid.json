@@ -1,0 +1,9 @@
+{
+  "connectionConfiguration": {
+    "limit": 1000,
+    "query": "Contains(categories, \"Freedom REC Invites\")",
+    "apikey": "$SECRET_SENDGRID_API_KEY"
+  },
+  "name": "Freedom Sendgrid",
+  "sourceDefinitionName": "Sendgrid HomeStory"
+}

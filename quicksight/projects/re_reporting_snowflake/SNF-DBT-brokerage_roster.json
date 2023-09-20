@@ -1,0 +1,168 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-efc8f413-8c7c-4245-8a19-1e310e13110e",
+  "Name": "SNF-DBT-brokerage_roster",
+  "PhysicalTableMap": {
+    "SNF-efc8f413-8c7c-4245-8a19-1e310e13110e": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BROKERAGE_ROSTER",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTPHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEADCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGENAME",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-efc8f413-8c7c-4245-8a19-1e310e13110e": {
+      "Alias": "brokerage_roster",
+      "Source": {
+        "PhysicalTableId": "SNF-efc8f413-8c7c-4245-8a19-1e310e13110e"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGENAME",
+            "NewColumnName": "brokeragename"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT",
+            "NewColumnName": "leadcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTPHONE",
+            "NewColumnName": "agentphone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTEMAIL",
+            "NewColumnName": "agentemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTNAME",
+            "NewColumnName": "agentname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTLASTNAME",
+            "NewColumnName": "agentlastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFIRSTNAME",
+            "NewColumnName": "agentfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

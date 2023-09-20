@@ -1,0 +1,128 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-305f3281-af9b-4c47-a9a3-6ce4531a4e97",
+  "Name": "SNF-DBT-zillow_coverage_and_leads",
+  "PhysicalTableMap": {
+    "SNF-305f3281-af9b-4c47-a9a3-6ce4531a4e97": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "ZILLOW_COVERAGE_AND_LEADS",
+        "InputColumns": [
+          {
+            "Name": "COVERAGETYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEADID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENTID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-305f3281-af9b-4c47-a9a3-6ce4531a4e97": {
+      "Alias": "zillow_coverage_and_leads",
+      "Source": {
+        "PhysicalTableId": "SNF-305f3281-af9b-4c47-a9a3-6ce4531a4e97"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CITY",
+            "NewColumnName": "city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIP",
+            "NewColumnName": "zip"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTID",
+            "NewColumnName": "agentid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADID",
+            "NewColumnName": "leadid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVERAGETYPE",
+            "NewColumnName": "coveragetype"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

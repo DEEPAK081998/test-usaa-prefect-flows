@@ -1,0 +1,12 @@
+{
+  "connectionConfiguration": {
+    "access_key_id": "$SECRET_DYNAMO_INVITATIONS_ACCESS_KEY_ID",
+    "dynamodb_region": "us-east-1",
+    "vreapi_endpoint": "vast-re-api.re-prod.homestoryrewards.com",
+    "dynamodb_endpoint": "",
+    "secret_access_key": "$SECRET_DYNAMO_INVITATIONS_SECRET_ACCESS_KEY",
+    "dynamodb_table_name": "hash-api-re-prod-table"
+  },
+  "name": "Dynamo Invitations",
+  "sourceDefinitionName": "Dynamo Invitations"
+}

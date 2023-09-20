@@ -1,0 +1,5 @@
+.user.yml
+*.env
+target/
+logs/
+venv/

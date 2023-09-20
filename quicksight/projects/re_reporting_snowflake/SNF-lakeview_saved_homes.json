@@ -1,0 +1,314 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-1eb1b2d3-748e-4776-bab2-03f9ddd1af75",
+  "Name": "SNF-lakeview_saved_homes",
+  "PhysicalTableMap": {
+    "SNF-21108b6c-fe9b-4563-b938-76a2c2294987": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LAKEVIEW_SAVED_HOMES",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LATITUDE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "LONGITUDE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "UPDATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "PHONETYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONE_NUMBER",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-21108b6c-fe9b-4563-b938-76a2c2294987": {
+      "Alias": "lakeview_saved_homes",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONE_NUMBER",
+            "NewColumnName": "phone_number"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONETYPE",
+            "NewColumnName": "phonetype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED",
+            "NewColumnName": "updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TYPE",
+            "NewColumnName": "type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LONGITUDE",
+            "NewColumnName": "longitude"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LATITUDE",
+            "NewColumnName": "latitude"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIP",
+            "NewColumnName": "zip"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CITY",
+            "NewColumnName": "city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ADDRESS",
+            "NewColumnName": "address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "city",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "CITY"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "state",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "STATE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "zip",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "POSTCODE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "latitude",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "LATITUDE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "longitude",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "LONGITUDE"
+              }
+            ]
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "id",
+              "address",
+              "city",
+              "state",
+              "zip",
+              "latitude",
+              "longitude",
+              "type",
+              "first_name",
+              "last_name",
+              "email",
+              "created",
+              "updated",
+              "phonetype",
+              "phone_number"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-21108b6c-fe9b-4563-b938-76a2c2294987"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/bwalker@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

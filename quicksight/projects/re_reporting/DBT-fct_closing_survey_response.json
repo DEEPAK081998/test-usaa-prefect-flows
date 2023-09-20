@@ -1,0 +1,84 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "a4fd6d01-ceb5-4a82-9c2e-dde9a9674663",
+    "Name": "Closing_Survey_Response",
+    "PhysicalTableMap": {
+        "a4fd6d01-ceb5-4a82-9c2e-dde9a9674663": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "fct_closing_survey_response",
+                "InputColumns": [
+                    {
+                        "Name": "lead_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "customer_aggregate_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_aggregate_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "survey_response_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "survey_subject",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "survey_response_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "question_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "question_position",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "question_subject",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "question_response",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

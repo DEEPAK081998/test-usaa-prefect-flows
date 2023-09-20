@@ -1,0 +1,219 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-0eca39b7-d875-40de-b7af-c37c4e7dac4c",
+  "Name": "SNF-lead_status_updates",
+  "PhysicalTableMap": {
+    "SNF-5fafa152-8b1f-481b-84a0-51a390be5eb2": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LEAD_STATUS_UPDATES",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UPDATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "ROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PARTNER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROFILE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "CATEGORY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COMMENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATA",
+            "Type": "JSON"
+          },
+          {
+            "Name": "PROFILE_AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b4c61bcc-2583-4c0c-88ad-d2e273be51f4": {
+      "Alias": "lead_status_updates",
+      "Source": {
+        "PhysicalTableId": "SNF-5fafa152-8b1f-481b-84a0-51a390be5eb2"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROFILE_AGGREGATE_ID",
+            "NewColumnName": "profile_aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATA",
+            "NewColumnName": "data"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COMMENT",
+            "NewColumnName": "comment"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATUS",
+            "NewColumnName": "status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CATEGORY",
+            "NewColumnName": "category"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROFILE",
+            "NewColumnName": "profile"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_ID",
+            "NewColumnName": "partner_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROLE",
+            "NewColumnName": "role"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATE_ID",
+            "NewColumnName": "update_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dvillalon@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

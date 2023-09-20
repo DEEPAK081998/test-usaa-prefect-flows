@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_profile_coverage_zips
+  - name: raw_profile_languages
+  - name: raw_profile_nmlsids
+  - name: raw_profile_unavailable_dates
+  - name: raw_profile_assignments
+  - name: raw_agent_completed_profile_report
+  - name: raw_profile_cities
+  - name: raw_profile_verification_status_sort_order

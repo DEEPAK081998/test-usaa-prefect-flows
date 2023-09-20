@@ -1,0 +1,96 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "4d753858-9b96-4d93-b0cd-392e75a33bb0",
+    "Name": "DBT-brokerage_agent_direct_stats",
+    "PhysicalTableMap": {
+        "4d753858-9b96-4d93-b0cd-392e75a33bb0": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "brokerage_agent_direct_stats",
+                "InputColumns": [
+                    {
+                        "Name": "brokerage_code",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "full_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rc_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rc_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rc_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "coverage",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "brokeragequalification",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentdirectdate",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "agentcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "eligibleagentcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "acceptedreferrals",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "unassignedenrollments",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "unacceptedenrollments",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

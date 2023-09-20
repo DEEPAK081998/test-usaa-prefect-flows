@@ -1,0 +1,18 @@
+{
+  "schedule": "@monthly",
+  "tags": [
+    "dbt",
+    "airbyte",
+    "re_reporting"
+  ],
+  "connection_ids": [
+    "991f2219-4f05-4d93-9569-a55fc646cf9d"
+  ],
+  "dbt_project_path": "s3://mdp-prod-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_conn_macro": "reduce_mlo_invite_size",
+  "dbt_extra_kwargs": {
+    "select": [
+      "+tag:monthly"
+    ]
+  }
+}

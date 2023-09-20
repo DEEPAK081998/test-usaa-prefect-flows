@@ -1,0 +1,180 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-95e526a4-6a7c-473a-91c0-bba92d9c394f",
+  "Name": "SNF-PD-pennymac_ga",
+  "PhysicalTableMap": {
+    "SNF-b7ebd907-a72e-4b34-803f-fdaaf48f91e2": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PMC_GA",
+        "InputColumns": [
+          {
+            "Name": "GA_USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "NEWUSERS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "BOUNCES",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "UNIQUE_PAGEVIEWS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "TOTAL_SECS_ON_SITE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "PAGEVIEWS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "SESSIONS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b7ebd907-a72e-4b34-803f-fdaaf48f91e2": {
+      "Alias": "pmc_ga",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SESSIONS",
+            "NewColumnName": "sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PAGEVIEWS",
+            "NewColumnName": "pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_SECS_ON_SITE",
+            "NewColumnName": "total_secs_on_site"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_PAGEVIEWS",
+            "NewColumnName": "unique_pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BOUNCES",
+            "NewColumnName": "bounces"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NEWUSERS",
+            "NewColumnName": "newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_USERS",
+            "NewColumnName": "ga_users"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "ga_users",
+              "newusers",
+              "bounces",
+              "unique_pageviews",
+              "total_secs_on_site",
+              "pageviews",
+              "sessions",
+              "ga_date"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-b7ebd907-a72e-4b34-803f-fdaaf48f91e2"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

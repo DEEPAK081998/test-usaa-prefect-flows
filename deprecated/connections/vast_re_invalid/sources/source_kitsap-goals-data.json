@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "267042733",
+    "start_date": "2022-06-22",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"kitsap-ga-goals\",\"metrics\":[\"ga:goal8Completions\",\"ga:goal10Completions\",\"ga:goal13Completions\",\"ga:goal9Completions\",\"ga:goal4Completions\",\"ga:goal1Completions\",\"ga:goal12Completions\",\"ga:goal11Completions\",\"ga:goal7Completions\",\"ga:goal2Completions\"],\"dimensions\":[\"ga:date\"]}]",
+    "window_in_days": 1
+  },
+  "name": "kitsap-goals-data",
+  "sourceDefinitionName": "Google Analytics"
+}

@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+
+  - name: raw_referral_fee_category_assignments
+  - name: raw_referral_fee_categories
+  - name: raw_referral_fee_categories_rates
+  - name: raw_current_referral_fee_category_assignments
+    identifier: raw_current_referral___category_assignments
+  - name: raw_referral_fee_category_updates

@@ -1,0 +1,188 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-6eb3c749-3077-4c16-87fc-d79a696acd58",
+  "Name": "SNF-DBT-fact_sofi_campaign",
+  "PhysicalTableMap": {
+    "SNF-6eb3c749-3077-4c16-87fc-d79a696acd58": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FACT_SOFI_CAMPAIGN",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_MEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BOUNCES",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "TOTAL_SECS_ON_SITE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "UNIQUEPAGEVIEWS",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-6eb3c749-3077-4c16-87fc-d79a696acd58": {
+      "Alias": "fact_sofi_campaign",
+      "Source": {
+        "PhysicalTableId": "SNF-6eb3c749-3077-4c16-87fc-d79a696acd58"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUEPAGEVIEWS",
+            "NewColumnName": "uniquepageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_SECS_ON_SITE",
+            "NewColumnName": "total_secs_on_site"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BOUNCES",
+            "NewColumnName": "bounces"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PAGEVIEWS",
+            "NewColumnName": "pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ADCONTENT",
+            "NewColumnName": "adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SESSIONS",
+            "NewColumnName": "sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NEWUSERS",
+            "NewColumnName": "newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_CAMPAIGN",
+            "NewColumnName": "ga_campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_MEDIUM",
+            "NewColumnName": "ga_medium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_USERS",
+            "NewColumnName": "ga_users"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

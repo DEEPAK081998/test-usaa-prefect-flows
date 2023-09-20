@@ -1,0 +1,508 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-b96e2bca-09ca-4f6d-9331-3f19ee0e00c7",
+  "Name": "SNF-DBT-pmc_upload",
+  "PhysicalTableMap": {
+    "SNF-b96e2bca-09ca-4f6d-9331-3f19ee0e00c7": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PMC_UPLOAD",
+        "InputColumns": [
+          {
+            "Name": "HOMESTORY ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "FIRST NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROPERTY CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROPERTY STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CELL PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SALES GROUP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MARKETING SOURCE CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RECEIVED FROM HOMESTORY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAMPAIGN NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEAD SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ESTIMATED PAYMENT SAVINGS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROPERTY ADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROPERTY ZIP CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DIALING ZIP CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROPERTY COUNTY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MAILING ADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MAILING CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MAILING STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MAILING ZIP CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CURRENT UPB",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CURRENT RATE (%)",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MARKETING RATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MI AMOUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "HOME PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "1ST P&I",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ESCROWED T&I",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST NAME (CO-BORROWER)",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST NAME (CO-BORROWER)",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGE OF LOAN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DUE DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ESCROW BALANCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ORIGINAL LOAN AMOUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NOTE DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MATURITY DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLS LISTING PRICE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLS LISTING DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BEDROOM COUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BATHROOM COUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "YEAR BUILT (HOME LISTED)",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SQUARE FOOTAGE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLS AGENT NAME",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b96e2bca-09ca-4f6d-9331-3f19ee0e00c7": {
+      "Alias": "pmc_upload",
+      "Source": {
+        "PhysicalTableId": "SNF-b96e2bca-09ca-4f6d-9331-3f19ee0e00c7"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLS AGENT NAME",
+            "NewColumnName": "mls agent name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SQUARE FOOTAGE",
+            "NewColumnName": "square footage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "YEAR BUILT (HOME LISTED)",
+            "NewColumnName": "year built (home listed)"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BATHROOM COUNT",
+            "NewColumnName": "bathroom count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BEDROOM COUNT",
+            "NewColumnName": "bedroom count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLS LISTING DATE",
+            "NewColumnName": "mls listing date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLS LISTING PRICE",
+            "NewColumnName": "mls listing price"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MATURITY DATE",
+            "NewColumnName": "maturity date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NOTE DATE",
+            "NewColumnName": "note date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ORIGINAL LOAN AMOUNT",
+            "NewColumnName": "original loan amount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ESCROW BALANCE",
+            "NewColumnName": "escrow balance"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DUE DATE",
+            "NewColumnName": "due date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGE OF LOAN",
+            "NewColumnName": "age of loan"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST NAME (CO-BORROWER)",
+            "NewColumnName": "last name (co-borrower)"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST NAME (CO-BORROWER)",
+            "NewColumnName": "first name (co-borrower)"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ESCROWED T&I",
+            "NewColumnName": "escrowed t&i"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "1ST P&I",
+            "NewColumnName": "1st p&i"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOME PHONE",
+            "NewColumnName": "home phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MI AMOUNT",
+            "NewColumnName": "mi amount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MARKETING RATE",
+            "NewColumnName": "marketing rate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENT RATE (%)",
+            "NewColumnName": "current rate (%)"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENT UPB",
+            "NewColumnName": "current upb"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAILING ZIP CODE",
+            "NewColumnName": "mailing zip code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAILING STATE",
+            "NewColumnName": "mailing state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAILING CITY",
+            "NewColumnName": "mailing city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAILING ADDRESS",
+            "NewColumnName": "mailing address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY COUNTY",
+            "NewColumnName": "property county"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DIALING ZIP CODE",
+            "NewColumnName": "dialing zip code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY ZIP CODE",
+            "NewColumnName": "property zip code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY ADDRESS",
+            "NewColumnName": "property address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ESTIMATED PAYMENT SAVINGS",
+            "NewColumnName": "estimated payment savings"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATUS",
+            "NewColumnName": "status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD SOURCE",
+            "NewColumnName": "lead source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAMPAIGN NAME",
+            "NewColumnName": "campaign name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RECEIVED FROM HOMESTORY",
+            "NewColumnName": "received from homestory"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MARKETING SOURCE CODE",
+            "NewColumnName": "marketing source code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SALES GROUP",
+            "NewColumnName": "sales group"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CELL PHONE",
+            "NewColumnName": "cell phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY STATE",
+            "NewColumnName": "property state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY CITY",
+            "NewColumnName": "property city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST NAME",
+            "NewColumnName": "last name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST NAME",
+            "NewColumnName": "first name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY ID",
+            "NewColumnName": "homestory id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

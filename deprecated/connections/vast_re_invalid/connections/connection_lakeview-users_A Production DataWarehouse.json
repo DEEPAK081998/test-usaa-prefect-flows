@@ -1,0 +1,78 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "a65287b1-9232-4c65-afbc-1aabd7dcba7f"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "lakeview-rep60-users",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_users": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "lakeview_rep60_users",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_lakeview-users.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

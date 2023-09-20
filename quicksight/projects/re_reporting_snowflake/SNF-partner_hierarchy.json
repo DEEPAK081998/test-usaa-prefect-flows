@@ -1,0 +1,264 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-ec1a6c3d-c82d-485a-9569-28ffb56439f5",
+  "Name": "SNF-partner_hierarchy",
+  "PhysicalTableMap": {
+    "SNF-490931a8-6513-4ad5-97ef-dbbe0f2b1328": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PARTNER_HIERARCHY",
+        "InputColumns": [
+          {
+            "Name": "UPDATE_DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANK_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LM_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SLM_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SLM_MANAGER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DD_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DD_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DIVISION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_FIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_LASTNAME",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-490931a8-6513-4ad5-97ef-dbbe0f2b1328": {
+      "Alias": "partner_hierarchy",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_LASTNAME",
+            "NewColumnName": "lo_lastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_FIRSTNAME",
+            "NewColumnName": "lo_firstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DIVISION",
+            "NewColumnName": "division"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DD_EMAIL",
+            "NewColumnName": "dd_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DD_NAME",
+            "NewColumnName": "dd_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SLM_MANAGER",
+            "NewColumnName": "slm_manager"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SLM_NAME",
+            "NewColumnName": "slm_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LM_EMAIL",
+            "NewColumnName": "lm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LM_NAME",
+            "NewColumnName": "lm_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_PHONE",
+            "NewColumnName": "lo_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_EMAIL",
+            "NewColumnName": "lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NAME",
+            "NewColumnName": "lo_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NMLSID",
+            "NewColumnName": "lo_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_NAME",
+            "NewColumnName": "bank_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATE_DATE",
+            "NewColumnName": "update_date"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "update_date",
+              "bank_name",
+              "lo_nmlsid",
+              "lo_name",
+              "lo_email",
+              "lo_phone",
+              "lm_name",
+              "lm_email",
+              "slm_name",
+              "slm_manager",
+              "dd_name",
+              "dd_email",
+              "division",
+              "lo_firstname",
+              "lo_lastname"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-490931a8-6513-4ad5-97ef-dbbe0f2b1328"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "170751556",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\": \"freedom_cta\", \"dimensions\": [\"ga:date\",\"ga:medium\",\"ga:source\",\"ga:campaign\",\"ga:adContent\"], \"metrics\": [\"ga:newUsers\",\"ga:users\",\"ga:sessions\",\"ga:avgTimeOnPage\",\"ga:bounceRate\",\"ga:pageviews\"]}]",
+    "window_in_days": 1
+  },
+  "name": "freedom-utm-content",
+  "sourceDefinitionName": "Google Analytics"
+}

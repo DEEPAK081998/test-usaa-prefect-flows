@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_brokerage_assignments
+  - name: raw_brokerage_coverage_zips
+  - name: raw_brokerage_qualifications
+  - name: raw_brokerage_user
+  - name: raw_brokerages

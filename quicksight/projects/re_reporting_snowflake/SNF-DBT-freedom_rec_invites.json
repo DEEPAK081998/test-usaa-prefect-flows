@@ -1,0 +1,268 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-7c7aa5f7-6adc-436a-b15e-63a229645415",
+  "Name": "SNF-DBT-freedom_rec_invites",
+  "PhysicalTableMap": {
+    "SNF-7c7aa5f7-6adc-436a-b15e-63a229645415": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_REC_INVITES",
+        "InputColumns": [
+          {
+            "Name": "PROGRAM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLEDDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CLIENT_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_LOCATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NORMALIZEDCITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NORMALIZEDSTATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NORMALIZEDZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENTTYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_EMAIL",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-7c7aa5f7-6adc-436a-b15e-63a229645415": {
+      "Alias": "freedom_rec_invites",
+      "Source": {
+        "PhysicalTableId": "SNF-7c7aa5f7-6adc-436a-b15e-63a229645415"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_EMAIL",
+            "NewColumnName": "lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_PHONE",
+            "NewColumnName": "lo_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_LAST_NAME",
+            "NewColumnName": "lo_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_FIRST_NAME",
+            "NewColumnName": "lo_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENTTYPE",
+            "NewColumnName": "enrollmenttype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONE",
+            "NewColumnName": "agent_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTLASTNAME",
+            "NewColumnName": "agentlastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFIRSTNAME",
+            "NewColumnName": "agentfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NORMALIZEDZIP",
+            "NewColumnName": "normalizedzip"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NORMALIZEDSTATE",
+            "NewColumnName": "normalizedstate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NORMALIZEDCITY",
+            "NewColumnName": "normalizedcity"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_LOCATION",
+            "NewColumnName": "purchase_location"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_PHONE",
+            "NewColumnName": "client_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_EMAIL",
+            "NewColumnName": "client_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_LAST_NAME",
+            "NewColumnName": "client_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_FIRST_NAME",
+            "NewColumnName": "client_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLEDDATE",
+            "NewColumnName": "enrolleddate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT",
+            "NewColumnName": "client"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROGRAM",
+            "NewColumnName": "program"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

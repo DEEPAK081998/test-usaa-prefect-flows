@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: profile_coverage_zips
+  - name: profile_languages
+  - name: profile_nmlsids
+  - name: profile_unavailable_dates

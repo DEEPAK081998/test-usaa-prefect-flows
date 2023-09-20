@@ -1,0 +1,158 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-f4a21e37-34aa-4edf-876c-ed18f6042363",
+  "Name": "SNF-DBT-freedom_paths",
+  "PhysicalTableMap": {
+    "SNF-f4a21e37-34aa-4edf-876c-ed18f6042363": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_PATHS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_PAGEPATH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ENTRANCES",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_PAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BOUNCES",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "TOTAL_SECS_ON_SITE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "PAGEVIEWS",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-f4a21e37-34aa-4edf-876c-ed18f6042363": {
+      "Alias": "freedom_paths",
+      "Source": {
+        "PhysicalTableId": "SNF-f4a21e37-34aa-4edf-876c-ed18f6042363"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PAGEVIEWS",
+            "NewColumnName": "pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_SECS_ON_SITE",
+            "NewColumnName": "total_secs_on_site"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BOUNCES",
+            "NewColumnName": "bounces"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_PAGEVIEWS",
+            "NewColumnName": "unique_pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENTRANCES",
+            "NewColumnName": "entrances"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NEWUSERS",
+            "NewColumnName": "newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SESSIONS",
+            "NewColumnName": "sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "USERS",
+            "NewColumnName": "users"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEPATH",
+            "NewColumnName": "ga_pagepath"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

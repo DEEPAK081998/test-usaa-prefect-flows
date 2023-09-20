@@ -1,0 +1,158 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-f86d541c-4ca4-4896-99d5-745c9596c295",
+  "Name": "SNF-DBT-sofi_leads_submitted_ga",
+  "PhysicalTableMap": {
+    "SNF-f86d541c-4ca4-4896-99d5-745c9596c295": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_LEADS_SUBMITTED_GA",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_PAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BOUNCES",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "TOTAL_SECS_ON_PAGE",
+            "Type": "DECIMAL"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-f86d541c-4ca4-4896-99d5-745c9596c295": {
+      "Alias": "sofi_leads_submitted_ga",
+      "Source": {
+        "PhysicalTableId": "SNF-f86d541c-4ca4-4896-99d5-745c9596c295"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_SECS_ON_PAGE",
+            "NewColumnName": "total_secs_on_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BOUNCES",
+            "NewColumnName": "bounces"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED",
+            "NewColumnName": "homestory_lead_submitted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_PAGEVIEWS",
+            "NewColumnName": "unique_pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PAGEVIEWS",
+            "NewColumnName": "pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SESSIONS",
+            "NewColumnName": "sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NEWUSERS",
+            "NewColumnName": "newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "USERS",
+            "NewColumnName": "users"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

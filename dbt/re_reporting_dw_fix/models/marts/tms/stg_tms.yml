@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: tms_ga_goals
+  - name: tms_rep60_prod_ga_data
+  - name: tms_users_rep60
+  - name: tms_ga_event

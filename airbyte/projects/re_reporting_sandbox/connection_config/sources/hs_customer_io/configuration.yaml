@@ -1,0 +1,11 @@
+resource_name: HS_customer_io
+definition_type: source
+definition_id: 6decfb7a-4495-4a00-8c35-f7b273bb5319
+definition_image: airbyte/source-customer-io
+definition_version: latest
+configuration:
+  cio_api_key: ${SECRET_CUSTOMER_IO_API_KEY}
+  backoff_time: 1
+  messages_stream_page_size: 1000
+  activities_stream_page_size: 100
+  sender_identities_stream_page_size: 20

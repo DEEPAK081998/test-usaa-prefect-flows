@@ -1,0 +1,84 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "pennymac_customer_profiles_",
+  "operationIds": [
+    "07b7052c-3e97-4231-b367-ab8b3a0d853f"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "messages",
+          "jsonSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "msg_id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "subject": {
+                "type": "string"
+              },
+              "to_email": {
+                "type": "string"
+              },
+              "from_email": {
+                "type": "string"
+              },
+              "opens_count": {
+                "type": "integer"
+              },
+              "clicks_count": {
+                "type": "integer"
+              },
+              "last_event_time": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "msg_id"
+            ]
+          ],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "append",
+          "primaryKey": [
+            [
+              "msg_id"
+            ]
+          ],
+          "aliasName": "messages",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_pennymac_customer_profiles.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

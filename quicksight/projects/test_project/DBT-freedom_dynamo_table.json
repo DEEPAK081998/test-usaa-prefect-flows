@@ -1,0 +1,148 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "181e48e9-45d4-4d5c-83d5-e13d16c5abc9",
+    "Name": "DBT-freedom_dynamo_table",
+    "PhysicalTableMap": {
+        "181e48e9-45d4-4d5c-83d5-e13d16c5abc9": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "freedom_dynamo_table",
+                "InputColumns": [
+                    {
+                        "Name": "invitation_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "purchase_specialist",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "mlo_submission",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sms_invite_permission",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "role",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "loemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "nmlsid",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sendgrid",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "firstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "shorthash",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "utmsource",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "disclosure",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lolastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lofirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "phonenumber",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "utmcampaign",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lophonenumber",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "mlosubmission",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customerconnect",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "currentbankcustomer",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "confirmationrequired",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "invitation_dynamo",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

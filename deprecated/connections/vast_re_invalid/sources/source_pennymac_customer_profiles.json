@@ -1,0 +1,9 @@
+{
+  "connectionConfiguration": {
+    "limit": 1000,
+    "query": "Contains(categories, \"Pennymac REC June\")",
+    "apikey": "$SECRET_SENDGRID_APIKEY"
+  },
+  "name": "pennymac_customer_profiles",
+  "sourceDefinitionName": "Sendgrid Homestory Connector"
+}

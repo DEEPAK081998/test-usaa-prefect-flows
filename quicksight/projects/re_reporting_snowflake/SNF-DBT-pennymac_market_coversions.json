@@ -1,0 +1,148 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-b95cbf3b-9570-41d0-9c61-773da31a9185",
+  "Name": "SNF-DBT-pennymac_market_coversions",
+  "PhysicalTableMap": {
+    "SNF-b95cbf3b-9570-41d0-9c61-773da31a9185": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PENNYMAC_MARKET_COVERSIONS",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_MEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENTS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "RN",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b95cbf3b-9570-41d0-9c61-773da31a9185": {
+      "Alias": "pennymac_market_coversions",
+      "Source": {
+        "PhysicalTableId": "SNF-b95cbf3b-9570-41d0-9c61-773da31a9185"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RN",
+            "NewColumnName": "rn"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENTS",
+            "NewColumnName": "enrollments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_MEDIUM",
+            "NewColumnName": "ga_medium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_CAMPAIGN",
+            "NewColumnName": "ga_campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

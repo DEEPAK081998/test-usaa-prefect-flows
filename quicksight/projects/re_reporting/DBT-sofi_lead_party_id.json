@@ -1,0 +1,168 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "8b162387-010b-4f82-92ad-7e3cc7890b25",
+    "Name": "DBT-sofi_lead_party_id",
+    "PhysicalTableMap": {
+        "8b162387-010b-4f82-92ad-7e3cc7890b25": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "sofi_lead_party_id",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_medium",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_campaign",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_pagepath",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_adcontent",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "user_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "max",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "partner_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "created",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "updated",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "data",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "phones",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "brokerage_code",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "opening_hours_minutes_of_day",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "closing_hours_minutes_of_day",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "local_timezone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "accepts_referrals_on_sundays",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "accepts_referrals_on_saturdays",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "receives_referrals_via_text_message",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "eligibility_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "training_completed",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "verification_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "aggregate_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sofi_data",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "party_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lead_id",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "fd909a85-68cf-45dc-a9f7-f6a097883bfb",
+    "Name": "DBT-freedom_dates_sql_cleaned",
+    "PhysicalTableMap": {
+        "fd909a85-68cf-45dc-a9f7-f6a097883bfb": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "freedom_dates_sql_cleaned",
+                "InputColumns": [
+                    {
+                        "Name": "agent_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_phonetype",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_phonenumber",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "enrolled_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "la_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "la_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lead_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "register_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "la_phonetype",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "la_phonenumber",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

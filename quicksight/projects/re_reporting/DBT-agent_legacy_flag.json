@@ -1,0 +1,108 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "bcbc161a-8c13-40cf-b0fd-5f65343fc5d1",
+    "Name": "DBT-agent_legacy_flag",
+    "PhysicalTableMap": {
+        "bcbc161a-8c13-40cf-b0fd-5f65343fc5d1": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "agent_legacy_flag",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentfirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentlastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "eligibility_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentfullname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentphone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragecode",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragename",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "referralagreementemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokerageemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokerage_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "inviter_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "caelegacyagent",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "verificationstatus",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "cae_legacy_agent",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "send-test",
+  "sourceDefinitionName": "Sendgrid",
+  "connectionConfiguration": {
+    "apikey": "$SOURCE_SENDGRID_APIKEY",
+    "start_time": 1645357889
+  }
+}

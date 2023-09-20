@@ -1,0 +1,46 @@
+sources:
+- name: public
+  tables:
+
+  - name: brokerages
+  - name: brokerage_assignments
+  - name: brokerage_coverage_zips
+  - name: brokerage_qualifications
+  - name: brokerage_user
+  - name: agent_assignment_statuses
+  - name: current_assignments
+  - name: user_assignments
+  - name: current_notes
+  - name: note_updates
+  - name: partner_user_profiles
+  - name: partner_user_relationships
+  - name: partner_user_roles
+  - name: profile_coverage_zips
+  - name: profile_languages
+  - name: profile_nmlsids
+  - name: profile_unavailable_dates
+  - name: current_lead_statuses
+  - name: lead_inserts
+  - name: lead_status_sort_order
+  - name: lead_status_updates
+  - name: lead_traffic_sources
+  - name: leads_data
+  - name: leads
+  - name: normalized_lead_locations
+  - name: cbsa_locations
+  - name: listings
+  - name: property_search_statuses
+  - name: reminders
+  - name: saved_searches
+  - name: lead_updates
+  - name: profile_assignments
+  - name: completed_agent_profiles_report
+  - name: snapshot_agent_scorecard
+  - name: historic_finance_data_aug2023
+  - name: state_restrictions_finance
+  
+
+
+
+
+version: 2

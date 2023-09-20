@@ -1,0 +1,112 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "a74f3f2a-94be-452b-b83b-e61c7fa17b6d",
+    "Name": "Customer_Communication_Event",
+    "PhysicalTableMap": {
+        "a74f3f2a-94be-452b-b83b-e61c7fa17b6d": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "fct_cust_com_event",
+                "InputColumns": [
+                    {
+                        "Name": "lead_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "warehouse",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "join_field",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_source",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_medium",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_type",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "system_event_timestamp",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "event_timestamp",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "event_subject",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_content",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_priority",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_tags",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_source_url",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_response",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_journey",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "related_events",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "event_status",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

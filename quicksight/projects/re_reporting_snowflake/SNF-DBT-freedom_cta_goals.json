@@ -1,0 +1,108 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-b7187878-574c-4c8c-982e-c6ad423566ee",
+  "Name": "SNF-DBT-freedom_cta_goals",
+  "PhysicalTableMap": {
+    "SNF-b7187878-574c-4c8c-982e-c6ad423566ee": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_CTA_GOALS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_MEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TEAMBUILDER_COMPLETIONS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GET_STARTED_CTA",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b7187878-574c-4c8c-982e-c6ad423566ee": {
+      "Alias": "freedom_cta_goals",
+      "Source": {
+        "PhysicalTableId": "SNF-b7187878-574c-4c8c-982e-c6ad423566ee"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GET_STARTED_CTA",
+            "NewColumnName": "get_started_cta"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TEAMBUILDER_COMPLETIONS",
+            "NewColumnName": "teambuilder_completions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_MEDIUM",
+            "NewColumnName": "ga_medium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

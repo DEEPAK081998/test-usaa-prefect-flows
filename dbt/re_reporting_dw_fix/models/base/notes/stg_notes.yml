@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: current_notes
+  - name: note_updates

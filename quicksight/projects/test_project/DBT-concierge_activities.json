@@ -1,0 +1,84 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "a6890c3b-c16c-4d62-83a9-d507e2f055ff",
+    "Name": "DBT-concierge_activities",
+    "PhysicalTableMap": {
+        "a6890c3b-c16c-4d62-83a9-d507e2f055ff": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "concierge_activities",
+                "InputColumns": [
+                    {
+                        "Name": "lead_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "enrolldate",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "updatedate",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "category",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "activity",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "concierge",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "conciergefirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "conciergelastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "?column?",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "bank_name",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

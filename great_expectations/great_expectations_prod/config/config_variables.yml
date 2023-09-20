@@ -1,0 +1,38 @@
+
+# This config file supports variable substitution which enables: 1) keeping
+# secrets out of source control & 2) environment-based configuration changes
+# such as staging vs prod.
+#
+# When GX encounters substitution syntax (like `my_key: ${my_value}` or
+# `my_key: $my_value`) in the great_expectations.yml file, it will attempt
+# to replace the value of `my_key` with the value from an environment
+# variable `my_value` or a corresponding key read from this config file,
+# which is defined through the `config_variables_file_path`.
+# Environment variables take precedence over variables defined here.
+#
+# Substitution values defined here can be a simple (non-nested) value,
+# nested value such as a dictionary, or an environment variable (i.e. ${ENV_VAR})
+#
+#
+# https://docs.greatexpectations.io/docs/guides/setup/configuring_data_contexts/how_to_configure_credentials
+
+instance_id: cd29f53a-dbe7-4f52-a860-c02b9c533a8c
+
+hs_prod_warehouse_creds:
+  username: secret|arn:aws:secretsmanager:us-east-1:931422288647:secret:AirbyteDWSecondaryUserSecre-AGmsPsxln1eW|username
+  password: secret|arn:aws:secretsmanager:us-east-1:931422288647:secret:AirbyteDWSecondaryUserSecre-AGmsPsxln1eW|password
+  host: secret|arn:aws:secretsmanager:us-east-1:931422288647:secret:AirbyteDWSecondaryUserSecre-AGmsPsxln1eW|host
+  port: 5432
+  database: warehouse_db
+  drivername: postgresql
+
+
+metric_store_creds:
+  username: secret|arn:aws:secretsmanager:us-east-1:931422288647:secret:AirbyteDWSecondaryUserSecre-AGmsPsxln1eW|username
+  password: secret|arn:aws:secretsmanager:us-east-1:931422288647:secret:AirbyteDWSecondaryUserSecre-AGmsPsxln1eW|password
+  host: secret|arn:aws:secretsmanager:us-east-1:931422288647:secret:AirbyteDWSecondaryUserSecre-AGmsPsxln1eW|host
+  port: 5432
+  database: warehouse_db
+  schema: public
+  drivername: postgresql
+

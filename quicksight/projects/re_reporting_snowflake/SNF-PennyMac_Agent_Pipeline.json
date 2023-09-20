@@ -1,0 +1,561 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-5df145c1-fdd7-4288-a9aa-93b2eba3ce2c",
+  "Name": "SNF-PennyMac_Agent_Pipeline",
+  "PhysicalTableMap": {
+    "SNF-70a07af9-73fb-4720-907c-f958c5b1b9d7": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "RAW_GS_AGENT_INFO",
+        "InputColumns": [
+          {
+            "Name": "LO NOTIFIED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT UID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFIED RE LICENSE EXPIRATION DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SMS SENT?",
+            "Type": "STRING"
+          },
+          {
+            "Name": "T&C STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKER APPROVAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COVERAGE AUDIT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRAINING SCHEDULED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFIED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROFILE CREATED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO LAST NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RE START DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DUPLICATE LO AUDIT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATE INVITED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CALL NOTES",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFIED UNITS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INTRO CALL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT LAST NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT FIRST NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO AFFILIATED?",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AREA",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INTEREST FORM COMPLETED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRAINING ATTENDED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EXISTING BROKERAGE CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SMS RESPONSE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CALL OUTCOME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FINAL OUTCOME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO FIRST NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_AB_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_EMITTED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_NORMALIZED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_RAW_GS_AGENT_INFO_HASHID",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-efc18486-be1f-4d65-91ee-faee43d3884b": {
+      "Alias": "raw_gs_agent_info",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_RAW_GS_AGENT_INFO_HASHID",
+            "NewColumnName": "_airbyte_raw_gs_agent_info_hashid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_NORMALIZED_AT",
+            "NewColumnName": "_airbyte_normalized_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_EMITTED_AT",
+            "NewColumnName": "_airbyte_emitted_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_AB_ID",
+            "NewColumnName": "_airbyte_ab_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO FIRST NAME",
+            "NewColumnName": "mlo first name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FINAL OUTCOME",
+            "NewColumnName": "final outcome"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CALL OUTCOME",
+            "NewColumnName": "call outcome"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SMS RESPONSE",
+            "NewColumnName": "sms response"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO EMAIL",
+            "NewColumnName": "mlo email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EXISTING BROKERAGE CODE",
+            "NewColumnName": "existing brokerage code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAINING ATTENDED",
+            "NewColumnName": "training attended"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT PHONE",
+            "NewColumnName": "agent phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INTEREST FORM COMPLETED",
+            "NewColumnName": "interest form completed"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AREA",
+            "NewColumnName": "area"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO AFFILIATED?",
+            "NewColumnName": "mlo affiliated?"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT FIRST NAME",
+            "NewColumnName": "agent first name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT LAST NAME",
+            "NewColumnName": "agent last name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INTRO CALL",
+            "NewColumnName": "intro call"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFIED UNITS",
+            "NewColumnName": "verified units"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKER",
+            "NewColumnName": "broker"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CALL NOTES",
+            "NewColumnName": "call notes"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NMLSID",
+            "NewColumnName": "nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE INVITED",
+            "NewColumnName": "date invited"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DUPLICATE LO AUDIT",
+            "NewColumnName": "duplicate lo audit"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RE START DATE",
+            "NewColumnName": "re start date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO LAST NAME",
+            "NewColumnName": "mlo last name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROFILE CREATED",
+            "NewColumnName": "profile created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFIED",
+            "NewColumnName": "verified"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAINING SCHEDULED",
+            "NewColumnName": "training scheduled"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVERAGE AUDIT",
+            "NewColumnName": "coverage audit"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT EMAIL",
+            "NewColumnName": "agent email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKER APPROVAL",
+            "NewColumnName": "broker approval"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "T&C STATUS",
+            "NewColumnName": "t&c status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SMS SENT?",
+            "NewColumnName": "sms sent?"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFIED RE LICENSE EXPIRATION DATE",
+            "NewColumnName": "verified re license expiration date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT UID",
+            "NewColumnName": "agent uid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO NOTIFIED",
+            "NewColumnName": "lo notified"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "LO Notified",
+              "Agent UID",
+              "Verified RE license expiration date",
+              "SMS Sent?",
+              "T&C Status",
+              "Broker Approval",
+              "Agent Email",
+              "Coverage Audit",
+              "Training Scheduled",
+              "verified",
+              "Profile Created",
+              "MLO Last Name",
+              "RE Start Date",
+              "Duplicate LO Audit",
+              "Date Invited",
+              "nmlsid",
+              "Call Notes",
+              "broker",
+              "Verified Units",
+              "Intro Call",
+              "Agent Last Name",
+              "Agent First Name",
+              "MLO Affiliated?",
+              "area",
+              "Interest Form Completed",
+              "Agent Phone",
+              "Training Attended",
+              "Existing Brokerage Code",
+              "MLO Email",
+              "SMS Response",
+              "Call Outcome",
+              "Final Outcome",
+              "MLO First Name",
+              "_airbyte_ab_id",
+              "_airbyte_emitted_at",
+              "_airbyte_normalized_at",
+              "_airbyte_raw_gs_agent_info_hashid"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-70a07af9-73fb-4720-907c-f958c5b1b9d7"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "25c561a9-7c48-4070-998a-a4dc74fc0d99",
+    "Name": "DBT-sofi_enrollment_source",
+    "PhysicalTableMap": {
+        "25c561a9-7c48-4070-998a-a4dc74fc0d99": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "sofi_enrollment_source",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_pagepath",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_source",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "unique_pageviews",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

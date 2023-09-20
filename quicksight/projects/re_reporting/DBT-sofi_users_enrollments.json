@@ -1,0 +1,56 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "dbd41fb0-33b4-436d-83cf-35e34f5f3065",
+    "Name": "DBT-sofi_users_enrollments",
+    "PhysicalTableMap": {
+        "dbd41fb0-33b4-436d-83cf-35e34f5f3065": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "sofi_users_enrollments",
+                "InputColumns": [
+                    {
+                        "Name": "enrollment_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "user_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_pagepath",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

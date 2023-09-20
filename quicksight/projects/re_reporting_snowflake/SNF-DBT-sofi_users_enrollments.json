@@ -1,0 +1,88 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-dbd41fb0-33b4-436d-83cf-35e34f5f3065",
+  "Name": "SNF-DBT-sofi_users_enrollments",
+  "PhysicalTableMap": {
+    "SNF-dbd41fb0-33b4-436d-83cf-35e34f5f3065": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_USERS_ENROLLMENTS",
+        "InputColumns": [
+          {
+            "Name": "ENROLLMENT_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "USER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_PAGEPATH",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-dbd41fb0-33b4-436d-83cf-35e34f5f3065": {
+      "Alias": "sofi_users_enrollments",
+      "Source": {
+        "PhysicalTableId": "SNF-dbd41fb0-33b4-436d-83cf-35e34f5f3065"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEPATH",
+            "NewColumnName": "ga_pagepath"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "USER_ID",
+            "NewColumnName": "user_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_DATE",
+            "NewColumnName": "enrollment_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

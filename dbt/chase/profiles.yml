@@ -1,0 +1,21 @@
+chase:
+  outputs:
+    sandbox:
+      type: postgres
+      host: "{{ env_var('SANDBOX_HOST') }}"
+      user: "{{ env_var('SANDBOX_USER') }}"
+      password: "{{ env_var('SANDBOX_PWD') }}"
+      port: 5432
+      dbname: "{{ env_var('SANDBOX_DB') }}"
+      schema: "{{ env_var('SANDBOX_SCHEMA') }}"
+      threads: 1
+    prod:
+      type: postgres
+      host: "{{ env_var('PROD_HOST') }}"
+      user: "{{ env_var('PROD_USER') }}"
+      password: "{{ env_var('PROD_PWD') }}"
+      port: 5432
+      dbname: "{{ env_var('PROD_DB') }}"
+      schema: "{{ env_var('PROD_SCHEMA') }}"
+      threads: 1
+  target: sandbox

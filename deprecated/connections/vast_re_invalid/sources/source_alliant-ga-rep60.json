@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "164114027",
+    "start_date": "2021-09-09",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"alliant-rep60-prod-ga-data\",\"dimensions\":[\"ga:date\",\"ga:pagePath\"],\"metrics\":[\"ga:sessions\",\"ga:newUsers\",\"ga:avgSessionDuration\",\"ga:pageviews\",\"ga:pageviewsPerSession\",\"ga:uniquePageviews\",\"ga:bounceRate\",\"ga:entrances\",\"ga:avgTimeOnPage\",\"ga:users\"]}]",
+    "window_in_days": 90
+  },
+  "name": "alliant-ga-rep60",
+  "sourceDefinitionName": "Google Analytics"
+}

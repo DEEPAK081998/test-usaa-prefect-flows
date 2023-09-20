@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: fidelity_ga_event
+  - name: fidelity_rep60_prod_ga_data
+  - name: fidelity_rep60_users
+  - name: fidelity_ga_goals
+  - name: ga4_fidelity_prod_ga_data
+  - name: ga4_fidelity_ga_goals_final
+  - name: ga4_fidelity_bouncerate
+  - name: ga4_fidelity_event_totals
+  - name: ga4_fidelity_users_final
+

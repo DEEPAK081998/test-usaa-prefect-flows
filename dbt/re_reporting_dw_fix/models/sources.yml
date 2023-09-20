@@ -1,0 +1,29 @@
+sources:
+- name: public
+  tables:
+  - name: raw_import_cbsa_locations
+  - name: raw_import_listings
+  - name: raw_import_property_search_statuses
+  - name: raw_import_reminders
+  - name: raw_import_saved_searches
+  - name: _raw_pennymac_invites_messages
+  - name: sofi_sg_invites_messages
+  - name: raw_zendesk_tickets
+  - name: raw_zendesk_ticket_fields
+  - name: raw_zendesk_tickets_custom_fields
+  - name: _airbyte_raw_prod_routing_api_stack_smeventstable334ccec7_nc661
+  - name: _AIRBYTE_RAW_PROD_ROUTING_API_STACK_SMEVENTSTABLE334CCEC7_NC661IJ28M3R
+  - name: surveys
+  - name: survey_responses
+  - name: survey_pages
+  - name: survey_questions
+  - name: raw_twilliostudioexecution_context
+  - name: raw_twilliostudiostep
+  - name: raw_twilliostudiostep_context
+  - name: raw_cio_verification_campaign_airbyte
+  - name: raw_inactive_campaign_airbyte
+  - name: raw_pennymac
+  - name: raw_import_profile_qualifications
+  - name: state_restrictions_finance
+  
+version: 2

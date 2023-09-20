@@ -1,0 +1,142 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-30fd1b99-3e29-46c8-8676-333e9e123f56",
+  "Name": "SNF-sofi_events_with_source",
+  "PhysicalTableMap": {
+    "SNF-73d757d1-65a5-4d71-8e11-ba366b21606a": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_EVENTS_WITH_SOURCE",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTLABEL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_EVENTACTION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_TOTALEVENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_UNIQUEEVENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-73d757d1-65a5-4d71-8e11-ba366b21606a": {
+      "Alias": "sofi_events_with_source",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_UNIQUEEVENTS",
+            "NewColumnName": "ga_uniqueevents"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_TOTALEVENTS",
+            "NewColumnName": "ga_totalevents"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTACTION",
+            "NewColumnName": "ga_eventaction"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_EVENTLABEL",
+            "NewColumnName": "ga_eventlabel"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "id",
+              "ga_date",
+              "ga_source",
+              "ga_eventlabel",
+              "ga_eventaction",
+              "ga_totalevents",
+              "ga_uniqueevents",
+              "updated_at"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-73d757d1-65a5-4d71-8e11-ba366b21606a"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

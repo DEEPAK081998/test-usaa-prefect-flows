@@ -1,0 +1,158 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-d60a215b-1654-496e-8907-999b9916bd4c",
+  "Name": "SNF-DBT-sofi_profiles",
+  "PhysicalTableMap": {
+    "SNF-d60a215b-1654-496e-8907-999b9916bd4c": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_PROFILES",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATA",
+            "Type": "JSON"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "UPDATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LEADID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "HAS_AGENT",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-d60a215b-1654-496e-8907-999b9916bd4c": {
+      "Alias": "sofi_profiles",
+      "Source": {
+        "PhysicalTableId": "SNF-d60a215b-1654-496e-8907-999b9916bd4c"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HAS_AGENT",
+            "NewColumnName": "has_agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADID",
+            "NewColumnName": "leadid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED",
+            "NewColumnName": "updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATA",
+            "NewColumnName": "data"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONE",
+            "NewColumnName": "phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

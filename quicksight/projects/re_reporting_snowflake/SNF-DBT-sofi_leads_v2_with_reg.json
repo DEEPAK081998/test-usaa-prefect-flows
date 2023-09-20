@@ -1,0 +1,248 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-329403a2-c87d-4b52-b026-bf4e89cbd5d1",
+  "Name": "SNF-DBT-sofi_leads_v2_with_reg",
+  "PhysicalTableMap": {
+    "SNF-329403a2-c87d-4b52-b026-bf4e89cbd5d1": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_LEADS_V2_WITH_REG",
+        "InputColumns": [
+          {
+            "Name": "PARTNER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PUP_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "HAS_AGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRANSACTION_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PREQUAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REGISTER_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CUSTOMER_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SOFI_PARTY_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SOFI_LEAD_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "BANK_PARTNER",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-329403a2-c87d-4b52-b026-bf4e89cbd5d1": {
+      "Alias": "sofi_leads_v2_with_reg",
+      "Source": {
+        "PhysicalTableId": "SNF-329403a2-c87d-4b52-b026-bf4e89cbd5d1"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_PARTNER",
+            "NewColumnName": "bank_partner"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SOFI_LEAD_ID",
+            "NewColumnName": "sofi_lead_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SOFI_PARTY_ID",
+            "NewColumnName": "sofi_party_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_EMAIL",
+            "NewColumnName": "customer_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_FULL_NAME",
+            "NewColumnName": "customer_full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_LAST_NAME",
+            "NewColumnName": "customer_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_FIRST_NAME",
+            "NewColumnName": "customer_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REGISTER_DATE",
+            "NewColumnName": "register_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOLASTNAME",
+            "NewColumnName": "lolastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOFIRSTNAME",
+            "NewColumnName": "lofirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PREQUAL",
+            "NewColumnName": "prequal"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTION_TYPE",
+            "NewColumnName": "transaction_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HAS_AGENT",
+            "NewColumnName": "has_agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PUP_ID",
+            "NewColumnName": "pup_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_LAST_NAME",
+            "NewColumnName": "agent_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_FIRST_NAME",
+            "NewColumnName": "agent_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_ID",
+            "NewColumnName": "partner_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

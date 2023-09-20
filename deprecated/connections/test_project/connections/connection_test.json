@@ -1,0 +1,68 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "my_pref1",
+  "operationIds": [],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "blocks",
+          "jsonSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "email": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "created": {
+                "type": "integer"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "created"
+          ],
+          "sourceDefinedPrimaryKey": [
+            [
+              "email"
+            ]
+          ],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [
+            "created"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [
+            [
+              "email"
+            ]
+          ],
+          "aliasName": "blocks",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": null,
+  "status": "active",
+  "resourceRequirements": null,
+  "sourceConnectorFile": "source_sendgrid_test.json",
+  "destinationConnectorFile": "destination_sendgrid_test.json"
+}
+

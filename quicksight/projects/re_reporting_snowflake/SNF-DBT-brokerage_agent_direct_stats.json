@@ -1,0 +1,188 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-4d753858-9b96-4d93-b0cd-392e75a33bb0",
+  "Name": "SNF-DBT-brokerage_agent_direct_stats",
+  "PhysicalTableMap": {
+    "SNF-4d753858-9b96-4d93-b0cd-392e75a33bb0": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BROKERAGE_AGENT_DIRECT_STATS",
+        "InputColumns": [
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COVERAGE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGEQUALIFICATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTDIRECTDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "AGENTCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ELIGIBLEAGENTCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ACCEPTEDREFERRALS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNASSIGNEDENROLLMENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNACCEPTEDENROLLMENTS",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-4d753858-9b96-4d93-b0cd-392e75a33bb0": {
+      "Alias": "brokerage_agent_direct_stats",
+      "Source": {
+        "PhysicalTableId": "SNF-4d753858-9b96-4d93-b0cd-392e75a33bb0"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNACCEPTEDENROLLMENTS",
+            "NewColumnName": "unacceptedenrollments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNASSIGNEDENROLLMENTS",
+            "NewColumnName": "unassignedenrollments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTEDREFERRALS",
+            "NewColumnName": "acceptedreferrals"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBLEAGENTCOUNT",
+            "NewColumnName": "eligibleagentcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTCOUNT",
+            "NewColumnName": "agentcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTDIRECTDATE",
+            "NewColumnName": "agentdirectdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGEQUALIFICATION",
+            "NewColumnName": "brokeragequalification"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVERAGE",
+            "NewColumnName": "coverage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_PHONE",
+            "NewColumnName": "rc_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_EMAIL",
+            "NewColumnName": "rc_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_NAME",
+            "NewColumnName": "rc_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FULL_NAME",
+            "NewColumnName": "full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

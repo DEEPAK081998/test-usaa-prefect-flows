@@ -1,0 +1,17 @@
+{
+  "connectionConfiguration": {
+    "view_id": "227228959",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Client",
+      "client_id": "$SECRET_GOOGLE_ANALYTICS_CLIENT_ID",
+      "access_token": "$SECRET_GOOGLE_ANALYTICS_ACCESS_TOKEN",
+      "client_secret": "$SECRET_GOOGLE_ANALYTICS_CLIENT_SECRET",
+      "refresh_token": "$SECRET_GOOGLE_ANALYTICS_REFRESH_TOKEN"
+    },
+    "custom_reports": "[{\"name\":\"chase-ga-event\",\"metrics\":[\"ga:totalEvents\"],\"dimensions\":[\"ga:EventLabel\",\"ga:EventCategory\",\"ga:EventAction\",\"ga:date\"]},{\"name\":\"chase-ga-goals\",\"metrics\":[\"ga:goal1Completions\",\"ga:goal2Completions\",\"ga:goal4Completions\",\"ga:goal5Completions\",\"ga:goal8Completions\",\"ga:goal9Completions\"],\"dimensions\":[\"ga:date\"]}]",
+    "window_in_days": 1
+  },
+  "name": "chase_goals_events",
+  "sourceDefinitionName": "Google Analytics"
+}

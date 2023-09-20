@@ -1,0 +1,108 @@
+{
+  "dag_name": "main_etl_dag_test_all_tasks",
+  "tags": [
+    "main-etl-dag",
+    "all-tasks",
+    "test"
+  ],
+  "schedule": "@daily",
+  "template_file": "airflow/dags_template/main_etl_dag.py",
+  "lambda_name": "sandbox-main-etl-dag-test-all-tasks-function",
+  "connection_ids": [
+    [
+     "a3bd70ce-208b-43bf-9dec-b07a8334fca0",
+     "c5586027-9c88-4ce0-90cb-7f4bacf5bd13"
+    ],
+    "c5586027-9c88-4ce0-90cb-7f4bacf5bd13"
+   ],
+  "dbt_conn_id": "warehouse_db",
+  "run_dbt": true,
+  "dbt_project_path": "s3://mdp-sandbox-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_extra_kwargs": {
+    "select": [
+      "brokerage_assignments"
+    ]
+  },
+  "run_dbt_source_freshness": true,
+  "dbt_source_freshness_extra_kwargs": {
+    "select": [
+      "brokerage_assignments"
+    ]
+  },
+  "run_dbt_test": true,
+  "dbt_test_extra_kwargs": {
+    "select": [
+      "brokerage_assignments"
+    ]
+  },
+  "dbt_conn_macro": "AirbyteIdsToIgnore",
+  "great_expectations_task_configurations": [
+    {
+      "great_expectations_checkpoint": "sandbox_db_checkpoint",
+      "great_expectations_project_path": "s3://mdp-sandbox-bucket/great_expectations/projects/test_project.zip"
+    },
+    [
+      {
+        "great_expectations_checkpoint": "sandbox_db_checkpoint",
+        "great_expectations_project_path": "s3://mdp-sandbox-bucket/great_expectations/projects/test_project.zip"
+      },
+      {
+        "invalidkey": "invalidvalue"
+      },
+      {
+        "great_expectations_checkpoint": "sandbox_db_checkpoint",
+        "great_expectations_project_path": "s3://mdp-sandbox-bucket/great_expectations/projects/test_project.zip"
+      }
+    ],
+    {
+      "invalidkey": "invalidvalue"
+    },
+    {
+      "great_expectations_checkpoint": "sandbox_db_checkpoint",
+      "great_expectations_project_path": "s3://mdp-sandbox-bucket/great_expectations/projects/test_project.zip"
+    }
+  ],
+  "s3_bucket_name": "mdp-sandbox-bucket",
+  "dataset_s3_directory": "quicksight/datasets/re_reporting/",
+  "aws_account_id": "429533234373",
+  "quicksight_dataset_ids": [
+    "019864dd-2517-4332-abcf-b0aeb51ad129"
+  ],
+  "partner_email": {
+    "attachment_name_template": "homestory_rbc_enrollments_daily_{date}.csv",
+    "columns_order": [
+      "date",
+      "id",
+      "client_first_name",
+      "client_last_name",
+      "client_email",
+      "client_phone",
+      "agent_name",
+      "agent_email",
+      "agent_phone",
+      "lo_name",
+      "lo_email",
+      "lo_phone",
+      "purchase_location",
+      "bankcustomer",
+      "transaction_type",
+      "hb_status",
+      "closedate",
+      "propertyaddress",
+      "propertyprice",
+      "purchase_time_frame",
+      "avg_price"
+    ],
+    "email_from": "partner-reporting@homestoryrewards.com",
+    "email_subject": "HomeStory Enrollments File",
+    "email_tag": "rbc_enrollments_daily",
+    "html_template_name": "plugins/partner_email/html_templates/rbc_enrollments_daily.html",
+    "limit": 3,
+    "manifest_path": "plugins/partner_email/manifests/rbc_enrollments_daily.csv",
+    "postmark_api_secret_id": "PostmarkTokenSecret-9DEedrBMVxpO",
+    "reply_to": "referrals@homestoryrewards.com",
+    "report_type": "rbc_enrollments_daily",
+    "s3_bucket_name": "mdp-utils-sandbox-partner-email-bucket",
+    "send_to": "jtg-dev"
+  }
+}

@@ -1,0 +1,14 @@
+dbt-core==1.4.1
+dbt-postgres==1.4.1
+dbt-snowflake==1.4.1
+dbt-extractor==0.4.1
+apache-airflow==2.4.3
+airflow-dbt-python==1.0.0
+great_expectations==0.17.8
+apache-airflow-providers-airbyte
+apache-airflow-providers-postgres
+airflow-provider-great-expectations
+apache-airflow-providers-ssh
+apache-airflow-providers-sftp
+apache-airflow-providers-docker
+dynamodb-json==1.3

@@ -1,0 +1,18 @@
+version: 2
+
+macros:
+  - name: extract_email_prefix
+    description: Return email prefix by keep everything before the @ symbol
+    arguments:
+      - name: column
+        type: column name (string)
+        description: Email column to extract prefix from.
+  - name: filter_previous_day
+    description: Filter from midnight of the previous day to the last millisecond of the previous day.
+    arguments:
+      - name: column
+        type: string
+        description: Table's column name will be used to filter.
+      - name: timezone
+        type: string
+        description: Desired timezone to be used for filtering the time period.

@@ -1,0 +1,16 @@
+{
+  "connectionConfiguration": {
+    "ssl": true,
+    "host": "airbyte-infra-sandbox-data-warehouse.re-sandbox.homestoryrewards.com",
+    "port": 5432,
+    "schema": "public",
+    "database": "warehouse_db",
+    "password": "$SECRET_DATA_WAREHOUSE_SANDBOX_POSTGRES_PASSWORD",
+    "username": "$SECRET_DATA_WAREHOUSE_SANDBOX_POSTGRES_USERNAME",
+    "tunnel_method": {
+      "tunnel_method": "NO_TUNNEL"
+    }
+  },
+  "name": "sandbox-data-warehouse",
+  "destinationDefinitionName": "Postgres"
+}

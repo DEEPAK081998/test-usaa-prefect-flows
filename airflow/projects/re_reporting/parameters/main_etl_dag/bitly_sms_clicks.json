@@ -1,0 +1,5 @@
+{
+    "lambda_name": "freedom-bitly_data-re-prod-hourly-refresh-clicks",
+    "wait_for_lambda_response": "True",
+    "schedule": "0 * * * *" 
+}

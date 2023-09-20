@@ -1,0 +1,216 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-157a04e1-2c88-4daa-ba1f-ac76604bc95a",
+  "Name": "SNF-PD-lakeview_goals",
+  "PhysicalTableMap": {
+    "SNF-a0ede79f-ab25-4034-92e1-b434dc7db221": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LAKEVIEW_GOALS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_SOURCEMEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED_PDP",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "VIEWED_SEARCH_RESULTS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "VIEWED_DETAILS_PAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "LOGGED_IN",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ACCOUNT_CREATED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "PROPERTY_SAVED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "SEARCH_SAVED",
+            "Type": "DECIMAL"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-c3a2ba7d-c7cf-4e1c-8d9d-9bd86ccbc430": {
+      "Alias": "lakeview_goals",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SEARCH_SAVED",
+            "NewColumnName": "search_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY_SAVED",
+            "NewColumnName": "property_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCOUNT_CREATED",
+            "NewColumnName": "account_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOGGED_IN",
+            "NewColumnName": "logged_in"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_DETAILS_PAGE",
+            "NewColumnName": "viewed_details_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_SEARCH_RESULTS",
+            "NewColumnName": "viewed_search_results"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED_PDP",
+            "NewColumnName": "homestory_lead_submitted_pdp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED",
+            "NewColumnName": "homestory_lead_submitted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCEMEDIUM",
+            "NewColumnName": "ga_sourcemedium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "CastColumnTypeOperation": {
+            "ColumnName": "homestory_lead_submitted_pdp",
+            "NewColumnType": "INTEGER"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "ga_date",
+              "ga_sourcemedium",
+              "homestory_lead_submitted",
+              "homestory_lead_submitted_pdp",
+              "viewed_search_results",
+              "viewed_details_page",
+              "logged_in",
+              "account_created",
+              "property_saved",
+              "search_saved"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-a0ede79f-ab25-4034-92e1-b434dc7db221"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dvillalon@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

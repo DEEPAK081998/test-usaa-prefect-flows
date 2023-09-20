@@ -1,0 +1,83 @@
+#!/bin/bash
+
+AIRFLOW_VERSION=2_2
+DOCKER_COMPOSE_PROJECT_NAME=airflow-ecs-local-runner-$AIRFLOW_VERSION
+LOCAL_ENV_FILE_PATH="dev.env"
+
+display_help() {
+  # Display Help
+  echo "======================================"
+  echo "   Airflow ECS Local Runner CLI"
+  echo "======================================"
+  echo "Syntax: airflow-ecs-local-env [command]"
+  echo
+  echo "---commands---"
+  echo "help                   Print CLI help"
+  echo "start                  Start Airflow local environment."
+  echo "stop                   Stop Airflow local environment."
+  echo "airflow-init           Initialize airflow local environment."
+  echo "validate-prereqs       Validate pre-reqs installed (docker, docker-compose, python3, pip3)"
+  echo
+}
+
+validate_prereqs() {
+  docker -v >/dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    echo -e "'docker' is not installed or not runnable without sudo. \xE2\x9D\x8C"
+  else
+    echo -e "Docker is Installed. \xE2\x9C\x94"
+  fi
+
+  docker-compose -v >/dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    echo -e "'docker-compose' is not installed. \xE2\x9D\x8C"
+  else
+    echo -e "Docker compose is Installed. \xE2\x9C\x94"
+  fi
+
+  python3 --version >/dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    echo -e "Python3 is not installed. \xE2\x9D\x8C"
+  else
+    echo -e "Python3 is Installed \xE2\x9C\x94"
+  fi
+
+  pip3 --version >/dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    echo -e "Pip3 is not installed. \xE2\x9D\x8C"
+  else
+    echo -e "Pip3 is Installed. \xE2\x9C\x94"
+  fi
+}
+
+if test -f "$LOCAL_ENV_FILE_PATH"; then
+  export $(xargs <$LOCAL_ENV_FILE_PATH)
+fi
+
+_PIP_ADDITIONAL_REQUIREMENTS="$(tr '\n' ' ' <"$SOURCE_CODE_ROOT"/"$LOCAL_AIRFLOW_PROJECT_PATH"/requirements.txt)"
+export _PIP_ADDITIONAL_REQUIREMENTS
+
+case "$1" in
+validate-prereqs)
+  validate_prereqs
+  ;;
+build-image)
+  build_image
+  ;;
+start)
+  docker-compose -p $DOCKER_COMPOSE_PROJECT_NAME -f ./docker/docker-compose.yaml up
+  ;;
+stop)
+  docker-compose -p $DOCKER_COMPOSE_PROJECT_NAME -f ./docker/docker-compose.yaml down
+  ;;
+airflow-init)
+  docker-compose -p $DOCKER_COMPOSE_PROJECT_NAME -f ./docker/docker-compose.yaml up airflow-init
+  ;;
+help)
+  display_help
+  ;;
+*)
+  echo "No command specified, displaying help"
+  display_help
+  ;;
+esac

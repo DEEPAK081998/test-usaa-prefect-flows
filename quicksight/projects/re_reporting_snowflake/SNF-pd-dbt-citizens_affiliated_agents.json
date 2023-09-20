@@ -1,0 +1,426 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-60e72d79-99bf-4e3e-ab4f-1f25799bfca9",
+  "Name": "SNF-pd-dbt-citizens_affiliated_agents",
+  "PhysicalTableMap": {
+    "SNF-02bbef86-6d64-4deb-9725-b053a42bca2e": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "CITIZENS_AFFILIATED_AGENTS",
+        "InputColumns": [
+          {
+            "Name": "CHILD_PROFILE_UUID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PARENT_PROFILE_UUID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "APSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "APSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ASM_REGION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ASM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ASM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RSM_REGION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DSM_DIVISION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TOTAL_REFERRALS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TOTAL_CITIZENS_REFERRALS",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-6346ac8a-5a52-49d4-a5a3-4a743d99a818": {
+      "Alias": "citizens_affiliated_agents",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_CITIZENS_REFERRALS",
+            "NewColumnName": "total_citizens_referrals"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_REFERRALS",
+            "NewColumnName": "total_referrals"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DSM_EMAIL",
+            "NewColumnName": "dsm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DSM_MANAGER_NAME",
+            "NewColumnName": "dsm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DSM_DIVISION",
+            "NewColumnName": "dsm_division"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RSM_EMAIL",
+            "NewColumnName": "rsm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RSM_MANAGER_NAME",
+            "NewColumnName": "rsm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RSM_REGION",
+            "NewColumnName": "rsm_region"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASM_EMAIL",
+            "NewColumnName": "asm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASM_MANAGER_NAME",
+            "NewColumnName": "asm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASM_REGION",
+            "NewColumnName": "asm_region"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PSM_EMAIL",
+            "NewColumnName": "psm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PSM_MANAGER_NAME",
+            "NewColumnName": "psm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "APSM_EMAIL",
+            "NewColumnName": "apsm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "APSM_MANAGER_NAME",
+            "NewColumnName": "apsm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NMLSID",
+            "NewColumnName": "lo_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_EMAIL",
+            "NewColumnName": "lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NAME",
+            "NewColumnName": "lo_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_NAME",
+            "NewColumnName": "brokerage_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARENT_PROFILE_UUID",
+            "NewColumnName": "parent_profile_uuid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CHILD_PROFILE_UUID",
+            "NewColumnName": "child_profile_uuid"
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "asm_region",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "STATE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "rsm_region",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "STATE"
+              }
+            ]
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "child_profile_uuid",
+              "parent_profile_uuid",
+              "agent_name",
+              "agent_email",
+              "brokerage_code",
+              "brokerage_name",
+              "lo_name",
+              "lo_email",
+              "lo_nmlsid",
+              "apsm_manager_name",
+              "apsm_email",
+              "psm_manager_name",
+              "psm_email",
+              "asm_region",
+              "asm_manager_name",
+              "asm_email",
+              "rsm_region",
+              "rsm_manager_name",
+              "rsm_email",
+              "dsm_division",
+              "dsm_manager_name",
+              "dsm_email",
+              "aggregate_id",
+              "total_referrals",
+              "total_citizens_referrals"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-02bbef86-6d64-4deb-9725-b053a42bca2e"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dvillalon@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

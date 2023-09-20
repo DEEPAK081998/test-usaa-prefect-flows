@@ -1,0 +1,17 @@
+{
+  "connectionConfiguration": {
+    "view_id": "227228959",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Client",
+      "client_id": "$SECRET_GOOGLE_ANALYTICS_CLIENT_ID",
+      "access_token": "$SECRET_GOOGLE_ANALYTICS_ACCESS_TOKEN",
+      "client_secret": "$SECRET_GOOGLE_ANALYTICS_CLIENT_SECRET",
+      "refresh_token": "$SECRET_GOOGLE_ANALYTICS_REFRESH_TOKEN"
+    },
+    "custom_reports": "[{\"name\":\"chase-rep60-prod-ga-data\",\"dimensions\":[\"ga:date\",\"ga:pagePath\"],       \"metrics\":[\"ga:sessions\",\"ga:newUsers\",\"ga:avgSessionDuration\",\"ga:pageviews\",\"ga:pageviewsPerSession\",      \"ga:uniquePageviews\",\"ga:bounceRate\",\"ga:entrances\",\"ga:avgTimeOnPage\",\"ga:users\"]},{\"name\":\"chase-rep60-users\",\"dimensions\":[\"ga:date\"],\"metrics\":[\"ga:users\"]}]",
+    "window_in_days": 1
+  },
+  "name": "chase-ga-rep60",
+  "sourceDefinitionName": "Google Analytics"
+}

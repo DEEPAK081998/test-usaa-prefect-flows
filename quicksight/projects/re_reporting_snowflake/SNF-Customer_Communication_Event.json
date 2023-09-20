@@ -1,0 +1,228 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-a74f3f2a-94be-452b-b83b-e61c7fa17b6d",
+  "Name": "SNF-Customer_Communication_Event",
+  "PhysicalTableMap": {
+    "SNF-a74f3f2a-94be-452b-b83b-e61c7fa17b6d": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FCT_CUST_COM_EVENT",
+        "InputColumns": [
+          {
+            "Name": "LEAD_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "WAREHOUSE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "JOIN_FIELD",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_MEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SYSTEM_EVENT_TIMESTAMP",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "EVENT_TIMESTAMP",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "EVENT_SUBJECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_CONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_PRIORITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_TAGS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_SOURCE_URL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_RESPONSE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_JOURNEY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RELATED_EVENTS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_STATUS",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-a74f3f2a-94be-452b-b83b-e61c7fa17b6d": {
+      "Alias": "fct_cust_com_event",
+      "Source": {
+        "PhysicalTableId": "SNF-a74f3f2a-94be-452b-b83b-e61c7fa17b6d"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_STATUS",
+            "NewColumnName": "event_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RELATED_EVENTS",
+            "NewColumnName": "related_events"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_JOURNEY",
+            "NewColumnName": "customer_journey"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_RESPONSE",
+            "NewColumnName": "event_response"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_SOURCE_URL",
+            "NewColumnName": "event_source_url"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_TAGS",
+            "NewColumnName": "event_tags"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_PRIORITY",
+            "NewColumnName": "event_priority"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_CONTENT",
+            "NewColumnName": "event_content"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_SUBJECT",
+            "NewColumnName": "event_subject"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_TIMESTAMP",
+            "NewColumnName": "event_timestamp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SYSTEM_EVENT_TIMESTAMP",
+            "NewColumnName": "system_event_timestamp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_TYPE",
+            "NewColumnName": "event_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_MEDIUM",
+            "NewColumnName": "event_medium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_SOURCE",
+            "NewColumnName": "event_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "JOIN_FIELD",
+            "NewColumnName": "join_field"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "WAREHOUSE",
+            "NewColumnName": "warehouse"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

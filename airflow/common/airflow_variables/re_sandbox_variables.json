@@ -1,0 +1,21 @@
+{
+  "REP-292": {
+    "bucket": "mdp-sandbox-bucket",
+    "contact_list_id": "2d5ae0d5-6163-44f3-87fe-e630684c67b4",
+    "postgres_conn_id": "postgres_sandbox",
+    "postgres_secret_id": "airbyte-infra-sandbox-airbyte-data-warehouse-password",
+    "sendgrid_secret_id": "SendGridAPIKeySecret-jhKakqxdoAM3",
+    "sftp_conn_id": "sftp_homestory",
+    "sftp_secret_id": "homestory_sftp_private_key_pennymac"
+  },
+  "mdp-s3-bucket": "mdp-sandbox-bucket",
+  "re_reporting_dag_schedule": "0 0 * * *",
+  "re_reporting_dag_weekly_dbt": "@weekly",
+  "sns_task_failure_alert_topic_arn": "arn:aws:sns:us-east-1:429533234373:datapipeline-sandbox-errors-topic",
+  "partner_email": {
+    "s3_bucket_name": "mdp-utils-sandbox-partner-email-bucket",
+    "postmark_api_secret_id": "PostmarkTokenSecret-9DEedrBMVxpO",
+    "send_to": "dev",
+    "limit": 1
+  }
+}

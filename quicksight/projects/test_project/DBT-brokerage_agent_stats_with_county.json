@@ -1,0 +1,72 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "6a5ce79a-93cf-4587-8049-255e34123dc0",
+    "Name": "DBT-brokerage_agent_stats_with_county",
+    "PhysicalTableMap": {
+        "6a5ce79a-93cf-4587-8049-255e34123dc0": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "brokerage_agent_stats_with_county",
+                "InputColumns": [
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "county",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "cbmsa",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragecount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "leadcount",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

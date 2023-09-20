@@ -1,0 +1,16 @@
+
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_current_lead_statuses
+  - name: raw_lead_inserts
+  - name: raw_lead_status_sort_order
+  - name: raw_lead_status_updates
+  - name: raw_lead_traffic_sources
+  - name: raw_lead_updates
+  - name: raw_leads
+  - name: raw_leads_data
+  - name: raw_normalized_lead_locations
+  - name: raw_normalized_lead_zips

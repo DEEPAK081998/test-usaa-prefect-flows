@@ -1,0 +1,84 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "e45a5676-a607-4515-a725-577ec32b06f7",
+    "Name": "DBT-agent_zip_count",
+    "PhysicalTableMap": {
+        "e45a5676-a607-4515-a725-577ec32b06f7": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "agent_zip_count",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentfirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentlastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "eligibility_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentphone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragecode",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zipcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

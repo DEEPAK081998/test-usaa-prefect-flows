@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: zillow_lo_report
+    columns:
+      - name: enrollmentdate
+        tests:
+          - data_freshness: {days: 3, tags: ['weekly_reports']}

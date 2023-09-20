@@ -1,0 +1,84 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "alliant_invites_sg_",
+  "operationIds": [
+    "ca855be1-2c0c-462a-885e-3fdfcd78468e"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "messages",
+          "jsonSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "msg_id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "subject": {
+                "type": "string"
+              },
+              "to_email": {
+                "type": "string"
+              },
+              "from_email": {
+                "type": "string"
+              },
+              "opens_count": {
+                "type": "integer"
+              },
+              "clicks_count": {
+                "type": "integer"
+              },
+              "last_event_time": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "msg_id"
+            ]
+          ],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "append",
+          "primaryKey": [
+            [
+              "msg_id"
+            ]
+          ],
+          "aliasName": "messages",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_alliant-daily-invitations-sg.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

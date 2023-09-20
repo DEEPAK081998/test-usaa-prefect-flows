@@ -1,0 +1,9 @@
+{
+  "connectionConfiguration": {
+    "auth_token": "$SECRET_TWILIO_HOMESTORY_AUTH_TOKEN",
+    "start_date": "2022-05-02T06:00:00Z",
+    "account_sid": "$SECRET_TWILIO_HOMESTORY_ACCOUNT_SID"
+  },
+  "name": "Twilio - HomeStory",
+  "sourceDefinitionName": "Twilio"
+}

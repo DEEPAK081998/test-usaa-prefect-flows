@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "164114027",
+    "start_date": "2021-09-09",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"alliant-rep60-users\",\"dimensions\":[\"ga:date\"],\"metrics\":[\"ga:users\"]}]",
+    "window_in_days": 1
+  },
+  "name": "alliant-rep60-user-counts",
+  "sourceDefinitionName": "Google Analytics"
+}

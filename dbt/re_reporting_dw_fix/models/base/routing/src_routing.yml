@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_prod_routing_api_stack_smeventstable334ccec7_nc661

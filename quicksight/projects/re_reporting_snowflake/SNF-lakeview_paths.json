@@ -1,0 +1,238 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-1843a4d7-e995-4900-a276-5f177fc237be",
+  "Name": "SNF-lakeview_paths",
+  "PhysicalTableMap": {
+    "SNF-771116cf-abef-44f5-9871-13821cde0fb9": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LAKEVIEW_PATHS",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_PAGEPATH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_ENTRANCES",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_PAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_BOUNCERATE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_AVGTIMEONPAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_UNIQUEPAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_AVGSESSIONDURATION",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_PAGEVIEWSPERSESSION",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-771116cf-abef-44f5-9871-13821cde0fb9": {
+      "Alias": "lakeview_paths",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEVIEWSPERSESSION",
+            "NewColumnName": "ga_pageviewspersession"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGSESSIONDURATION",
+            "NewColumnName": "ga_avgsessionduration"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_UNIQUEPAGEVIEWS",
+            "NewColumnName": "ga_uniquepageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGTIMEONPAGE",
+            "NewColumnName": "ga_avgtimeonpage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_BOUNCERATE",
+            "NewColumnName": "ga_bouncerate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEVIEWS",
+            "NewColumnName": "ga_pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ENTRANCES",
+            "NewColumnName": "ga_entrances"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SESSIONS",
+            "NewColumnName": "ga_sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_NEWUSERS",
+            "NewColumnName": "ga_newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_USERS",
+            "NewColumnName": "ga_users"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEPATH",
+            "NewColumnName": "ga_pagepath"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "id",
+              "ga_date",
+              "ga_pagepath",
+              "ga_users",
+              "ga_newusers",
+              "ga_sessions",
+              "ga_entrances",
+              "ga_pageviews",
+              "ga_bouncerate",
+              "ga_avgtimeonpage",
+              "ga_uniquepageviews",
+              "ga_avgsessionduration",
+              "ga_pageviewspersession",
+              "updated_at"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-771116cf-abef-44f5-9871-13821cde0fb9"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

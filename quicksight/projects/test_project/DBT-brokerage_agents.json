@@ -1,0 +1,100 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "47343cf1-d07e-488a-8fd5-69848063e217",
+    "Name": "DBT-brokerage_agents",
+    "PhysicalTableMap": {
+        "47343cf1-d07e-488a-8fd5-69848063e217": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "brokerage_agents",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentfirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentlastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "eligibility_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentphone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragecode",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "full_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "county",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "leadcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentclosedcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

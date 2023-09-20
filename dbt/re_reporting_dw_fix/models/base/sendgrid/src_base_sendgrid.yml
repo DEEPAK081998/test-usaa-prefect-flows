@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_pmc_loinvites_messages
+    freshness:
+      warn_after:
+        count: 8
+        period: hour
+      error_after:
+        count: 3
+        period: day
+    loaded_at_field: "last_event_time::timestamp"

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dynamodb_invite_table
+    columns:
+      - name: invitation_id
+        tests:
+          - unique
+          - not_null

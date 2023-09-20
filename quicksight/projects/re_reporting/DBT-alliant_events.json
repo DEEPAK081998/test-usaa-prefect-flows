@@ -1,0 +1,68 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "24ea66dc-96a4-447d-a799-1f0b7debd62c",
+    "Name": "DBT-alliant_events",
+    "PhysicalTableMap": {
+        "24ea66dc-96a4-447d-a799-1f0b7debd62c": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "alliant_events",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_eventlabel",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_eventaction",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_eventcategory",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_totalevents",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

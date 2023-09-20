@@ -1,0 +1,32 @@
+{
+  "tags": [
+    "partner_email",
+    "pennymac",
+    "enrollments"
+  ],
+  "schedule": "0 14 * * 1,4",
+  "partner_email": {
+    "report_type": "pennymac_unassigned-enrollments_weekly",
+    "email_tag": "pennymac_unassigned-enrollments_weekly",
+    "email_subject": "HomeStory - Pennymac Unassigned Enrollments",
+    "email_from": "partner-reporting@homestoryrewards.com",
+    "reply_to": "referrals@homestoryrewards.com",
+    "email_cc": "gloureiro@homestoryrewards.com,bi@homestoryrewards.com",
+    "manifest_path": "plugins/partner_email/manifests/pennymac_unassigned-enrollments_weekly.csv",
+    "html_template_name": "plugins/partner_email/html_templates/pennymac_unassigned-enrollments_weekly.html",
+    "attachment_name_template": "homestory_pennymac_unassigned-enrollments_weekly_{date}.csv",
+    "columns_order": [
+      "id",
+      "date",
+      "client_name",
+      "client_email",
+      "client_phone",
+      "lo_name",
+      "lo_phone",
+      "lo_email",
+      "nmlsid",
+      "major_status",
+      "transaction_type"
+    ]
+  }
+}

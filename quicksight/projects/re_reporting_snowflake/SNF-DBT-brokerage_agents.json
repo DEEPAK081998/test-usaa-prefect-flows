@@ -1,0 +1,198 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-47343cf1-d07e-488a-8fd5-69848063e217",
+  "Name": "SNF-DBT-brokerage_agents",
+  "PhysicalTableMap": {
+    "SNF-47343cf1-d07e-488a-8fd5-69848063e217": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BROKERAGE_AGENTS",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENTFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTPHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COUNTY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEADCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENTCLOSEDCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-47343cf1-d07e-488a-8fd5-69848063e217": {
+      "Alias": "brokerage_agents",
+      "Source": {
+        "PhysicalTableId": "SNF-47343cf1-d07e-488a-8fd5-69848063e217"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTCLOSEDCOUNT",
+            "NewColumnName": "agentclosedcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT",
+            "NewColumnName": "leadcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COUNTY",
+            "NewColumnName": "county"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FULL_NAME",
+            "NewColumnName": "full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTPHONE",
+            "NewColumnName": "agentphone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTEMAIL",
+            "NewColumnName": "agentemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTNAME",
+            "NewColumnName": "agentname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTLASTNAME",
+            "NewColumnName": "agentlastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFIRSTNAME",
+            "NewColumnName": "agentfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('public', 'raw_partner_hierarchy') }}

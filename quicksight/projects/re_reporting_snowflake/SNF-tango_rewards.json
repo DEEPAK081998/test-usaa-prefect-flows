@@ -1,0 +1,294 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-3213aafc-c940-4294-8cea-0fb373197a5f",
+  "Name": "SNF-tango_rewards",
+  "PhysicalTableMap": {
+    "SNF-37ff3d84-b829-4e5d-b4d2-6cc56b379297": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "TANGO_REWARDS",
+        "InputColumns": [
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATEISSUED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARD_RECEIVED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "CURRENCY_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERENCEORDERID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERENCELINEITEMID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LSU_REFERENCE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LSU_VALUE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LSU_REWARD_AMOUNT",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-30217660-cf2c-4240-bf1e-7355bb177f9a": {
+      "Alias": "tango_rewards",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_REWARD_AMOUNT",
+            "NewColumnName": "lsu_reward_amount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAMPAIGN",
+            "NewColumnName": "campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_VALUE",
+            "NewColumnName": "lsu_value"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_REFERENCE_ID",
+            "NewColumnName": "lsu_reference_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERENCELINEITEMID",
+            "NewColumnName": "referencelineitemid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERENCEORDERID",
+            "NewColumnName": "referenceorderid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENCY_CODE",
+            "NewColumnName": "currency_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARD_RECEIVED",
+            "NewColumnName": "reward_received"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONE",
+            "NewColumnName": "phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATEISSUED",
+            "NewColumnName": "dateissued"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NAME",
+            "NewColumnName": "name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROLE",
+            "NewColumnName": "role"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "aggregate_id",
+              "role",
+              "lead_id",
+              "name",
+              "email",
+              "dateissued",
+              "phone",
+              "reward_received",
+              "currency_code",
+              "referenceorderid",
+              "referencelineitemid",
+              "lsu_reference_id",
+              "lsu_value",
+              "campaign",
+              "lsu_reward_amount"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-37ff3d84-b829-4e5d-b4d2-6cc56b379297"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    }
+  ]
+}

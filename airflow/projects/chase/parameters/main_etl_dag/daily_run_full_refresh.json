@@ -1,0 +1,17 @@
+{
+  "schedule": "0 7 */1 * *",
+  "tags": [
+    "dbt",
+    "airbyte",
+    "chase"
+  ],
+  "connection_ids": [
+    "3a345a5f-b273-4efd-abf2-42454956590e"
+  ],
+  "dbt_project_path": "s3://mdp-prod-chase-bucket/dbt/projects/chase.zip",
+  "dbt_conn_id": "warehouse_db",
+  "dbt_extra_kwargs": {
+    "full_refresh": true,
+    "threads": 10
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "14e4fc2b-a017-4d38-a43f-6e8ad149ce88",
+    "Name": "DBT-sofi_sendgrid_totals",
+    "PhysicalTableMap": {
+        "14e4fc2b-a017-4d38-a43f-6e8ad149ce88": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "sofi_sendgrid_totals",
+                "InputColumns": [
+                    {
+                        "Name": "to_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "first_email_event",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "total_opens",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "total_clicks",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "email_sent",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "unique_campaign_open",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "unique_campaign_click",
+                        "Type": "BIT"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

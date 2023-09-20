@@ -1,0 +1,10 @@
+resource_name: Tango
+definition_type: source
+definition_id: 3165c00f-4655-427e-a925-f6fe7e263e14
+definition_image: airbyte/source-tango
+definition_version: latest
+configuration:
+  start_time: '2022-12-22T00:00:00.000Z'
+  platform_name: ${SECRET_TANGO_PLATFORM_NAME}
+  tango_env_endpoint: https://integration-api.tangocard.com/raas/v2/
+  platform_access_key: ${SECRET_TANGO_PLATFORM_ACCESS_KEY}

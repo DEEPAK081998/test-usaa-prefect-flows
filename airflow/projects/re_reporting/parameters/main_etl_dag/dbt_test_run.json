@@ -1,0 +1,14 @@
+{
+  "tags": [
+    "dbt",
+    "dboling",
+    "re_reporting"
+  ],
+  "dbt_project_path": "s3://mdp-prod-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_conn_id": "warehouse_db",
+  "run_dbt": false,
+  "run_dbt_test": true,
+  "run_dbt_source_freshness": true,
+  "dbt_test_extra_kwargs": {},
+  "dbt_source_freshness_extra_kwargs": {}
+}

@@ -1,0 +1,838 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-c491d285-de5b-4097-94b0-201fc925ea26",
+  "Name": "SNF-DBT-fct_portal_finance",
+  "PhysicalTableMap": {
+    "SNF-c491d285-de5b-4097-94b0-201fc925ea26": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FCT_PORTAL_FINANCE",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "DATE_MARKED_CLOSED_FINAL",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CLIENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RCNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RCEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_OFFICE_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_MOBILE_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRANSACTION_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANK_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TSTATE_FINAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LDSTATE1",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LDSTATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRANSACTIONSTATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLOSEDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LSU_CLOSE_DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SALEPRICE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENT_COMMISSION",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "COMMISSION_PERCENT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LENDERCLOSEDWITH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DOCUMENTATION_RECEIVED",
+            "Type": "BIT"
+          },
+          {
+            "Name": "REVIEWER1NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER1DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REVIEWER2NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER2DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REVIEWER1DELAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "REFERRALFEEDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REFERRALAMOUNTRECEIVED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BANKACCOUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DIFFERENCE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "EXPECTED_FEE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REFERRALFEEDELAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "REBATE_AMOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "STATE_RESTRICTIONS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARDPAIDDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REBATE_PAID",
+            "Type": "BIT"
+          },
+          {
+            "Name": "REWARDTYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARDAMOUNT_FINAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDERID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDERNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MAJOR_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "HB_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "MAX_UPADATE_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REWARD_READY_DATE_FINAL",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REWARD_READY_ORDERED_DATE_FINAL",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "MAX_REWARD_CREATED_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "DOCUMENTATION_RECEIVED_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "FEEDATE1",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FEEDATE2",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REFERRAL_FEE_1",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERRAL_FEE_2",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROW_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REFERRAL_FEE_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATEISSUED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARD_RECEIVED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "CURRENCY_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERENCEORDERID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERENCELINEITEMID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LSU_REFERENCE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LSU_VALUE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LSU_REWARD_AMOUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARDAMOUNT_FINAL_REWARDS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANK_NAME_REWARDS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_NAME",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-c491d285-de5b-4097-94b0-201fc925ea26": {
+      "Alias": "fct_portal_finance",
+      "Source": {
+        "PhysicalTableId": "SNF-c491d285-de5b-4097-94b0-201fc925ea26"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_NAME",
+            "NewColumnName": "brokerage_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_NAME_REWARDS",
+            "NewColumnName": "bank_name_rewards"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDAMOUNT_FINAL_REWARDS",
+            "NewColumnName": "rewardamount_final_rewards"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_REWARD_AMOUNT",
+            "NewColumnName": "lsu_reward_amount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAMPAIGN",
+            "NewColumnName": "campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_VALUE",
+            "NewColumnName": "lsu_value"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_REFERENCE_ID",
+            "NewColumnName": "lsu_reference_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERENCELINEITEMID",
+            "NewColumnName": "referencelineitemid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERENCEORDERID",
+            "NewColumnName": "referenceorderid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENCY_CODE",
+            "NewColumnName": "currency_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARD_RECEIVED",
+            "NewColumnName": "reward_received"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONE",
+            "NewColumnName": "phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATEISSUED",
+            "NewColumnName": "dateissued"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NAME",
+            "NewColumnName": "name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROLE",
+            "NewColumnName": "role"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRAL_FEE_TYPE",
+            "NewColumnName": "referral_fee_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROW_ID",
+            "NewColumnName": "row_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRAL_FEE_2",
+            "NewColumnName": "referral_fee_2"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRAL_FEE_1",
+            "NewColumnName": "referral_fee_1"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FEEDATE2",
+            "NewColumnName": "feedate2"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FEEDATE1",
+            "NewColumnName": "feedate1"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DOCUMENTATION_RECEIVED_DATE",
+            "NewColumnName": "documentation_received_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAX_REWARD_CREATED_DATE",
+            "NewColumnName": "max_reward_created_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARD_READY_ORDERED_DATE_FINAL",
+            "NewColumnName": "reward_ready_ordered_date_final"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARD_READY_DATE_FINAL",
+            "NewColumnName": "reward_ready_date_final"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAX_UPADATE_DATE",
+            "NewColumnName": "max_upadate_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLDATE",
+            "NewColumnName": "enrolldate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HB_STATUS",
+            "NewColumnName": "hb_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAJOR_STATUS",
+            "NewColumnName": "major_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDERNAME",
+            "NewColumnName": "sendername"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDERID",
+            "NewColumnName": "senderid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDAMOUNT_FINAL",
+            "NewColumnName": "rewardamount_final"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDTYPE",
+            "NewColumnName": "rewardtype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REBATE_PAID",
+            "NewColumnName": "rebate_paid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDPAIDDATE",
+            "NewColumnName": "rewardpaiddate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE_RESTRICTIONS",
+            "NewColumnName": "state_restrictions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REBATE_AMOUNT",
+            "NewColumnName": "rebate_amount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALFEEDELAY",
+            "NewColumnName": "referralfeedelay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EXPECTED_FEE",
+            "NewColumnName": "expected_fee"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DIFFERENCE",
+            "NewColumnName": "difference"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANKACCOUNT",
+            "NewColumnName": "bankaccount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALAMOUNTRECEIVED",
+            "NewColumnName": "referralamountreceived"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALFEEDATE",
+            "NewColumnName": "referralfeedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER1DELAY",
+            "NewColumnName": "reviewer1delay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER2DATE",
+            "NewColumnName": "reviewer2date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER2NAME",
+            "NewColumnName": "reviewer2name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER1DATE",
+            "NewColumnName": "reviewer1date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER1NAME",
+            "NewColumnName": "reviewer1name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DOCUMENTATION_RECEIVED",
+            "NewColumnName": "documentation_received"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LENDERCLOSEDWITH",
+            "NewColumnName": "lenderclosedwith"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COMMISSION_PERCENT",
+            "NewColumnName": "commission_percent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_COMMISSION",
+            "NewColumnName": "agent_commission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SALEPRICE",
+            "NewColumnName": "saleprice"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSU_CLOSE_DATE",
+            "NewColumnName": "lsu_close_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLOSEDATE",
+            "NewColumnName": "closedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ADDRESS",
+            "NewColumnName": "address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTIONSTATE",
+            "NewColumnName": "transactionstate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LDSTATE",
+            "NewColumnName": "ldstate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LDSTATE1",
+            "NewColumnName": "ldstate1"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TSTATE_FINAL",
+            "NewColumnName": "tstate_final"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_NAME",
+            "NewColumnName": "bank_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTION_TYPE",
+            "NewColumnName": "transaction_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_MOBILE_PHONE",
+            "NewColumnName": "rc_mobile_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_OFFICE_PHONE",
+            "NewColumnName": "rc_office_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RCEMAIL",
+            "NewColumnName": "rcemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RCNAME",
+            "NewColumnName": "rcname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FULL_NAME",
+            "NewColumnName": "full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONE",
+            "NewColumnName": "agent_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_PHONE",
+            "NewColumnName": "client_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_EMAIL",
+            "NewColumnName": "client_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_NAME",
+            "NewColumnName": "client_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE_MARKED_CLOSED_FINAL",
+            "NewColumnName": "date_marked_closed_final"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

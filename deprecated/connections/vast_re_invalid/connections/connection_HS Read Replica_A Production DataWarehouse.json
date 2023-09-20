@@ -1,0 +1,1981 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "null",
+  "prefix": "raw_import_",
+  "operationIds": [
+    "7bd08456-d766-4af9-9a93-3c75b2e87235"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "agent_assignment_statuses",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "broker_id": {
+                "type": "string"
+              },
+              "agent_name": {
+                "type": "string"
+              },
+              "agent_email": {
+                "type": "string"
+              },
+              "agent_phone": {
+                "type": "string"
+              },
+              "agent_external_id": {
+                "type": "string"
+              },
+              "cancellation_reason": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "agent_assignment_statuses",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "brokerage_assignments",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "brokerage_code": {
+                "type": "string"
+              },
+              "lead_aggregate_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "brokerage_assignments",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "brokerage_coverage_zips",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "county": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "brokerage_code": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "brokerage_coverage_zips",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "brokerage_qualifications",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "qualification": {
+                "type": "string"
+              },
+              "brokerage_code": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "brokerage_qualifications",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "brokerage_user",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "email": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "brokerage_code": {
+                "type": "string"
+              },
+              "notify_on_assignment": {
+                "type": "boolean"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "brokerage_user",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "brokerages",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string"
+              },
+              "aggregate_id": {
+                "type": "string"
+              },
+              "broker_network": {
+                "type": "string"
+              },
+              "brokerage_code": {
+                "type": "string"
+              },
+              "local_timezone": {
+                "type": "string"
+              },
+              "use_agent_zips": {
+                "type": "boolean"
+              },
+              "click_to_call_enabled": {
+                "type": "boolean"
+              },
+              "closing_hours_minutes_of_day": {
+                "type": "number"
+              },
+              "opening_hours_minutes_of_day": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "brokerages",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "cbsa_locations",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "st": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "cbmsa": {
+                "type": "string"
+              },
+              "county": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [],
+          "aliasName": "cbsa_locations",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "current_assignments",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              },
+              "profile_aggregate_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "current_assignments",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "current_lead_statuses",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "comment": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "current_lead_statuses",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "current_notes",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "private": {
+                "type": "boolean"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "current_notes",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "databasechangelog",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "string"
+              },
+              "author": {
+                "type": "string"
+              },
+              "labels": {
+                "type": "string"
+              },
+              "md5sum": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "contexts": {
+                "type": "string"
+              },
+              "exectype": {
+                "type": "string"
+              },
+              "filename": {
+                "type": "string"
+              },
+              "liquibase": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "dateexecuted": {
+                "type": "string"
+              },
+              "deployment_id": {
+                "type": "string"
+              },
+              "orderexecuted": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [],
+          "aliasName": "databasechangelog",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "databasechangeloglock",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "locked": {
+                "type": "boolean"
+              },
+              "lockedby": {
+                "type": "string"
+              },
+              "lockgranted": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "databasechangeloglock",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "lead_inserts",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "body": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "aggregate_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "lead_inserts",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "lead_status_sort_order",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "sort_order": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "lead_status_sort_order",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "lead_status_updates",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "comment": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "update_id": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "lead_status_updates",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "lead_traffic_sources",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "term": {
+                "type": "string"
+              },
+              "medium": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "campaign": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "lead_traffic_sources",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "lead_updates",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "updates": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "lead_updates",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "leads",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "bank_id": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "prequal": {
+                "type": "boolean"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "rebate_paid": {
+                "type": "boolean"
+              },
+              "aggregate_id": {
+                "type": "string"
+              },
+              "rc_assignable": {
+                "type": "boolean"
+              },
+              "sell_location": {
+                "type": "string"
+              },
+              "funds_received": {
+                "type": "boolean"
+              },
+              "contact_methods": {
+                "type": "string"
+              },
+              "selling_address": {
+                "type": "string"
+              },
+              "current_location": {
+                "type": "string"
+              },
+              "transaction_type": {
+                "type": "string"
+              },
+              "purchase_location": {
+                "type": "string"
+              },
+              "consumer_confirmed": {
+                "type": "boolean"
+              },
+              "brokerage_contacted": {
+                "type": "boolean"
+              },
+              "purchase_time_frame": {
+                "type": "number"
+              },
+              "documentation_received": {
+                "type": "boolean"
+              },
+              "price_range_lower_bound": {
+                "type": "number"
+              },
+              "price_range_upper_bound": {
+                "type": "number"
+              },
+              "purchase_location_detail": {
+                "type": "string"
+              },
+              "referral_fee_transaction": {
+                "type": "boolean"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "leads",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "leads_data",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "updated": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "leads_data",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "listings",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "data": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "vast_id": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "user_profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "listings",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "normalized_lead_locations",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "sell_state": {
+                "type": "string"
+              },
+              "purchase_state": {
+                "type": "string"
+              },
+              "normalized_sell_location": {
+                "type": "string"
+              },
+              "normalized_purchase_location": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "normalized_lead_locations",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "note_updates",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "note_updates",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "partner_user_profiles",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "phones": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              },
+              "aggregate_id": {
+                "type": "string"
+              },
+              "brokerage_code": {
+                "type": "string"
+              },
+              "local_timezone": {
+                "type": "string"
+              },
+              "eligibility_status": {
+                "type": "string"
+              },
+              "training_completed": {
+                "type": "string"
+              },
+              "accepts_referrals_on_sundays": {
+                "type": "boolean"
+              },
+              "closing_hours_minutes_of_day": {
+                "type": "number"
+              },
+              "opening_hours_minutes_of_day": {
+                "type": "number"
+              },
+              "accepts_referrals_on_saturdays": {
+                "type": "boolean"
+              },
+              "receives_referrals_via_text_message": {
+                "type": "boolean"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "partner_user_profiles",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "partner_user_relationships",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "child_profile_id": {
+                "type": "number"
+              },
+              "parent_profile_id": {
+                "type": "number"
+              },
+              "child_profile_uuid": {
+                "type": "string"
+              },
+              "parent_profile_uuid": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "partner_user_relationships",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "partner_user_roles",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "user_profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "partner_user_roles",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "profile_coverage_zips",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "zip": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "county": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "profile_coverage_zips",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "profile_languages",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "profile_languages",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "profile_nmlsids",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "nmlsid": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "profile_nmlsids",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "profile_unavailable_dates",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "date_end": {
+                "type": "string"
+              },
+              "date_start": {
+                "type": "string"
+              },
+              "profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "profile_unavailable_dates",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "property_search_statuses",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "category": {
+                "type": "string"
+              },
+              "update_id": {
+                "type": "string"
+              },
+              "external_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "property_search_statuses",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "reminders",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "data": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "due_date": {
+                "type": "string"
+              },
+              "reminder": {
+                "type": "string"
+              },
+              "reminder_id": {
+                "type": "string"
+              },
+              "completion_status": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "reminders",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "saved_searches",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "params": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string"
+              },
+              "user_profile_id": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "saved_searches",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "user_assignments",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              },
+              "lead_id": {
+                "type": "number"
+              },
+              "profile": {
+                "type": "string"
+              },
+              "partner_id": {
+                "type": "string"
+              },
+              "profile_aggregate_id": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "namespace": "public"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "user_assignments",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": null,
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_HS Read Replica.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

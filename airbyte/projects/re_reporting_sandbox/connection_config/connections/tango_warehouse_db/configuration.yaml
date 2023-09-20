@@ -1,0 +1,140 @@
+definition_type: connection
+resource_name: Tango <> Warehouse DB
+source_configuration_path: sources/tango/configuration.yaml
+destination_configuration_path: destinations/warehouse_db/configuration.yaml
+configuration:
+  sync_catalog:
+    streams:
+    - stream:
+        name: line_items
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            etid:
+              type: string
+            utid:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                lastName:
+                  type: string
+                firstName:
+                  type: string
+            status:
+              type: string
+            recipient:
+              type: object
+              properties:
+                email:
+                  type: string
+                lastName:
+                  type: string
+                firstName:
+                  type: string
+            dateIssued:
+              type: string
+            lineNumber:
+              type: integer
+            rewardName:
+              type: string
+            emailStatus:
+              type: string
+            orderSource:
+              type: string
+            orderStatus:
+              type: string
+            amountIssued:
+              type: object
+              properties:
+                fee:
+                  type: number
+                total:
+                  type: number
+                value:
+                  type: number
+                currencyCode:
+                  type: string
+                exchangeRate:
+                  type: number
+            accountNumber:
+              type: string
+            expirationDate:
+              type: string
+            referenceOrderID:
+              type: string
+            accountIdentifier:
+              type: string
+            customerIdentifier:
+              type: string
+            referenceLineItemID:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - referenceLineItemID
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - referenceLineItemID
+        alias_name: line_items
+        selected: true
+    - stream:
+        name: customers
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            status:
+              type: string
+            accounts:
+              type: array
+              items:
+              - type: object
+                properties:
+                  status:
+                    type: string
+                  createdAt:
+                    type: string
+                  displayName:
+                    type: string
+                  accountNumber:
+                    type: string
+                  accountIdentifier:
+                    type: string
+            createdAt:
+              type: string
+            displayName:
+              type: string
+            customerIdentifier:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - customerIdentifier
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - customerIdentifier
+        alias_name: customers
+        selected: true
+  status: active
+  namespace_definition: source
+  namespace_format: ${SOURCE_NAMESPACE}
+  prefix: ''
+  schedule_type: manual
+  operations:
+  - name: Normalization
+    operator_configuration:
+      operator_type: normalization
+      normalization:
+        option: basic

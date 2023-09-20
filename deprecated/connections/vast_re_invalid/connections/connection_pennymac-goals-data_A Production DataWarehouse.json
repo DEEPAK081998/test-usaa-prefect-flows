@@ -1,0 +1,132 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "20085083-0683-410c-8482-f0b3b78ce990"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "pennymac-ga-goals",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_goal1Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal3Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal4Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal5Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal6Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal7Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal8Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal9Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal10Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal11Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "pennymac_ga_goals",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_pennymac-goals-data.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

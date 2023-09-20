@@ -1,0 +1,104 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "8f76cec9-c950-4b4c-a6d2-0f0c6f165504",
+    "Name": "DBT-agent_county_coverage",
+    "PhysicalTableMap": {
+        "8f76cec9-c950-4b4c-a6d2-0f0c6f165504": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "agent_county_coverage",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentfirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentlastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "eligibility_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentphone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragecode",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentcountycoverage",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "county",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "st",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zipsincounty",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "partner_updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

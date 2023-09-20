@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "262726744",
+    "start_date": "2021-01-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"sofi-test-metrics-data\",\"dimensions\":[\"ga:date\",\"ga:pagePath\"],   \"metrics\":[\"ga:sessions\",\"ga:newUsers\",\"ga:avgSessionDuration\",\"ga:pageviews\",\"ga:pageviewsPerSession\",  \"ga:uniquePageviews\",\"ga:bounceRate\",\"ga:entrances\",\"ga:avgTimeOnPage\"]},  {\"name\":\"sofi-daily-prod-ga-events\",\"dimensions\":[\"ga:date\",\"ga:EventLabel\",\"ga:EventCategory\",\"ga:EventAction\"],\"metrics\":[\"ga:totalEvents\",\"ga:uniqueEvents\"]}]",
+    "window_in_days": 90
+  },
+  "name": "sofi-test-metrics",
+  "sourceDefinitionName": "Google Analytics"
+}

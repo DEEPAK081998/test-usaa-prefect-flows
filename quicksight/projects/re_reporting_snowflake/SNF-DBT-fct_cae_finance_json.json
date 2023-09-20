@@ -1,0 +1,348 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-c197b4c6-eef5-4667-ba3a-6da89e3856e5",
+  "Name": "SNF-DBT-fct_cae_finance_json",
+  "PhysicalTableMap": {
+    "SNF-c197b4c6-eef5-4667-ba3a-6da89e3856e5": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FCT_CAE_FINANCE_JSON",
+        "InputColumns": [
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REFERRALAMOUNTRECEIVED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REFERRALFEEDATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BANKACCOUNT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATEDATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "SALEPRICE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRANSACTIONSTATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTCOMMISSIONAMOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UPDATEDFIELD",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "COMMISSIONPERCENT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BUYTRANSACTION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARDTYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDERID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDERNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REWARDCREATEDDATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REBATETYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER1ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FINALREVIEWNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FINALREVIEWDATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FINALREVIEWID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER1NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER1DATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REVIEWER2ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER2NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REVIEWER2DATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REWARDPAIDDATE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TRANSACTIONCLOSEDATE_UNW",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "TRANSACTIONCLOSEDATE",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-c197b4c6-eef5-4667-ba3a-6da89e3856e5": {
+      "Alias": "fct_cae_finance_json",
+      "Source": {
+        "PhysicalTableId": "SNF-c197b4c6-eef5-4667-ba3a-6da89e3856e5"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTIONCLOSEDATE",
+            "NewColumnName": "transactionclosedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTIONCLOSEDATE_UNW",
+            "NewColumnName": "transactionclosedate_unw"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDPAIDDATE",
+            "NewColumnName": "rewardpaiddate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER2DATE",
+            "NewColumnName": "reviewer2date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER2NAME",
+            "NewColumnName": "reviewer2name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER2ID",
+            "NewColumnName": "reviewer2id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER1DATE",
+            "NewColumnName": "reviewer1date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER1NAME",
+            "NewColumnName": "reviewer1name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FINALREVIEWID",
+            "NewColumnName": "finalreviewid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FINALREVIEWDATE",
+            "NewColumnName": "finalreviewdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FINALREVIEWNAME",
+            "NewColumnName": "finalreviewname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REVIEWER1ID",
+            "NewColumnName": "reviewer1id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REBATETYPE",
+            "NewColumnName": "rebatetype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDCREATEDDATE",
+            "NewColumnName": "rewardcreateddate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDERNAME",
+            "NewColumnName": "sendername"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDERID",
+            "NewColumnName": "senderid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REWARDTYPE",
+            "NewColumnName": "rewardtype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BUYTRANSACTION",
+            "NewColumnName": "buytransaction"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COMMISSIONPERCENT",
+            "NewColumnName": "commissionpercent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATEDFIELD",
+            "NewColumnName": "updatedfield"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTCOMMISSIONAMOUNT",
+            "NewColumnName": "agentcommissionamount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTIONSTATE",
+            "NewColumnName": "transactionstate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ADDRESS",
+            "NewColumnName": "address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SALEPRICE",
+            "NewColumnName": "saleprice"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATEDATE",
+            "NewColumnName": "updatedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANKACCOUNT",
+            "NewColumnName": "bankaccount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALFEEDATE",
+            "NewColumnName": "referralfeedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALAMOUNTRECEIVED",
+            "NewColumnName": "referralamountreceived"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

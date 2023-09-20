@@ -1,0 +1,104 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "d421514e-5bd4-4e1f-ab5a-474cf828a1c7",
+    "Name": "DBT-pennymac_saved_homes",
+    "PhysicalTableMap": {
+        "d421514e-5bd4-4e1f-ab5a-474cf828a1c7": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "pennymac_saved_homes",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "address",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "city",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "latitude",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "longitude",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "type",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "created",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "updated",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "phonetype",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "phone_number",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

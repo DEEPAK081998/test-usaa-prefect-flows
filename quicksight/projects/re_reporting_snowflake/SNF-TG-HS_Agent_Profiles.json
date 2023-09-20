@@ -1,0 +1,876 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-5d5b11ad-0beb-4970-80ae-aac158f21c6a",
+  "Name": "SNF-TG-HS_Agent_Profiles",
+  "PhysicalTableMap": {
+    "SNF-581b86f3-0812-46c7-9939-6c17f6311d35": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "HS_AGENT_PROFILES",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGE_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "UPDATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "ZIPCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATELICENSES",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BIO",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UNITS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SELLERPCT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LUXPCT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BUYERPCT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NEWPCT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FTHBPCT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VOLUME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRAININGCOMP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EXPERIENCEYEARS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LANGUAGECOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNAVAILABLEDATES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "REASONFORREMOVAL",
+            "Type": "JSON"
+          },
+          {
+            "Name": "PRODUCTIONTOTALUNITS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "REMOVALREASON",
+            "Type": "JSON"
+          },
+          {
+            "Name": "ADDITIONALNOTES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "NMLSID",
+            "Type": "JSON"
+          },
+          {
+            "Name": "RECEIVESREFERRALSVIATEXTMESSAGE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "COVEREDZIPS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "CLOSINGHOURS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "VERIFICATIONINPUTFIELDSINPROGRESS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "IMAGELINK",
+            "Type": "JSON"
+          },
+          {
+            "Name": "STATELICENSEEXPIRATION",
+            "Type": "JSON"
+          },
+          {
+            "Name": "TRAININGCOMPLETED",
+            "Type": "JSON"
+          },
+          {
+            "Name": "ADDRESS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "REALESTATESTARTDATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TERMSANDCONDITIONS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "VERIFICATIONSTATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COGNITOUSERNAME",
+            "Type": "JSON"
+          },
+          {
+            "Name": "LOCALTIMEZONE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "COMMENT",
+            "Type": "JSON"
+          },
+          {
+            "Name": "COVEREDAREAS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "NETWORKREQUIREMENTS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "LANGUAGES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "OFFICES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "OFFICE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "COMMENTS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "INVITER_FIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITER_LASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITER_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAELEGACYAGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ELIGIBILITYSTATUS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "INELIGIBLECOMMENT",
+            "Type": "JSON"
+          },
+          {
+            "Name": "PRODUCTIONINPUT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERRALAGREEMENTEMAIL",
+            "Type": "JSON"
+          },
+          {
+            "Name": "UNVERIFIEDPROFILESECTIONS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "UNVERFIEDPROFILESECTIONS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "FIRSTONBOARDINGSTEP",
+            "Type": "JSON"
+          },
+          {
+            "Name": "PROFILEINFO",
+            "Type": "JSON"
+          },
+          {
+            "Name": "STANDARDSACCEPTED",
+            "Type": "JSON"
+          },
+          {
+            "Name": "REASONFORDEACTIVATION",
+            "Type": "JSON"
+          },
+          {
+            "Name": "WORKINGHOURS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "ACCEPTSREFERRALFEES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "ACCEPTSREFERRALSONSUNDAYS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "OPENINGHOURS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "ACCEPTSREFERRALSONSATURDAYS",
+            "Type": "JSON"
+          },
+          {
+            "Name": "REFERRALCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "OLDZIPCOUNT",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-5aae9107-d9ce-4c95-bef6-0bc98356c8be": {
+      "Alias": "hs_agent_profiles",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OLDZIPCOUNT",
+            "NewColumnName": "oldzipcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALCOUNT",
+            "NewColumnName": "referralcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTSREFERRALSONSATURDAYS",
+            "NewColumnName": "acceptsreferralsonsaturdays"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OPENINGHOURS",
+            "NewColumnName": "openinghours"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTSREFERRALSONSUNDAYS",
+            "NewColumnName": "acceptsreferralsonsundays"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTSREFERRALFEES",
+            "NewColumnName": "acceptsreferralfees"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "WORKINGHOURS",
+            "NewColumnName": "workinghours"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REASONFORDEACTIVATION",
+            "NewColumnName": "reasonfordeactivation"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STANDARDSACCEPTED",
+            "NewColumnName": "standardsaccepted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROFILEINFO",
+            "NewColumnName": "profileinfo"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRSTONBOARDINGSTEP",
+            "NewColumnName": "firstonboardingstep"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNVERFIEDPROFILESECTIONS",
+            "NewColumnName": "unverfiedprofilesections"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNVERIFIEDPROFILESECTIONS",
+            "NewColumnName": "unverifiedprofilesections"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALAGREEMENTEMAIL",
+            "NewColumnName": "referralagreementemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRODUCTIONINPUT",
+            "NewColumnName": "productioninput"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INELIGIBLECOMMENT",
+            "NewColumnName": "ineligiblecomment"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITYSTATUS",
+            "NewColumnName": "eligibilitystatus"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAELEGACYAGENT",
+            "NewColumnName": "caelegacyagent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITER_EMAIL",
+            "NewColumnName": "inviter_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITER_LASTNAME",
+            "NewColumnName": "inviter_lastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITER_FIRSTNAME",
+            "NewColumnName": "inviter_firstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COMMENTS",
+            "NewColumnName": "comments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OFFICE",
+            "NewColumnName": "office"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OFFICES",
+            "NewColumnName": "offices"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LANGUAGES",
+            "NewColumnName": "languages"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NETWORKREQUIREMENTS",
+            "NewColumnName": "networkrequirements"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVEREDAREAS",
+            "NewColumnName": "coveredareas"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COMMENT",
+            "NewColumnName": "comment"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOCALTIMEZONE",
+            "NewColumnName": "localtimezone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COGNITOUSERNAME",
+            "NewColumnName": "cognitousername"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFICATIONSTATUS",
+            "NewColumnName": "verificationstatus"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TERMSANDCONDITIONS",
+            "NewColumnName": "termsandconditions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REALESTATESTARTDATE",
+            "NewColumnName": "realestatestartdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ADDRESS",
+            "NewColumnName": "address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAININGCOMPLETED",
+            "NewColumnName": "trainingcompleted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATELICENSEEXPIRATION",
+            "NewColumnName": "statelicenseexpiration"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "IMAGELINK",
+            "NewColumnName": "imagelink"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFICATIONINPUTFIELDSINPROGRESS",
+            "NewColumnName": "verificationinputfieldsinprogress"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLOSINGHOURS",
+            "NewColumnName": "closinghours"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVEREDZIPS",
+            "NewColumnName": "coveredzips"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RECEIVESREFERRALSVIATEXTMESSAGE",
+            "NewColumnName": "receivesreferralsviatextmessage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NMLSID",
+            "NewColumnName": "nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ADDITIONALNOTES",
+            "NewColumnName": "additionalnotes"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REMOVALREASON",
+            "NewColumnName": "removalreason"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE",
+            "NewColumnName": "brokerage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRODUCTIONTOTALUNITS",
+            "NewColumnName": "productiontotalunits"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REASONFORREMOVAL",
+            "NewColumnName": "reasonforremoval"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNAVAILABLEDATES",
+            "NewColumnName": "unavailabledates"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LANGUAGECOUNT",
+            "NewColumnName": "languagecount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EXPERIENCEYEARS",
+            "NewColumnName": "experienceyears"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAININGCOMP",
+            "NewColumnName": "trainingcomp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VOLUME",
+            "NewColumnName": "volume"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FTHBPCT",
+            "NewColumnName": "fthbpct"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NEWPCT",
+            "NewColumnName": "newpct"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BUYERPCT",
+            "NewColumnName": "buyerpct"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LUXPCT",
+            "NewColumnName": "luxpct"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SELLERPCT",
+            "NewColumnName": "sellerpct"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNITS",
+            "NewColumnName": "units"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLS",
+            "NewColumnName": "mls"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BIO",
+            "NewColumnName": "bio"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATELICENSES",
+            "NewColumnName": "statelicenses"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_PHONE",
+            "NewColumnName": "brokerage_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_EMAIL",
+            "NewColumnName": "brokerage_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIPCOUNT",
+            "NewColumnName": "zipcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED",
+            "NewColumnName": "updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONES",
+            "NewColumnName": "phones"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_NAME",
+            "NewColumnName": "brokerage_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "id",
+              "brokerage_name",
+              "first_name",
+              "last_name",
+              "email",
+              "phones",
+              "aggregate_id",
+              "created",
+              "updated",
+              "zipcount",
+              "brokeragecode",
+              "brokerage_email",
+              "brokerage_phone",
+              "statelicenses",
+              "bio",
+              "mls",
+              "units",
+              "sellerpct",
+              "luxpct",
+              "buyerpct",
+              "newpct",
+              "fthbpct",
+              "volume",
+              "trainingcomp",
+              "experienceyears",
+              "languagecount",
+              "unavailabledates",
+              "reasonforremoval",
+              "productiontotalunits",
+              "brokerage",
+              "removalreason",
+              "additionalnotes",
+              "nmlsid",
+              "receivesreferralsviatextmessage",
+              "coveredzips",
+              "closinghours",
+              "verificationinputfieldsinprogress",
+              "imagelink",
+              "statelicenseexpiration",
+              "trainingcompleted",
+              "address",
+              "realestatestartdate",
+              "termsandconditions",
+              "verificationstatus",
+              "cognitousername",
+              "localtimezone",
+              "comment",
+              "coveredareas",
+              "networkrequirements",
+              "languages",
+              "offices",
+              "office",
+              "comments",
+              "inviter_firstname",
+              "inviter_lastname",
+              "inviter_email",
+              "caelegacyagent",
+              "eligibilitystatus",
+              "ineligiblecomment",
+              "productioninput",
+              "referralagreementemail",
+              "unverifiedprofilesections",
+              "unverfiedprofilesections",
+              "firstonboardingstep",
+              "profileinfo",
+              "standardsaccepted",
+              "reasonfordeactivation",
+              "workinghours",
+              "acceptsreferralfees",
+              "acceptsreferralsonsundays",
+              "openinghours",
+              "acceptsreferralsonsaturdays",
+              "referralcount",
+              "oldzipcount"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-581b86f3-0812-46c7-9939-6c17f6311d35"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "8eef3116-abea-42f5-92b9-27a4d0ac5672",
+    "Name": "DBT-cio-Campaign-sms-responses",
+    "PhysicalTableMap": {
+        "8eef3116-abea-42f5-92b9-27a4d0ac5672": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "base_cio_campaign_sms_response",
+                "InputColumns": [
+                    {
+                        "Name": "campaign_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "campaign_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentobj",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "profile_role",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "profile_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lead_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "aggregate_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_aggregate_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "questionresponse",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "response",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "system_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "reporting_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "cio_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "delivery_type",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

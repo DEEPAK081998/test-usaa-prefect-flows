@@ -1,0 +1,19 @@
+{
+ "dag_name": "leads_data_dag",
+ "schedule": "0 */3 * * *",
+ "tags": [
+  "great_expectations",
+  "prod",
+  "gx"
+ ],
+ "great_expectations_task_configurations": [
+    {
+     "great_expectations_project_path": "s3://mdp-prod-bucket/great_expectations/projects/great_expectations_prod.zip",
+     "great_expectations_checkpoint": "leads_data_checkpoint",
+     "great_expectations_extra_kwargs": {}
+    }
+ ],
+ "template_file": "airflow/dags_template/main_etl_dag.py"
+}
+
+

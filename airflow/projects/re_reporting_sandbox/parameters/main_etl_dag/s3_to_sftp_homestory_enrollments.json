@@ -1,0 +1,14 @@
+{
+  "tags": [
+    "s3_to_sftp",
+    "test",
+    "gui"
+  ],
+  "copy_from_s3_to_sftp": {
+    "s3_bucket": "mdp-utils-sandbox-partner-email-bucket",
+    "s3_key": "attachments/pmc_sftp_enrollments_followup_previous_day/0.csv",
+    "sftp_path": "test/homestory_enrollments_{{ macros.ds_format(ds, '%Y-%m-%d', '%m_%d_%Y') }}.csv",
+    "sftp_conn_id": "sftp_hs_airflow",
+    "test_single_bank": {"bank_name": "my_bank", "bank_name_col": "client"}
+  }
+}

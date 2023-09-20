@@ -1,0 +1,88 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "b2820185-6d4b-4f52-9bc4-23bef7da902c",
+    "Name": "DBT-freedom_cta_adcontent",
+    "PhysicalTableMap": {
+        "b2820185-6d4b-4f52-9bc4-23bef7da902c": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "freedom_cta_adcontent",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_medium",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_source",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_campaign",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_adcontent",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "users",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "newusers",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "sessions",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "bounces",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "total_secs_on_page",
+                        "Type": "DECIMAL"
+                    },
+                    {
+                        "Name": "pageviews",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

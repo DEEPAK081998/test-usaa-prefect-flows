@@ -1,0 +1,129 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "6f7cb8ca-b01b-4399-8a18-1d4f1fcbe701"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "chase-rep60-test",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_users": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_newUsers": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_sessions": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_entrances": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_pageviews": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_bounceRate": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_avgTimeOnPage": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_uniquePageviews": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_avgSessionDuration": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_pageviewsPerSession": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [],
+          "aliasName": "chase_rep60_test",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": null,
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_chase-rep60-test-fullrefresh-overwrite.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

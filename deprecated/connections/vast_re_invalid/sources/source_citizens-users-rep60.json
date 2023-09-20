@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "182295338",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"citizens-users-rep60\",\"dimensions\":[\"ga:date\"],\"metrics\":[\"ga:users\"]}]",
+    "window_in_days": 1
+  },
+  "name": "citizens-users-rep60",
+  "sourceDefinitionName": "Google Analytics"
+}

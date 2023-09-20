@@ -1,0 +1,19 @@
+{
+  "tags": [
+    "dbt",
+    "airbyte",
+    "re_reporting_sandbox"
+  ],
+  "connection_ids": [
+    "a2a15ff9-8ec0-43fa-888b-4503e38a013f"
+  ],
+  "dbt_project_path": "s3://mdp-sandbox-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_conn_id": "dbt_test2",
+  "dbt_extra_kwargs": {
+    "select": [
+      "brokerage_assignments"
+    ]
+  },
+  "s3_bucket_name": "mdp-sandbox-bucket",
+  "dataset_s3_directory": "quicksight/datasets/re_reporting/"
+}

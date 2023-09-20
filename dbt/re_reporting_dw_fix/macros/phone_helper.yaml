@@ -1,0 +1,9 @@
+version: 2
+
+macros:
+  - name: normalize_phone_number
+    description: Normalize phone number from string 'column'
+    arguments:
+      - name: column
+        type: column name (string)
+        description: Column name to extract digits from.

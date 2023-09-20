@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_agent_assignment_statuses
+  - name: raw_current_assignments
+  - name: raw_user_assignments
+  - name: raw_cbsa_locations

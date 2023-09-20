@@ -1,0 +1,87 @@
+{
+  "name": "default",
+  "namespaceDefinition": "destination",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "auth_service_",
+  "operationIds": [
+    "4318628d-1d97-4ad2-905a-36e9bf6ff616"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "users",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "app_id": {
+                "type": "string"
+              },
+              "external_user_id": {
+                "type": "string"
+              },
+              "locked_timestamp": {
+                "type": "number"
+              },
+              "creation_timestamp": {
+                "type": "number"
+              },
+              "activation_timestamp": {
+                "type": "number"
+              },
+              "unsuccessful_login_count": {
+                "type": "number"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [
+            [
+              "app_id"
+            ],
+            [
+              "id"
+            ]
+          ],
+          "namespace": "authentication_store_prod"
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "overwrite",
+          "primaryKey": [
+            [
+              "app_id"
+            ],
+            [
+              "id"
+            ]
+          ],
+          "aliasName": "users",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_AuthService.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

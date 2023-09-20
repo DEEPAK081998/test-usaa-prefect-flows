@@ -1,0 +1,9 @@
+version: 2
+
+models: 
+  - name: kitsap_ga_data
+    description: Kitsap Google Analytics Data, general REC metrics
+    columns:
+      - name: ga_date
+        description: This is the date of website visit.
+ 

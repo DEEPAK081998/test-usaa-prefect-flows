@@ -1,0 +1,138 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-b94c0ad6-416e-4a1d-b4c8-2da4bce14884",
+  "Name": "SNF-DBT-brokerage_agents_w_o_brokeragecode",
+  "PhysicalTableMap": {
+    "SNF-b94c0ad6-416e-4a1d-b4c8-2da4bce14884": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BROKERAGE_AGENTS_W_O_BROKERAGECODE",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENTFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTPHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b94c0ad6-416e-4a1d-b4c8-2da4bce14884": {
+      "Alias": "brokerage_agents_w_o_brokeragecode",
+      "Source": {
+        "PhysicalTableId": "SNF-b94c0ad6-416e-4a1d-b4c8-2da4bce14884"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTPHONE",
+            "NewColumnName": "agentphone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTEMAIL",
+            "NewColumnName": "agentemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTNAME",
+            "NewColumnName": "agentname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTLASTNAME",
+            "NewColumnName": "agentlastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFIRSTNAME",
+            "NewColumnName": "agentfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

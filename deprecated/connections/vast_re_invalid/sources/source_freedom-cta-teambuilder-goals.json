@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "170751556",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"freedom-ga-tb-cta-goals\",\"metrics\":[\"ga:goal13Completions\",\"ga:goal14Completions\"],\"dimensions\":[\"ga:date\",\"ga:source\",\"ga:medium\"]}]",
+    "window_in_days": 1
+  },
+  "name": "freedom-cta-teambuilder-goals",
+  "sourceDefinitionName": "Google Analytics"
+}

@@ -1,0 +1,71 @@
+version: 0.2
+
+phases: 
+  install:
+    runtime-versions:
+      python: 3.10
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Registering/Updating all dags"
+      - env=${ENVIRONMENT}
+      - business_unit=${BUSINESS_UNIT}
+      - mdp_utils_stack_name=${MDP_UTILS_STACK_NAME}
+      - bucket_name=${AIRFLOW_S3_BUCKET_NAME}
+      - airflow_stack_name=${AIRFLOW_STACK_NAME}
+      - airflow_projects=""
+      - |
+        if [ $business_unit = "re" ]; then
+          case $env in
+            prod)
+              airflow_projects="re_reporting pennymac_clicks"
+              ;;
+            sandbox)
+              airflow_projects="re_reporting_sandbox pennymac_clicks"
+              ;;
+            beta)
+              airflow_projects="re_reporting_beta"
+              ;;
+            *)
+              airflow_projects=""
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "chase" ]; then
+          case $env in
+            prod)
+              airflow_projects="chase"
+              ;;
+            *)
+              airflow_projects="chase"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "usaa" ]; then
+          case $env in
+            prod)
+              airflow_projects=""
+              ;;
+            *)
+              airflow_projects=""
+              ;;
+          esac
+        fi
+      - echo $airflow_projects
+      - echo $env
+      - echo $business_unit
+      - echo $mdp_utils_stack_name
+      - echo $business_unit
+      - echo $airflow_stack_name
+      # This was causing the docker limit to exceed and was not required. Ticked-ID: REP-1747
+      # - |
+      #   if [ "$mdp_utils_stack_name" != "" ]; then 
+      #     python scripts/airflow_build --mdp-utils-stack-name ${MDP_UTILS_STACK_NAME} --docker-file-dir airflow/ecs_tasks --projects $airflow_projects ${AIRFLOW_SCRIPT_EXTRA_ARGS}
+      #   fi
+      # - python scripts/airflow_build --update-variables airflow/common/airflow_variables/${BUSINESS_UNIT}_${ENVIRONMENT}_variables.json  --airflow-stack-name ${AIRFLOW_STACK_NAME} --airflow-resource-logical-id AirflowVer243Resource
+      # - python scripts/airflow_build --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --airflow-stack-name ${AIRFLOW_STACK_NAME} --airflow-resource-logical-id AirflowVer243Resource --update-dynamic-dags --dags-directory airflow/dags_template --update-common-dags --requirements-file airflow/common/requirements/requirements_ver_243.txt --s3-requirements-path airflow/airflow_requirements_ver_243.txt --plugins-directory airflow/common/plugins --s3-plugins-path airflow/airflow_dags_plugins_ver_243.zip --projects $airflow_projects ${AIRFLOW_SCRIPT_EXTRA_ARGS}
+      - aws s3 cp airflow/dags_template s3://${AIRFLOW_S3_BUCKET_NAME}/airflow/dags_template/ --recursive

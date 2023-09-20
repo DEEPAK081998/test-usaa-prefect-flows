@@ -1,0 +1,208 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-37222267-f805-4c87-a02c-67d7ee9630dd",
+  "Name": "SNF-DBT-agent_roster",
+  "PhysicalTableMap": {
+    "SNF-37222267-f805-4c87-a02c-67d7ee9630dd": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "AGENT_ROSTER",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ZIPCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RCEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RCFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RCLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RCFULLNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGENAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CURRENTLEADCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGECOVERAGE",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-37222267-f805-4c87-a02c-67d7ee9630dd": {
+      "Alias": "agent_roster",
+      "Source": {
+        "PhysicalTableId": "SNF-37222267-f805-4c87-a02c-67d7ee9630dd"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECOVERAGE",
+            "NewColumnName": "brokeragecoverage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENTLEADCOUNT",
+            "NewColumnName": "currentleadcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGENAME",
+            "NewColumnName": "brokeragename"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RCFULLNAME",
+            "NewColumnName": "rcfullname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RCLASTNAME",
+            "NewColumnName": "rclastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RCFIRSTNAME",
+            "NewColumnName": "rcfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RCEMAIL",
+            "NewColumnName": "rcemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIPCOUNT",
+            "NewColumnName": "zipcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONES",
+            "NewColumnName": "phones"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

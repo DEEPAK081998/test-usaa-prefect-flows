@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_import_current_notes
+  - name: raw_import_note_updates

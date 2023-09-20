@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: brokerages
+  - name: brokerage_user
+  - name: brokerage_qualifications
+  - name: brokerage_coverage_zips
+  - name: brokerage_assignments 

@@ -1,0 +1,20 @@
+{
+  "schedule": "30 13 * * *",
+  "tags": [
+    "dbt",
+    "airbyte",
+    "re_reporting"
+  ],
+  "dbt_project_path": "s3://mdp-prod-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_conn_id": "warehouse_db",
+  "dbt_extra_kwargs": {
+    "select": [
+      "+marts"
+    ],
+    "exclude": [
+      "config.materialized:view",
+      "tag:monthly"
+    ]
+    ,"threads": 10
+  }
+}

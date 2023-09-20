@@ -1,0 +1,172 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "32d2dffe-d750-42f1-bd84-302fe756d286",
+    "Name": "DBT-pmc_rec",
+    "PhysicalTableMap": {
+        "32d2dffe-d750-42f1-bd84-302fe756d286": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "pmc_rec",
+                "InputColumns": [
+                    {
+                        "Name": "date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "inviteddate",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "client_first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "client_last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "client_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "client_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lo_phone",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "purchase_location",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sell_location",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "current_location",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "purchase_time_frame",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "prequal",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "avg_price",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "transaction_type",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "price_range_lower_bound",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "price_range_upper_bound",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "hb_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "category",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lenderclosedwith",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "citizenssalesforceenrollment",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "mlosubmission",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "city",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "bank_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,258 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-824a4a36-9cc4-4973-8c7c-52fe9ae73111",
+  "Name": "SNF-DBT-freedom_user_id_paths",
+  "PhysicalTableMap": {
+    "SNF-824a4a36-9cc4-4973-8c7c-52fe9ae73111": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_USER_ID_PATHS",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "VIEW_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_PAGEPATH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DIMENSION5",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_ENTRANCES",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_PAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_BOUNCERATE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_AVGTIMEONPAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_UNIQUEPAGEVIEWS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_AVGSESSIONDURATION",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_PAGEVIEWSPERSESSION",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "RN",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-824a4a36-9cc4-4973-8c7c-52fe9ae73111": {
+      "Alias": "freedom_user_id_paths",
+      "Source": {
+        "PhysicalTableId": "SNF-824a4a36-9cc4-4973-8c7c-52fe9ae73111"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RN",
+            "NewColumnName": "rn"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEVIEWSPERSESSION",
+            "NewColumnName": "ga_pageviewspersession"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGSESSIONDURATION",
+            "NewColumnName": "ga_avgsessionduration"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_UNIQUEPAGEVIEWS",
+            "NewColumnName": "ga_uniquepageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGTIMEONPAGE",
+            "NewColumnName": "ga_avgtimeonpage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_BOUNCERATE",
+            "NewColumnName": "ga_bouncerate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEVIEWS",
+            "NewColumnName": "ga_pageviews"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ENTRANCES",
+            "NewColumnName": "ga_entrances"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SESSIONS",
+            "NewColumnName": "ga_sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_NEWUSERS",
+            "NewColumnName": "ga_newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_USERS",
+            "NewColumnName": "ga_users"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DIMENSION5",
+            "NewColumnName": "ga_dimension5"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEPATH",
+            "NewColumnName": "ga_pagepath"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_CAMPAIGN",
+            "NewColumnName": "ga_campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCE",
+            "NewColumnName": "ga_source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEW_ID",
+            "NewColumnName": "view_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

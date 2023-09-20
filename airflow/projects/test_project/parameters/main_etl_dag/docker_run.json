@@ -1,0 +1,22 @@
+{
+  "tags": [
+    "ecs",
+    "dbt",
+    "vrathore",
+    "sandbox"
+  ],
+  "dbt_project_path": "s3://mdp-sandbox-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_conn_id": "dbt_test2",
+  "ecs_run_command": [
+    "run",
+    "--select",
+    "brokerage_assignments"
+  ],
+  "run_local_docker": true,
+  "run_dbt": false,
+  "local_docker_image_name": "docker_dbt_run",
+  "local_aws_cred_abs_path": "/tmp/.aws/credentials",
+  "local_docker_additional_envs": {
+    "AWS_PROFILE": "sandbox"
+  }
+}

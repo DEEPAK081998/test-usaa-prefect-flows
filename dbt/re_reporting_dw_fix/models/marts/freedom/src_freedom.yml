@@ -1,0 +1,63 @@
+version: 2
+
+sources: 
+- name: public
+  tables: 
+  - name: freedom_custom_user_id
+  - name: partner_user_profiles
+  - name: freedom_sg_conversions
+  - name: listings
+  - name: freedom_event_totals
+  - name: dynamodb_mlo_invites
+  - name: freedom_daily_sg_messages
+  - name: freedom_sendgrid
+  - name: freedom_cta
+  - name: freedom_ga_tb_cta_goals
+  - name: freedom_ga_event
+  - name: freedom_ga_goals
+  - name: freedom_rep60_prod_ga_data
+  - name: freedom_rep60_users
+  - name: la_mapping_historical
+  - name: freedom_historical_invites
+  - name: ga4_freedom_event_totals
+  - name: ga4_freedom_prod_ga_data
+  - name: ga4_freedom_users_final
+  - name: ga4_freedom_bouncerate
+  - name: ga4_freedom_ga_goals_final
+
+
+- name: dbolling_public
+  tables:
+  - name: freedom_historical_invites
+
+
+models:
+  - name: freedom_user_id_paths
+    description: table with custom dimension
+    columns:
+      - name: id
+        description: This is the primary key for partner user profiles table.
+        tests:
+          - unique
+          - not_null
+  - name: freedom_market_conversion
+    description: table used to find email conversions
+    columns:
+      - name: id
+        description: This is the primary key for partner user profiles table.
+        tests:
+          - unique
+          - not_null
+  - name: freedom_dynamo_table
+    description: deduped table of freedom invitation data
+    columns:
+      - name: invitation_id
+        description: This is a unique key for freedom invitations.
+        tests:
+          - unique
+          - not_null
+  - name: stg_freedom_invites
+    description: joining dynamo invitation data to sendgrid
+  - name: stg_freedom_registrations
+    description: freedom invitations joined with registrations    
+          

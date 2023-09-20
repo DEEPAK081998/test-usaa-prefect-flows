@@ -1,0 +1,158 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-9c99672d-419e-4d5e-b018-96c532a3c9fb",
+  "Name": "SNF-DBT-fact_alliant_sendgrid",
+  "PhysicalTableMap": {
+    "SNF-9c99672d-419e-4d5e-b018-96c532a3c9fb": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FACT_ALLIANT_SENDGRID",
+        "InputColumns": [
+          {
+            "Name": "MSG_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SUBJECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FROM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "OPENS_COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CLICKS_COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FIRST_EVENT_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LAST_EVENT_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "EMAIL_NO",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-9c99672d-419e-4d5e-b018-96c532a3c9fb": {
+      "Alias": "fact_alliant_sendgrid",
+      "Source": {
+        "PhysicalTableId": "SNF-9c99672d-419e-4d5e-b018-96c532a3c9fb"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL_NO",
+            "NewColumnName": "email_no"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_EVENT_TIME",
+            "NewColumnName": "last_event_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_EVENT_TIME",
+            "NewColumnName": "first_event_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLICKS_COUNT",
+            "NewColumnName": "clicks_count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OPENS_COUNT",
+            "NewColumnName": "opens_count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FROM_EMAIL",
+            "NewColumnName": "from_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TO_EMAIL",
+            "NewColumnName": "to_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SUBJECT",
+            "NewColumnName": "subject"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATUS",
+            "NewColumnName": "status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MSG_ID",
+            "NewColumnName": "msg_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

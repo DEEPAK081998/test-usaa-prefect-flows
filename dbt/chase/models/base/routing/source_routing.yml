@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: _airbyte_raw_chase_prod_routing_api_stack_smeventstable334ccec7
+  - name: legacy_step_functions_executions_history
+  - name: _airbyte_raw_legacy_step_functions_executions_history
+  - name: raw_routing_events_chase
+    identifier: _airbyte_raw_json_routing_events_v2chase_prod_routing_api_stack
+  - name: routing_state_machine_v3_executions_history

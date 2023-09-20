@@ -1,0 +1,1744 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-34cb3f4d-ff56-471a-9cc2-92e0d94182d1",
+  "Name": "SNF-freedom_inv_reg_enr",
+  "PhysicalTableMap": {
+    "SNF-6dc948bf-1b2c-4c5f-a14b-819a5cf07ed1": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_INV_REG_ENR",
+        "InputColumns": [
+          {
+            "Name": "AGENTNAME_TOTAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_EMAIL_TOTAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LONAME_TOTAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRANSACTION_TYPE_TOTAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NMLSID_TOTAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_SUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PARTNER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REGISTER_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "HAS_AGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REG_TRANSACTION_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REG_PREQUAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOFIRSTNAME_REG",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOLASTNAME_REG",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REGISTER_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CUSTOMER_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED_AT_REG",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "BANK_PARTNER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITATION_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITE_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "INVITING_LOFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITING_LOLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITING_AGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_SPECIALIST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INV_MLO_SUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SMS_INVITE_PERMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENR_NMLS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDGRID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SHORTHASH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UTMSOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DISCLOSURE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOPHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REG_MLO_SUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMERCONNECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CURRENTBANKCUSTOMER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CONFIRMATIONREQUIRED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITE_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ALL_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENTDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CLIENT_NAME_",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLL_AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENT_LO_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENT_LO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENT_LO_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_LOCATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_TIME_FRAME",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ENR_PREQUAL",
+            "Type": "BIT"
+          },
+          {
+            "Name": "COMMENTS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANK_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRANSACTION_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_STATUS_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "RC_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_STATUS_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "AGENT_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_STATUS_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CLOSEDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "PROPERTYADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROPERTYPRICE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LENDERCLOSEDWITH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGTCOMMPCT",
+            "Type": "JSON"
+          },
+          {
+            "Name": "LEAD_CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "RC_ACCEPT_TIME_UNADJUSTED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "AGENT_ASSIGN_TIME_UNADJUSTED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "AGENT_ASSIGN_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "ACCEPT_TIME_DELAY_HRS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "AGENTASSIGN_TIME_DELAY_HRS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "MNTH_YR",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATE_PART",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ATTACHMENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "HB_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DOW",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "CST",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CSTDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "CSTHOUR",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "YEAR",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "PENDING",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENR_MLO_SUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REG_NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "OUTOFNETWORKBROKERAGE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "CLIENT_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_CONTACT_FIRST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_CONTACT_LAST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_CITY",
+            "Type": "JSON"
+          },
+          {
+            "Name": "RC_STATE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "SELLING_ADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANKCUSTOMER",
+            "Type": "JSON"
+          },
+          {
+            "Name": "SOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_CONTACT_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "FIRST_CONTACT_DELAY_FROM_ENROLLMENT",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ACCEPT_TO_CONTACT_DELAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "MAJOR_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BRANCHNAME",
+            "Type": "JSON"
+          },
+          {
+            "Name": "BRANCHEMPLOYEE",
+            "Type": "JSON"
+          },
+          {
+            "Name": "COVERAGE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LASTPENDINGDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "INACTIVEDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "TIMETOINACTIVE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "INACTIVEROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_AGENT_UPDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LAST_RC_UPDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "PENDINGCLOSEDATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PENDINGPROPERTYADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLOSEADDRESS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FINANCECLOSEDATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NETWORKID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CUSTOMERECI",
+            "Type": "JSON"
+          },
+          {
+            "Name": "BROKERAGEROUTINGMETHOD",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_ASSIGNED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ESCALATEDTOCONCIERGE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENT_LOFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLMENT_LOLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "HB_STATUS_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "HOMESALEPRICE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENR_UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "AVG_PRICE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PRICE_RANGE_LOWER_BOUND",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PRICE_RANGE_UPPER_BOUND",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-6dc948bf-1b2c-4c5f-a14b-819a5cf07ed1": {
+      "Alias": "freedom_inv_reg_enr",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRICE_RANGE_UPPER_BOUND",
+            "NewColumnName": "price_range_upper_bound"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRICE_RANGE_LOWER_BOUND",
+            "NewColumnName": "price_range_lower_bound"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AVG_PRICE",
+            "NewColumnName": "avg_price"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENR_UPDATED_AT",
+            "NewColumnName": "enr_updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESALEPRICE",
+            "NewColumnName": "homesaleprice"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HB_STATUS_TIME",
+            "NewColumnName": "hb_status_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_LOLASTNAME",
+            "NewColumnName": "enrollment_lolastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_LOFIRSTNAME",
+            "NewColumnName": "enrollment_lofirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CITY",
+            "NewColumnName": "city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIP",
+            "NewColumnName": "zip"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ESCALATEDTOCONCIERGE",
+            "NewColumnName": "escalatedtoconcierge"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_ASSIGNED",
+            "NewColumnName": "agent_assigned"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGEROUTINGMETHOD",
+            "NewColumnName": "brokerageroutingmethod"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMERECI",
+            "NewColumnName": "customereci"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NETWORKID",
+            "NewColumnName": "networkid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FINANCECLOSEDATE",
+            "NewColumnName": "financeclosedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLOSEADDRESS",
+            "NewColumnName": "closeaddress"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PENDINGPROPERTYADDRESS",
+            "NewColumnName": "pendingpropertyaddress"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PENDINGCLOSEDATE",
+            "NewColumnName": "pendingclosedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_RC_UPDATE",
+            "NewColumnName": "last_rc_update"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_AGENT_UPDATE",
+            "NewColumnName": "last_agent_update"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INACTIVEROLE",
+            "NewColumnName": "inactiverole"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TIMETOINACTIVE",
+            "NewColumnName": "timetoinactive"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INACTIVEDATE",
+            "NewColumnName": "inactivedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LASTPENDINGDATE",
+            "NewColumnName": "lastpendingdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVERAGE",
+            "NewColumnName": "coverage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BRANCHEMPLOYEE",
+            "NewColumnName": "branchemployee"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BRANCHNAME",
+            "NewColumnName": "branchname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAJOR_STATUS",
+            "NewColumnName": "major_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPT_TO_CONTACT_DELAY",
+            "NewColumnName": "accept_to_contact_delay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_CONTACT_DELAY_FROM_ENROLLMENT",
+            "NewColumnName": "first_contact_delay_from_enrollment"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_CONTACT_TIME",
+            "NewColumnName": "first_contact_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SOURCE",
+            "NewColumnName": "source"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANKCUSTOMER",
+            "NewColumnName": "bankcustomer"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SELLING_ADDRESS",
+            "NewColumnName": "selling_address"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_STATE",
+            "NewColumnName": "rc_state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_CITY",
+            "NewColumnName": "rc_city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTLASTNAME",
+            "NewColumnName": "agentlastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFIRSTNAME",
+            "NewColumnName": "agentfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_CONTACT_LAST",
+            "NewColumnName": "rc_contact_last"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_CONTACT_FIRST",
+            "NewColumnName": "rc_contact_first"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_LAST_NAME",
+            "NewColumnName": "client_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_FIRST_NAME",
+            "NewColumnName": "client_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OUTOFNETWORKBROKERAGE",
+            "NewColumnName": "outofnetworkbrokerage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REG_NMLSID",
+            "NewColumnName": "reg_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENR_MLO_SUBMISSION",
+            "NewColumnName": "enr_mlo_submission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PENDING",
+            "NewColumnName": "pending"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "YEAR",
+            "NewColumnName": "year"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CSTHOUR",
+            "NewColumnName": "csthour"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CSTDATE",
+            "NewColumnName": "cstdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CST",
+            "NewColumnName": "cst"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DOW",
+            "NewColumnName": "dow"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HB_STATUS",
+            "NewColumnName": "hb_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ATTACHMENT",
+            "NewColumnName": "attachment"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE_PART",
+            "NewColumnName": "date_part"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_PHONE",
+            "NewColumnName": "rc_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_EMAIL",
+            "NewColumnName": "rc_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_NAME",
+            "NewColumnName": "rc_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FULL_NAME",
+            "NewColumnName": "full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MNTH_YR",
+            "NewColumnName": "mnth_yr"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTASSIGN_TIME_DELAY_HRS",
+            "NewColumnName": "agentassign_time_delay_hrs"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPT_TIME_DELAY_HRS",
+            "NewColumnName": "accept_time_delay_hrs"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_ASSIGN_TIME",
+            "NewColumnName": "agent_assign_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_ASSIGN_TIME_UNADJUSTED",
+            "NewColumnName": "agent_assign_time_unadjusted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_ACCEPT_TIME_UNADJUSTED",
+            "NewColumnName": "rc_accept_time_unadjusted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_CREATED",
+            "NewColumnName": "lead_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGTCOMMPCT",
+            "NewColumnName": "agtcommpct"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LENDERCLOSEDWITH",
+            "NewColumnName": "lenderclosedwith"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTYPRICE",
+            "NewColumnName": "propertyprice"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTYADDRESS",
+            "NewColumnName": "propertyaddress"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLOSEDATE",
+            "NewColumnName": "closedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_STATUS_TIME",
+            "NewColumnName": "agent_status_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_STATUS",
+            "NewColumnName": "agent_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_STATUS_TIME",
+            "NewColumnName": "rc_status_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_STATUS",
+            "NewColumnName": "rc_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_STATUS_TIME",
+            "NewColumnName": "mlo_status_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_STATUS",
+            "NewColumnName": "mlo_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTION_TYPE",
+            "NewColumnName": "transaction_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_NAME",
+            "NewColumnName": "bank_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COMMENTS",
+            "NewColumnName": "comments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENR_PREQUAL",
+            "NewColumnName": "enr_prequal"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_TIME_FRAME",
+            "NewColumnName": "purchase_time_frame"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_LOCATION",
+            "NewColumnName": "purchase_location"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_LO_PHONE",
+            "NewColumnName": "enrollment_lo_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_LO_EMAIL",
+            "NewColumnName": "enrollment_lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_LO_NAME",
+            "NewColumnName": "enrollment_lo_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONE",
+            "NewColumnName": "agent_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLL_AGENT_NAME",
+            "NewColumnName": "enroll_agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_PHONE",
+            "NewColumnName": "client_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_EMAIL",
+            "NewColumnName": "client_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_NAME_",
+            "NewColumnName": "client_name_"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENTDATE",
+            "NewColumnName": "enrollmentdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ALL_EMAIL",
+            "NewColumnName": "all_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITE_NAME",
+            "NewColumnName": "invite_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CONFIRMATIONREQUIRED",
+            "NewColumnName": "confirmationrequired"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENTBANKCUSTOMER",
+            "NewColumnName": "currentbankcustomer"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMERCONNECT",
+            "NewColumnName": "customerconnect"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REG_MLO_SUBMISSION",
+            "NewColumnName": "reg_mlo_submission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOPHONENUMBER",
+            "NewColumnName": "lophonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONENUMBER",
+            "NewColumnName": "phonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DISCLOSURE",
+            "NewColumnName": "disclosure"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UTMSOURCE",
+            "NewColumnName": "utmsource"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SHORTHASH",
+            "NewColumnName": "shorthash"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRSTNAME",
+            "NewColumnName": "firstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDGRID",
+            "NewColumnName": "sendgrid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LASTNAME",
+            "NewColumnName": "lastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENR_NMLS",
+            "NewColumnName": "enr_nmls"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOEMAIL",
+            "NewColumnName": "loemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROLE",
+            "NewColumnName": "role"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SMS_INVITE_PERMISSION",
+            "NewColumnName": "sms_invite_permission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INV_MLO_SUBMISSION",
+            "NewColumnName": "inv_mlo_submission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_SPECIALIST",
+            "NewColumnName": "purchase_specialist"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITING_AGENT",
+            "NewColumnName": "inviting_agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITING_LOLASTNAME",
+            "NewColumnName": "inviting_lolastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITING_LOFIRSTNAME",
+            "NewColumnName": "inviting_lofirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITE_DATE",
+            "NewColumnName": "invite_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITATION_ID",
+            "NewColumnName": "invitation_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_PARTNER",
+            "NewColumnName": "bank_partner"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT_REG",
+            "NewColumnName": "updated_at_reg"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_EMAIL",
+            "NewColumnName": "customer_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_FULL_NAME",
+            "NewColumnName": "customer_full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_LAST_NAME",
+            "NewColumnName": "customer_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_FIRST_NAME",
+            "NewColumnName": "customer_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REGISTER_DATE",
+            "NewColumnName": "register_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOLASTNAME_REG",
+            "NewColumnName": "lolastname_reg"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOFIRSTNAME_REG",
+            "NewColumnName": "lofirstname_reg"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REG_PREQUAL",
+            "NewColumnName": "reg_prequal"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REG_TRANSACTION_TYPE",
+            "NewColumnName": "reg_transaction_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HAS_AGENT",
+            "NewColumnName": "has_agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REGISTER_ID",
+            "NewColumnName": "register_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_LAST_NAME",
+            "NewColumnName": "agent_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_FIRST_NAME",
+            "NewColumnName": "agent_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_ID",
+            "NewColumnName": "partner_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_NAME",
+            "NewColumnName": "client_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_SUBMISSION",
+            "NewColumnName": "mlo_submission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NMLSID_TOTAL",
+            "NewColumnName": "nmlsid_total"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRANSACTION_TYPE_TOTAL",
+            "NewColumnName": "transaction_type_total"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LONAME_TOTAL",
+            "NewColumnName": "loname_total"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_EMAIL_TOTAL",
+            "NewColumnName": "client_email_total"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTNAME_TOTAL",
+            "NewColumnName": "agentname_total"
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "rc_city",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "CITY"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "rc_state",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "STATE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "zip",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "POSTCODE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "state",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "STATE"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "city",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "CITY"
+              }
+            ]
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "agentname_total",
+              "client_email_total",
+              "loname_total",
+              "transaction_type_total",
+              "nmlsid_total",
+              "mlo_submission",
+              "client_name",
+              "partner_id",
+              "agent_first_name",
+              "agent_last_name",
+              "agent_name",
+              "register_id",
+              "has_agent",
+              "reg_transaction_type",
+              "reg_prequal",
+              "lofirstname_reg",
+              "lolastname_reg",
+              "register_date",
+              "customer_first_name",
+              "customer_last_name",
+              "customer_full_name",
+              "customer_email",
+              "updated_at_reg",
+              "bank_partner",
+              "invitation_id",
+              "invite_date",
+              "inviting_lofirstname",
+              "inviting_lolastname",
+              "inviting_agent",
+              "purchase_specialist",
+              "inv_mlo_submission",
+              "sms_invite_permission",
+              "role",
+              "loemail",
+              "enr_nmls",
+              "lastname",
+              "sendgrid",
+              "firstname",
+              "shorthash",
+              "utmsource",
+              "disclosure",
+              "phonenumber",
+              "lophonenumber",
+              "reg_mlo_submission",
+              "customerconnect",
+              "currentbankcustomer",
+              "confirmationrequired",
+              "invite_name",
+              "all_email",
+              "enrollmentdate",
+              "lead_id",
+              "client_name_",
+              "client_email",
+              "client_phone",
+              "enroll_agent_name",
+              "agent_email",
+              "agent_phone",
+              "enrollment_lo_name",
+              "enrollment_lo_email",
+              "enrollment_lo_phone",
+              "purchase_location",
+              "purchase_time_frame",
+              "enr_prequal",
+              "comments",
+              "bank_name",
+              "transaction_type",
+              "mlo_status",
+              "mlo_status_time",
+              "rc_status",
+              "rc_status_time",
+              "agent_status",
+              "agent_status_time",
+              "closedate",
+              "propertyaddress",
+              "propertyprice",
+              "lenderclosedwith",
+              "agtcommpct",
+              "lead_created",
+              "rc_accept_time_unadjusted",
+              "agent_assign_time_unadjusted",
+              "agent_assign_time",
+              "accept_time_delay_hrs",
+              "agentassign_time_delay_hrs",
+              "mnth_yr",
+              "brokerage_code",
+              "full_name",
+              "rc_name",
+              "rc_email",
+              "rc_phone",
+              "date_part",
+              "attachment",
+              "hb_status",
+              "dow",
+              "cst",
+              "cstdate",
+              "csthour",
+              "year",
+              "pending",
+              "enr_mlo_submission",
+              "reg_nmlsid",
+              "outofnetworkbrokerage",
+              "client_first_name",
+              "client_last_name",
+              "rc_contact_first",
+              "rc_contact_last",
+              "agentfirstname",
+              "agentlastname",
+              "rc_city",
+              "rc_state",
+              "selling_address",
+              "bankcustomer",
+              "source",
+              "first_contact_time",
+              "first_contact_delay_from_enrollment",
+              "accept_to_contact_delay",
+              "major_status",
+              "branchname",
+              "branchemployee",
+              "coverage",
+              "lastpendingdate",
+              "inactivedate",
+              "timetoinactive",
+              "inactiverole",
+              "last_agent_update",
+              "last_rc_update",
+              "pendingclosedate",
+              "pendingpropertyaddress",
+              "closeaddress",
+              "financeclosedate",
+              "networkid",
+              "customereci",
+              "brokerageroutingmethod",
+              "agent_assigned",
+              "escalatedtoconcierge",
+              "zip",
+              "state",
+              "city",
+              "enrollment_lofirstname",
+              "enrollment_lolastname",
+              "hb_status_time",
+              "homesaleprice",
+              "enr_updated_at",
+              "avg_price",
+              "price_range_lower_bound",
+              "price_range_upper_bound"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-6dc948bf-1b2c-4c5f-a14b-819a5cf07ed1"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet"
+      ]
+    }
+  ]
+}

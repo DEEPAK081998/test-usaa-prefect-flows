@@ -1,0 +1,213 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-25476d10-31b7-412d-94f4-0d450ead45d0",
+  "Name": "SNF-PD-pennymac_goals",
+  "PhysicalTableMap": {
+    "SNF-32159198-616c-47da-9315-04f45461c381": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PMC_GOALS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED_SEARCH_LANDING_PAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED_ABOUT_LANDING_PAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ACCOUNT_CREATED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "SEARCH_SAVED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED_PDP",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED_LO",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "PROPERTY_SAVED",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "VIEWED_DETAIL_PAGE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "VIEWED_SEARCH_RESULTS",
+            "Type": "DECIMAL"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-32159198-616c-47da-9315-04f45461c381": {
+      "Alias": "pmc_goals",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_SEARCH_RESULTS",
+            "NewColumnName": "viewed_search_results"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_DETAIL_PAGE",
+            "NewColumnName": "viewed_detail_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY_SAVED",
+            "NewColumnName": "property_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED_LO",
+            "NewColumnName": "homestory_lead_submitted_lo"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED_PDP",
+            "NewColumnName": "homestory_lead_submitted_pdp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SEARCH_SAVED",
+            "NewColumnName": "search_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCOUNT_CREATED",
+            "NewColumnName": "account_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED_ABOUT_LANDING_PAGE",
+            "NewColumnName": "homestory_lead_submitted_about_landing_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED_SEARCH_LANDING_PAGE",
+            "NewColumnName": "homestory_lead_submitted_search_landing_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED",
+            "NewColumnName": "homestory_lead_submitted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "ga_date",
+              "homestory_lead_submitted",
+              "homestory_lead_submitted_search_landing_page",
+              "homestory_lead_submitted_about_landing_page",
+              "account_created",
+              "search_saved",
+              "homestory_lead_submitted_pdp",
+              "homestory_lead_submitted_lo",
+              "property_saved",
+              "viewed_detail_page",
+              "viewed_search_results"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-32159198-616c-47da-9315-04f45461c381"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

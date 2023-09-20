@@ -1,0 +1,8 @@
+{
+  "tags": [
+    "lambda",
+    "test"
+  ],
+  "lambda_name": "xyz",
+  "wait_for_lambda_response": true
+}

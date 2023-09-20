@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: current_lead_statuses
+  - name: lead_inserts
+  - name: lead_status_sort_order
+  - name: lead_status_updates
+  - name: lead_traffic_sources
+  - name: lead_updates
+  - name: leads_data
+  - name: leads
+  - name: normalized_lead_locations
+  - name: stg_leads_rec_data
+    description: Kitsap REC leads data
+    columns:
+      - name: id
+        description: The unique id for leads
+  - name: stg_lead_phones_normalized

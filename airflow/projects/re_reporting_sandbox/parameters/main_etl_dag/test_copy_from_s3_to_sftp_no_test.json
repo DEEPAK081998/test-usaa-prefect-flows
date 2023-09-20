@@ -1,0 +1,13 @@
+{
+  "tags": [
+    "s3_to_sftp",
+    "test",
+    "gui"
+  ],
+  "copy_from_s3_to_sftp": {
+    "s3_bucket": "mdp-utils-sandbox-partner-email-bucket",
+    "s3_key": "test/csv_for_test.csv",
+    "sftp_path": "test/test_parameterized_dag_{{ macros.ds_format(ds, '%Y-%m-%d', '%m_%d_%Y') }}.csv",
+    "sftp_conn_id": "sftp_hs_airflow"
+  }
+}

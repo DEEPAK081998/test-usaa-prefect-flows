@@ -1,0 +1,198 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-ba1c4810-3c77-447d-933c-8a638d81b37c",
+  "Name": "SNF-DBT-fct_cae_network_coverage",
+  "PhysicalTableMap": {
+    "SNF-ba1c4810-3c77-447d-933c-8a638d81b37c": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FCT_CAE_NETWORK_COVERAGE",
+        "InputColumns": [
+          {
+            "Name": "ST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COUNTY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BAAGENTCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNAFFILIATEDAGENTCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNW",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNAFFILIATEDCOUNT",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "LEADCOUNT180_UNW",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LEADCOUNT180",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "LEADCOUNT365_UNW",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LEADCOUNT365",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BROKERAGECOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TOTALBROKERCOUNTBYCOUNTY",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-ba1c4810-3c77-447d-933c-8a638d81b37c": {
+      "Alias": "fct_cae_network_coverage",
+      "Source": {
+        "PhysicalTableId": "SNF-ba1c4810-3c77-447d-933c-8a638d81b37c"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTALBROKERCOUNTBYCOUNTY",
+            "NewColumnName": "totalbrokercountbycounty"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECOUNT",
+            "NewColumnName": "brokeragecount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT365",
+            "NewColumnName": "leadcount365"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT365_UNW",
+            "NewColumnName": "leadcount365_unw"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT180",
+            "NewColumnName": "leadcount180"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT180_UNW",
+            "NewColumnName": "leadcount180_unw"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNAFFILIATEDCOUNT",
+            "NewColumnName": "unaffiliatedcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNW",
+            "NewColumnName": "unw"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNAFFILIATEDAGENTCOUNT",
+            "NewColumnName": "unaffiliatedagentcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BAAGENTCOUNT",
+            "NewColumnName": "baagentcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTCOUNT",
+            "NewColumnName": "agentcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COUNTY",
+            "NewColumnName": "county"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ST",
+            "NewColumnName": "st"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

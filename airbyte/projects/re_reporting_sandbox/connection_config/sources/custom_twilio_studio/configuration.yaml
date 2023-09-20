@@ -1,0 +1,10 @@
+resource_name: Custom Twilio Studio
+definition_type: source
+definition_id: 8ebfce10-d9b7-4baa-9619-4b52883004b3
+definition_image: airbyte/source-custom-twilio-studio
+definition_version: latest
+configuration:
+  twilio_base_url: https://studio.twilio.com/v2
+  twilio_account_id: ${SECRET_TWILIO_STUDIO_SID}
+  twilio_auth_token: ${SECRET_TWILIO_STUDIO_SECRET}
+  twilio_api_page_size: 1000

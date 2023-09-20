@@ -1,0 +1,483 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-c75144ef-9535-4cb0-bbf3-e008703233e5",
+  "Name": "SNF-PennyMac_Agent_Pipeline_DBT",
+  "PhysicalTableMap": {
+    "SNF-e9bcdd82-16e9-4aaf-8df1-6efd68f37bfb": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PENNYMAC_GS_AGENT_INFO",
+        "InputColumns": [
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_UID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKER_APPROVAL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CALL_NOTES",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CALL_OUTCOME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COVERAGE_AUDIT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DATE_INVITED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DUPLICATE_LO_AUDIT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EXISTING_BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FINAL_OUTCOME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INTEREST_FORM_COMPLETED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INTRO_CALL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NOTIFIED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "IS_MLO_AFFLIATED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PROFILE_CREATED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RE_START_DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SMS_RESPONSE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "IS_SMS_SENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "T_AND_C_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRAINING_ATTENDED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRAINING_SCHEDULED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFIED_RE_LICENSE_EXPIRATION_DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFIED_UNITS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AREA",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFIED",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-b4512234-4f02-492a-9819-af4354279c15": {
+      "Alias": "pennymac_gs_agent_info",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFIED",
+            "NewColumnName": "verified"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NMLSID",
+            "NewColumnName": "nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKER",
+            "NewColumnName": "broker"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AREA",
+            "NewColumnName": "area"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFIED_UNITS",
+            "NewColumnName": "verified_units"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFIED_RE_LICENSE_EXPIRATION_DATE",
+            "NewColumnName": "verified_re_license_expiration_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAINING_SCHEDULED",
+            "NewColumnName": "training_scheduled"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAINING_ATTENDED",
+            "NewColumnName": "training_attended"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "T_AND_C_STATUS",
+            "NewColumnName": "t_and_c_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "IS_SMS_SENT",
+            "NewColumnName": "is_sms_sent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SMS_RESPONSE",
+            "NewColumnName": "sms_response"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RE_START_DATE",
+            "NewColumnName": "re_start_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROFILE_CREATED",
+            "NewColumnName": "profile_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_LAST_NAME",
+            "NewColumnName": "mlo_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_FIRST_NAME",
+            "NewColumnName": "mlo_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_EMAIL",
+            "NewColumnName": "mlo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "IS_MLO_AFFLIATED",
+            "NewColumnName": "is_mlo_affliated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NOTIFIED",
+            "NewColumnName": "lo_notified"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INTRO_CALL",
+            "NewColumnName": "intro_call"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INTEREST_FORM_COMPLETED",
+            "NewColumnName": "interest_form_completed"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FINAL_OUTCOME",
+            "NewColumnName": "final_outcome"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EXISTING_BROKERAGE_CODE",
+            "NewColumnName": "existing_brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DUPLICATE_LO_AUDIT",
+            "NewColumnName": "duplicate_lo_audit"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE_INVITED",
+            "NewColumnName": "date_invited"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVERAGE_AUDIT",
+            "NewColumnName": "coverage_audit"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CALL_OUTCOME",
+            "NewColumnName": "call_outcome"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CALL_NOTES",
+            "NewColumnName": "call_notes"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKER_APPROVAL",
+            "NewColumnName": "broker_approval"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_UID",
+            "NewColumnName": "agent_uid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONE",
+            "NewColumnName": "agent_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_LAST_NAME",
+            "NewColumnName": "agent_last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_FIRST_NAME",
+            "NewColumnName": "agent_first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "agent_email",
+              "agent_first_name",
+              "agent_last_name",
+              "agent_phone",
+              "agent_uid",
+              "broker_approval",
+              "call_notes",
+              "call_outcome",
+              "coverage_audit",
+              "date_invited",
+              "duplicate_lo_audit",
+              "existing_brokerage_code",
+              "final_outcome",
+              "interest_form_completed",
+              "intro_call",
+              "lo_notified",
+              "is_mlo_affliated",
+              "mlo_email",
+              "mlo_first_name",
+              "mlo_last_name",
+              "profile_created",
+              "re_start_date",
+              "sms_response",
+              "is_sms_sent",
+              "t_and_c_status",
+              "training_attended",
+              "training_scheduled",
+              "verified_re_license_expiration_date",
+              "verified_units",
+              "area",
+              "broker",
+              "nmlsid",
+              "verified"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-e9bcdd82-16e9-4aaf-8df1-6efd68f37bfb"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

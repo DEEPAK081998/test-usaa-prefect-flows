@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_partner_user_profiles
+  - name: raw_partner_user_relationships
+  - name: raw_partner_user_roles

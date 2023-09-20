@@ -1,0 +1,18 @@
+resource_name: dbt_test1
+definition_type: source
+definition_id: decd338e-5647-4c0b-adf4-da0e75f5a750
+definition_image: airbyte/source-postgres
+definition_version: 1.0.23
+configuration:
+  ssl: true
+  host: airbyte-infra-sandbox-data-warehouse.re-sandbox.homestoryrewards.com
+  port: 5432
+  schemas:
+  - public
+  database: dbt_test1
+  password: ${SECRET_DATA_WAREHOUSE_SANDBOX_POSTGRES_PASSWORD}
+  username: ${SECRET_DATA_WAREHOUSE_SANDBOX_POSTGRES_USERNAME}
+  tunnel_method:
+    tunnel_method: NO_TUNNEL
+  replication_method:
+    method: Standard

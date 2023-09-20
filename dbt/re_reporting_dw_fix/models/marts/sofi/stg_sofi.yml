@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: sofi_events_with_source
+    description: Events with source measures by events and total events.
+    columns:
+      - name: id
+        description: This is the primary key for partner user profiles table.
+        tests:
+          - unique
+          - not_null
+  - name: sofi_lo_report
+    columns:
+      - name: invite_date
+        tests:
+          - data_freshness: {days: 3, tags: ['weekly_reports']}

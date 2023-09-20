@@ -1,0 +1,21 @@
+TMP_PLUGINS_PATH = '/tmp/airflow_dags_plugins.zip'
+AIRFLOW_RESOURCE_LOGICAL_ID = 'AirflowResource'
+DUPLICATE_REQUIREMENT_FILE_PATH = '/tmp/duplicate_airflow_requirements.txt'
+DUPLICATE_PLUGINS_PATH = '/tmp/duplicate_airflow_plugins.zip'
+WEBSERVER = 'webserver'
+SCHEDULER = 'scheduler'
+WORKER = 'worker'
+ALL = 'all'
+ECS_SERVICE_CHOICE = [WEBSERVER, SCHEDULER, WORKER, ALL]
+PARAMETERS = 'parameters'
+TMP_DAGS_DIR = '/tmp/airflow_dags'
+CONFIG_PARAMS_MAP_PLACEHOLDER = '{{CONFIG_PARAMS_MAP_PLACEHOLDER}}'
+TMP_REQUIREMENTS_PATH = '/tmp/airflow_requirements.txt'
+REQUIREMENTS_DIR = 'requirements/'
+DAGS_DIRECTORY_PATH = 'dags/'
+PLUGINS_DIRECTORY_PATH = 'plugins/'
+COMMON_DAGS_DIRECTORY_PATH = 'airflow/common/dags'
+
+EXCLUDE_DIRECTORIES = {'plugins', 'airflow_variables'}
+AWS_DEPLOY_CONFIG = 'aws_deploy.json'
+ECR_STACK_LOGICAL_ID = 'ECRStackLogicalId'

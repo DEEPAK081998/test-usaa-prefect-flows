@@ -1,0 +1,23 @@
+{
+  "name": "sandbox database <> sandbox-data-warehouse",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "d7dfe930-c83e-407c-8b2a-cb48b9b02944"
+  ],
+  "syncCatalog": {
+    "streams": []
+  },
+  "schedule": null,
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceCatalogId": null,
+  "sourceConnectorFile": "source_sandbox database.json",
+  "destinationConnectorFile": "destination_sandbox-data-warehouse.json"
+}

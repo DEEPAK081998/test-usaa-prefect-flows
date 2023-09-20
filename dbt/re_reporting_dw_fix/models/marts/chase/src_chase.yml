@@ -1,0 +1,12 @@
+
+version: 2
+
+sources:
+- name: public
+  tables:
+    - name: chase_ga_event
+    - name: chase_rep60_prod_ga_data
+    - name: chase_rep60_users
+    - name: chase_ga_goals
+
+

@@ -1,0 +1,72 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "305f3281-af9b-4c47-a9a3-6ce4531a4e97",
+    "Name": "DBT-zillow_coverage_and_leads",
+    "PhysicalTableMap": {
+        "305f3281-af9b-4c47-a9a3-6ce4531a4e97": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "zillow_coverage_and_leads",
+                "InputColumns": [
+                    {
+                        "Name": "coveragetype",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "leadid",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "agentid",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "brokerage_code",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "city",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "state",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

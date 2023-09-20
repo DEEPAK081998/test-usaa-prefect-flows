@@ -1,0 +1,17 @@
+resource_name: Warehouse DB
+definition_type: destination
+definition_id: 25c5221d-dce2-4163-ade9-739ef790f503
+definition_image: airbyte/destination-postgres
+definition_version: 0.3.23
+configuration:
+  ssl: false
+  host: airbyte-infra-sandbox-data-warehouse.re-sandbox.homestoryrewards.com
+  port: 5432
+  schema: public
+  database: warehouse_db
+  password: ${SECRET_DATA_WAREHOUSE_SANDBOX_POSTGRES_PASSWORD}
+  ssl_mode:
+    mode: disable
+  username: ${SECRET_DATA_WAREHOUSE_SANDBOX_POSTGRES_USERNAME}
+  tunnel_method:
+    tunnel_method: NO_TUNNEL

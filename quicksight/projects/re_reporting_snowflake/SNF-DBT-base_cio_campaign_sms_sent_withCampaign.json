@@ -1,0 +1,456 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-19e09ca8-97f8-4432-a384-79038cad8e3d",
+  "Name": "SNF-DBT-base_cio_campaign_sms_sent_withCampaign",
+  "PhysicalTableMap": {
+    "SNF-14e8f8a7-c3bf-46e8-8de5-2078cbe65529": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BASE_CIO_CAMPAIGN_SMS_SENT",
+        "InputColumns": [
+          {
+            "Name": "DELIVERY_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SUBJECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_JOURNEY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DELIVERY_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TIMESTAMP",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "SYSTEM_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "REPORTING_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "RECIPIENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAMPAIGN_ID",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    },
+    "SNF-37b98791-fbc9-4371-9c9b-8e565bebeb7d": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "CIO_PROD_CAMPAIGNS",
+        "InputColumns": [
+          {
+            "Name": "START_MINUTES",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "DATE_ATTRIBUTE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TIMEZONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ACTIVE",
+            "Type": "BIT"
+          },
+          {
+            "Name": "USE_CUSTOMER_TIMEZONE",
+            "Type": "BIT"
+          },
+          {
+            "Name": "DEDUPLICATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FREQUENCY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_STARTED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "START_HOUR",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EVENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "_AIRBYTE_AB_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_EMITTED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_NORMALIZED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_CIO_PROD_CAMPAIGNS_HASHID",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-7c448ed2-4a62-4ddd-af1c-c7b14b6c4d70": {
+      "Alias": "base_cio_campaign_sms_sent",
+      "Source": {
+        "PhysicalTableId": "SNF-14e8f8a7-c3bf-46e8-8de5-2078cbe65529"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAMPAIGN_ID",
+            "NewColumnName": "campaign_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_ID",
+            "NewColumnName": "customer_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RECIPIENT",
+            "NewColumnName": "recipient"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REPORTING_DATE",
+            "NewColumnName": "reporting_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SYSTEM_DATE",
+            "NewColumnName": "system_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TIMESTAMP",
+            "NewColumnName": "timestamp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NAME",
+            "NewColumnName": "name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DELIVERY_TYPE",
+            "NewColumnName": "delivery_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_JOURNEY",
+            "NewColumnName": "customer_journey"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SUBJECT",
+            "NewColumnName": "subject"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TYPE",
+            "NewColumnName": "type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DELIVERY_ID",
+            "NewColumnName": "delivery_id"
+          }
+        }
+      ]
+    },
+    "SNF-e8691226-76f9-4edf-bc68-3f7cdeea76eb": {
+      "Alias": "Intermediate Table",
+      "DataTransforms": [
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "delivery_id",
+              "type",
+              "subject",
+              "customer_journey",
+              "delivery_type",
+              "name",
+              "timestamp",
+              "system_date",
+              "reporting_date",
+              "recipient",
+              "customer_id",
+              "campaign_id",
+              "start_minutes",
+              "date_attribute",
+              "created",
+              "timezone",
+              "active",
+              "use_customer_timezone",
+              "deduplicate_id",
+              "type[cio_prod_campaigns]",
+              "frequency",
+              "first_started",
+              "start_hour",
+              "name[cio_prod_campaigns]",
+              "event_name",
+              "id",
+              "state",
+              "updated",
+              "_airbyte_ab_id",
+              "_airbyte_emitted_at",
+              "_airbyte_normalized_at",
+              "_airbyte_cio_prod_campaigns_hashid"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "JoinInstruction": {
+          "LeftOperand": "SNF-7c448ed2-4a62-4ddd-af1c-c7b14b6c4d70",
+          "RightOperand": "SNF-e9783220-1751-4151-b200-8b0a417127e9",
+          "Type": "LEFT",
+          "OnClause": "{campaign_id} = {id}"
+        }
+      }
+    },
+    "SNF-e9783220-1751-4151-b200-8b0a417127e9": {
+      "Alias": "cio_prod_campaigns",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_CIO_PROD_CAMPAIGNS_HASHID",
+            "NewColumnName": "_airbyte_cio_prod_campaigns_hashid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_NORMALIZED_AT",
+            "NewColumnName": "_airbyte_normalized_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_EMITTED_AT",
+            "NewColumnName": "_airbyte_emitted_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_AB_ID",
+            "NewColumnName": "_airbyte_ab_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED",
+            "NewColumnName": "updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EVENT_NAME",
+            "NewColumnName": "event_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NAME",
+            "NewColumnName": "name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "START_HOUR",
+            "NewColumnName": "start_hour"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_STARTED",
+            "NewColumnName": "first_started"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FREQUENCY",
+            "NewColumnName": "frequency"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TYPE",
+            "NewColumnName": "type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DEDUPLICATE_ID",
+            "NewColumnName": "deduplicate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "USE_CUSTOMER_TIMEZONE",
+            "NewColumnName": "use_customer_timezone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACTIVE",
+            "NewColumnName": "active"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TIMEZONE",
+            "NewColumnName": "timezone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE_ATTRIBUTE",
+            "NewColumnName": "date_attribute"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "START_MINUTES",
+            "NewColumnName": "start_minutes"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "type",
+            "NewColumnName": "type[cio_prod_campaigns]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "name",
+            "NewColumnName": "name[cio_prod_campaigns]"
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-37b98791-fbc9-4371-9c9b-8e565bebeb7d"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

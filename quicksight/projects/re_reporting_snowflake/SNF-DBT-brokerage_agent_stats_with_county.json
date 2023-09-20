@@ -1,0 +1,128 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-6a5ce79a-93cf-4587-8049-255e34123dc0",
+  "Name": "SNF-DBT-brokerage_agent_stats_with_county",
+  "PhysicalTableMap": {
+    "SNF-6a5ce79a-93cf-4587-8049-255e34123dc0": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BROKERAGE_AGENT_STATS_WITH_COUNTY",
+        "InputColumns": [
+          {
+            "Name": "ZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COUNTY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CBMSA",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGECOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENTCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LEADCOUNT",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-6a5ce79a-93cf-4587-8049-255e34123dc0": {
+      "Alias": "brokerage_agent_stats_with_county",
+      "Source": {
+        "PhysicalTableId": "SNF-6a5ce79a-93cf-4587-8049-255e34123dc0"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADCOUNT",
+            "NewColumnName": "leadcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTCOUNT",
+            "NewColumnName": "agentcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECOUNT",
+            "NewColumnName": "brokeragecount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CBMSA",
+            "NewColumnName": "cbmsa"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COUNTY",
+            "NewColumnName": "county"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIP",
+            "NewColumnName": "zip"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

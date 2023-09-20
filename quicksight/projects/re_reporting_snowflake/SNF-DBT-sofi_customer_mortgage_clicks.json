@@ -1,0 +1,278 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-2ed42f81-3f7a-4234-be6c-7db9251526e5",
+  "Name": "SNF-DBT-sofi_customer_mortgage_clicks",
+  "PhysicalTableMap": {
+    "SNF-2ed42f81-3f7a-4234-be6c-7db9251526e5": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_CUSTOMER_MORTGAGE_CLICKS",
+        "InputColumns": [
+          {
+            "Name": "PARTNER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "URL1_",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL1_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "URL2_",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL2_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "URL3_",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL3_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "URL4_",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL4_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "URL5_",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL5_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "URL1_CAT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL2_CAT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL3_CAT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL4_CAT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "URL5_CAT",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-2ed42f81-3f7a-4234-be6c-7db9251526e5": {
+      "Alias": "sofi_customer_mortgage_clicks",
+      "Source": {
+        "PhysicalTableId": "SNF-2ed42f81-3f7a-4234-be6c-7db9251526e5"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL5_CAT",
+            "NewColumnName": "url5_cat"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL4_CAT",
+            "NewColumnName": "url4_cat"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL3_CAT",
+            "NewColumnName": "url3_cat"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL2_CAT",
+            "NewColumnName": "url2_cat"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL1_CAT",
+            "NewColumnName": "url1_cat"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL5_DATE",
+            "NewColumnName": "url5_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL5_",
+            "NewColumnName": "url5_"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL4_DATE",
+            "NewColumnName": "url4_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL4_",
+            "NewColumnName": "url4_"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL3_DATE",
+            "NewColumnName": "url3_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL3_",
+            "NewColumnName": "url3_"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL2_DATE",
+            "NewColumnName": "url2_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL2_",
+            "NewColumnName": "url2_"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL1_DATE",
+            "NewColumnName": "url1_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "URL1_",
+            "NewColumnName": "url1_"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_ID",
+            "NewColumnName": "partner_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

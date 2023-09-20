@@ -1,0 +1,368 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-8b162387-010b-4f82-92ad-7e3cc7890b25",
+  "Name": "SNF-DBT-sofi_lead_party_id",
+  "PhysicalTableMap": {
+    "SNF-8b162387-010b-4f82-92ad-7e3cc7890b25": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_LEAD_PARTY_ID",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "GA_MEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_PAGEPATH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "USER_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "MAX",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PARTNER_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "UPDATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "DATA",
+            "Type": "JSON"
+          },
+          {
+            "Name": "PHONES",
+            "Type": "JSON"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "OPENING_HOURS_MINUTES_OF_DAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "CLOSING_HOURS_MINUTES_OF_DAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "LOCAL_TIMEZONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ACCEPTS_REFERRALS_ON_SUNDAYS",
+            "Type": "BIT"
+          },
+          {
+            "Name": "ACCEPTS_REFERRALS_ON_SATURDAYS",
+            "Type": "BIT"
+          },
+          {
+            "Name": "RECEIVES_REFERRALS_VIA_TEXT_MESSAGE",
+            "Type": "BIT"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TRAINING_COMPLETED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFICATION_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SOFI_DATA",
+            "Type": "JSON"
+          },
+          {
+            "Name": "PARTY_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEAD_ID",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-8b162387-010b-4f82-92ad-7e3cc7890b25": {
+      "Alias": "sofi_lead_party_id",
+      "Source": {
+        "PhysicalTableId": "SNF-8b162387-010b-4f82-92ad-7e3cc7890b25"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTY_ID",
+            "NewColumnName": "party_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SOFI_DATA",
+            "NewColumnName": "sofi_data"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFICATION_STATUS",
+            "NewColumnName": "verification_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TRAINING_COMPLETED",
+            "NewColumnName": "training_completed"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RECEIVES_REFERRALS_VIA_TEXT_MESSAGE",
+            "NewColumnName": "receives_referrals_via_text_message"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTS_REFERRALS_ON_SATURDAYS",
+            "NewColumnName": "accepts_referrals_on_saturdays"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTS_REFERRALS_ON_SUNDAYS",
+            "NewColumnName": "accepts_referrals_on_sundays"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOCAL_TIMEZONE",
+            "NewColumnName": "local_timezone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLOSING_HOURS_MINUTES_OF_DAY",
+            "NewColumnName": "closing_hours_minutes_of_day"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OPENING_HOURS_MINUTES_OF_DAY",
+            "NewColumnName": "opening_hours_minutes_of_day"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONES",
+            "NewColumnName": "phones"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATA",
+            "NewColumnName": "data"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED",
+            "NewColumnName": "updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CREATED",
+            "NewColumnName": "created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONE",
+            "NewColumnName": "phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_ID",
+            "NewColumnName": "partner_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MAX",
+            "NewColumnName": "max"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "USER_ID",
+            "NewColumnName": "user_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEPATH",
+            "NewColumnName": "ga_pagepath"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_CAMPAIGN",
+            "NewColumnName": "ga_campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_MEDIUM",
+            "NewColumnName": "ga_medium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

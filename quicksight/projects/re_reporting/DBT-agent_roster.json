@@ -1,0 +1,104 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "37222267-f805-4c87-a02c-67d7ee9630dd",
+    "Name": "DBT-agent_roster",
+    "PhysicalTableMap": {
+        "37222267-f805-4c87-a02c-67d7ee9630dd": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "agent_roster",
+                "InputColumns": [
+                    {
+                        "Name": "id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "phones",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "eligibility_status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zipcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "brokeragecode",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rcemail",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rcfirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rclastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rcfullname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragename",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "currentleadcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "brokeragecoverage",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

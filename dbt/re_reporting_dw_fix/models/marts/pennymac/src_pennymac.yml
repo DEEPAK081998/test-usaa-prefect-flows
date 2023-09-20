@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+    - name: pennymac_sg_conversions
+    - name: pennymac_rep60_prod_ga_data
+    - name: pennymac_rep60_users
+    - name: pennymac_ga_goals
+    - name: pennymac_ga_event
+    - name: pennymac_customer_profiles_messages
+    - name: raw_gs_agent_info
+    - name: ga4_pmc_ga_goals_final_v2
+    - name: ga4_pmc_bouncerate
+    - name: ga4_pmc_users_final
+    - name: ga4_pmc_prod_ga_data
+    - name: ga4_pmc_event_totals
+

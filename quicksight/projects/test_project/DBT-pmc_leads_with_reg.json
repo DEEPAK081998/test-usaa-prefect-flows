@@ -1,0 +1,120 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "58271863-5be4-4804-b0cc-eff08068066f",
+    "Name": "DBT-pmc_leads_with_reg",
+    "PhysicalTableMap": {
+        "58271863-5be4-4804-b0cc-eff08068066f": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "pmc_leads_with_reg",
+                "InputColumns": [
+                    {
+                        "Name": "partner_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agent_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "pup_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "has_agent",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "transaction_type",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "prequal",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lofirstname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "lolastname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "register_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "customer_first_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_last_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_full_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "customer_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sofi_party_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sofi_lead_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "bank_partner",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

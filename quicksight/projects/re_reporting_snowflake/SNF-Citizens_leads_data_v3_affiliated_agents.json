@@ -1,0 +1,610 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-ec2f1d1b-b025-4416-8802-9e3cc46558c7",
+  "Name": "SNF-Citizens_leads_data_v3_affiliated_agents",
+  "PhysicalTableMap": {
+    "SNF-bba58f7b-ce83-4bf7-b07f-e8f68d8776b3": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "CITIZENS_AFFILIATED_AGENTS",
+        "InputColumns": [
+          {
+            "Name": "CHILD_PROFILE_UUID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PARENT_PROFILE_UUID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "APSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "APSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ASM_REGION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ASM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ASM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RSM_REGION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DSM_DIVISION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DSM_MANAGER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DSM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TOTAL_REFERRALS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TOTAL_CITIZENS_REFERRALS",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-02699617-c5ee-4d02-8775-f4ba33809a9c": {
+      "Alias": "citizens_affiliated_agents",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_CITIZENS_REFERRALS",
+            "NewColumnName": "total_citizens_referrals"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_REFERRALS",
+            "NewColumnName": "total_referrals"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DSM_EMAIL",
+            "NewColumnName": "dsm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DSM_MANAGER_NAME",
+            "NewColumnName": "dsm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DSM_DIVISION",
+            "NewColumnName": "dsm_division"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RSM_EMAIL",
+            "NewColumnName": "rsm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RSM_MANAGER_NAME",
+            "NewColumnName": "rsm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RSM_REGION",
+            "NewColumnName": "rsm_region"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASM_EMAIL",
+            "NewColumnName": "asm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASM_MANAGER_NAME",
+            "NewColumnName": "asm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASM_REGION",
+            "NewColumnName": "asm_region"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PSM_EMAIL",
+            "NewColumnName": "psm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PSM_MANAGER_NAME",
+            "NewColumnName": "psm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "APSM_EMAIL",
+            "NewColumnName": "apsm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "APSM_MANAGER_NAME",
+            "NewColumnName": "apsm_manager_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NMLSID",
+            "NewColumnName": "lo_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_EMAIL",
+            "NewColumnName": "lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NAME",
+            "NewColumnName": "lo_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_NAME",
+            "NewColumnName": "brokerage_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARENT_PROFILE_UUID",
+            "NewColumnName": "parent_profile_uuid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CHILD_PROFILE_UUID",
+            "NewColumnName": "child_profile_uuid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "agent_name",
+            "NewColumnName": "agent_name[citizens_affiliated_agents]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "agent_email",
+            "NewColumnName": "agent_email[citizens_affiliated_agents]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "brokerage_code",
+            "NewColumnName": "brokerage_code[citizens_affiliated_agents]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_name",
+            "NewColumnName": "lo_name[citizens_affiliated_agents]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_email",
+            "NewColumnName": "lo_email[citizens_affiliated_agents]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_nmlsid",
+            "NewColumnName": "lo_nmlsid[citizens_affiliated_agents]"
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-bba58f7b-ce83-4bf7-b07f-e8f68d8776b3"
+      }
+    },
+    "SNF-93cd7898-4073-417f-b110-ceac6c667dad": {
+      "Alias": "PD-DBT-leads_data_v3-CITIZENS",
+      "Source": {
+        "DataSetArn": "arn:aws:quicksight:us-east-1:931422288647:dataset/2b6002bc-cbba-47d2-8cc7-160244e178bf"
+      }
+    },
+    "SNF-deb177d7-5efa-421d-8f5d-066147dc5d82": {
+      "Alias": "Intermediate Table",
+      "DataTransforms": [
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "date",
+              "id",
+              "client_name",
+              "client_email",
+              "client_phone",
+              "agent_name",
+              "agent_email",
+              "agent_phone",
+              "lo_name",
+              "lo_email",
+              "lo_phone",
+              "purchase_location",
+              "purchase_time_frame",
+              "prequal",
+              "avg_price",
+              "comments",
+              "bank_name",
+              "bank_id",
+              "transaction_type",
+              "mlo_status",
+              "mlo_status_time",
+              "rc_status",
+              "rc_status_time",
+              "agent_status",
+              "agent_status_time",
+              "closedate",
+              "lsuclosedate",
+              "propertyaddress",
+              "propertyprice",
+              "lenderclosedwith",
+              "agtcommpct",
+              "created",
+              "rc_accept_time_unadjusted",
+              "agent_assign_time_unadjusted",
+              "agent_assign_time",
+              "accept_time_delay_hrs",
+              "agentassign_time_delay_hrs",
+              "mnth_yr",
+              "brokerage_code",
+              "full_name",
+              "rc_name",
+              "rc_email",
+              "rc_phone",
+              "date_part",
+              "attachment",
+              "hb_status",
+              "dow",
+              "cst",
+              "cstdate",
+              "csthour",
+              "year",
+              "weeknum",
+              "businesshours",
+              "pending",
+              "mlosubmission",
+              "nmlsid",
+              "outofnetworkbrokerage",
+              "client_first_name",
+              "client_last_name",
+              "rc_contact_first",
+              "rc_contact_last",
+              "price_range_lower_bound",
+              "price_range_upper_bound",
+              "agentfirstname",
+              "agentlastname",
+              "rc_city",
+              "rc_state",
+              "selling_address",
+              "bankcustomer",
+              "source",
+              "first_contact_time",
+              "first_contact_delay_from_enrollment",
+              "accept_to_contact_delay",
+              "velocifyid",
+              "major_status",
+              "branchname",
+              "branchemployee",
+              "coverage",
+              "attached",
+              "lastpendingdate",
+              "inactivedate",
+              "timetoinactive",
+              "inactiverole",
+              "last_agent_update",
+              "last_rc_update",
+              "citizenssalesforceenrollment",
+              "pendingclosedate",
+              "pendingpropertyaddress",
+              "closeaddress",
+              "financeclosedate",
+              "networkid",
+              "customereci",
+              "brokerageroutingmethod",
+              "agent_assigned",
+              "escalatedtoconcierge",
+              "zip",
+              "city",
+              "state",
+              "lo_first_name",
+              "lo_last_name",
+              "hb_status_time",
+              "contactmethod",
+              "outofnetwork",
+              "failc",
+              "faild",
+              "first_agent_contact_time",
+              "actively_searching_status_time",
+              "pending_status_time",
+              "client_contact_approval",
+              "date_marked_closed_final",
+              "current_location",
+              "sell_location",
+              "category",
+              "homesaleprice",
+              "updated_at",
+              "rc_office_phone",
+              "rc_mobile_phone",
+              "lo_aggregate_id",
+              "consumer_confirmed",
+              "normalizedclosedate",
+              "agent_aggregate_id",
+              "traffic_medium",
+              "traffic_campaign",
+              "mlo_assign_time",
+              "first_time_wh",
+              "updated_in_wh",
+              "type_of_load_wh",
+              "ph_bank_name",
+              "level_1_manager[leads_data_v3]",
+              "level_1_manager_email[leads_data_v3]",
+              "ph_lm_name",
+              "ph_lm_email",
+              "level_3_manager_name[leads_data_v3]",
+              "level_3_manager_email[leads_data_v3]",
+              "level_3_manager_region[leads_data_v3]",
+              "ph_slm_name",
+              "ph_slm_manager",
+              "level_4_manager_region[leads_data_v3]",
+              "ph_dd_name",
+              "ph_dd_email",
+              "ph_dd_division",
+              "lo_nmlsid",
+              "ph_lo_email",
+              "attachment_code",
+              "attachment_reason",
+              "system_invite_date",
+              "system_enroll_date",
+              "reporting_invite_date",
+              "reporting_enroll_date",
+              "Partner",
+              "TrafficCategory",
+              "Source",
+              "bank_name[normalized_partner_hierarchy]",
+              "mlo_nmlsid",
+              "mlo_name",
+              "mlo_email",
+              "mlo_phone",
+              "level_1_manager",
+              "level_1_manager_email",
+              "level_2_manger",
+              "level_2_manager_email",
+              "level_3_manager_name",
+              "level_3_manager_email",
+              "level_3_manager_region",
+              "level_4_manager_name",
+              "level_4_manager_email",
+              "level_4_manager_region",
+              "level_5_manager_name",
+              "level_5_manager_email",
+              "level_5_manager_region",
+              "row_id",
+              "ProjectCloseRate",
+              "child_profile_uuid",
+              "parent_profile_uuid",
+              "agent_name[citizens_affiliated_agents]",
+              "agent_email[citizens_affiliated_agents]",
+              "brokerage_code[citizens_affiliated_agents]",
+              "brokerage_name",
+              "lo_name[citizens_affiliated_agents]",
+              "lo_email[citizens_affiliated_agents]",
+              "lo_nmlsid[citizens_affiliated_agents]",
+              "apsm_manager_name",
+              "apsm_email",
+              "psm_manager_name",
+              "psm_email",
+              "asm_region",
+              "asm_manager_name",
+              "asm_email",
+              "rsm_region",
+              "rsm_manager_name",
+              "rsm_email",
+              "dsm_division",
+              "dsm_manager_name",
+              "dsm_email",
+              "aggregate_id",
+              "total_referrals",
+              "total_citizens_referrals"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "JoinInstruction": {
+          "LeftOperand": "SNF-93cd7898-4073-417f-b110-ceac6c667dad",
+          "RightOperand": "SNF-02699617-c5ee-4d02-8775-f4ba33809a9c",
+          "Type": "LEFT",
+          "OnClause": "{agent_aggregate_id} = {child_profile_uuid}"
+        }
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dvillalon@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

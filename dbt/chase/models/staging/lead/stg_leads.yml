@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stg_leads_rec_data
+    description: Kitsap REC leads data
+    columns:
+      - name: id
+        description: The unique id for leads

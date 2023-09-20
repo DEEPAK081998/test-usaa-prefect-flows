@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: alliant_ga_event
+  - name: alliant_rep60_prod_ga_data
+  - name: alliant_rep60_users
+  - name: alliant_ga_goals
+  - name: alliant_sendgrid
+  - name: alliant_invites_sg_messages
+  - name: ga_event_test

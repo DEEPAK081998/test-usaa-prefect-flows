@@ -1,0 +1,134 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "95d90717-2ee0-4e4e-884a-9a97733c2fdb"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "sofi-campaign",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_users": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_medium": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_source": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_campaign": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_newUsers": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_sessions": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_adContent": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_pageviews": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_bounceRate": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_avgTimeOnPage": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "ga_uniquePageviews": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "sofi_campaign",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_sofi-campaign-data.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

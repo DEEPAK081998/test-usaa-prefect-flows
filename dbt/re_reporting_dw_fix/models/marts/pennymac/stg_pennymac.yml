@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: pennymac_event_totals
+
+
+models:
+  - name: pennymac_events_with_source
+    description: Events with source measures by events and total events.
+    columns:
+      - name: id
+        description: This is the primary key for partner user profiles table.
+        tests:
+          - unique
+          - not_null
+  - name: pennymac_paths
+    description: GA data on the pagepath level
+    columns:
+      - name: id
+        description: PK for ga data
+        tests:
+          - unique
+          - not_null
+  - name: pmc_sendgrid_totals
+    description: Customer marketing emails rolled up to the to_email
+    columns:
+      - name: to_email
+        tests:
+          - unique
+          - not_null
+  - name: pennymac_lo_report
+    columns:
+      - name: invite_date
+        tests:
+          - data_freshness: {days: 3, tags: ['weekly_reports']}
+          - dbt_expectations.expect_row_values_to_have_recent_data:
+              datepart: day
+              interval: 100

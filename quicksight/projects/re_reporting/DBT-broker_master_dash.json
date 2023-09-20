@@ -1,0 +1,92 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "6a71af7a-ca67-4bc4-a4a5-7a2ead476828",
+    "Name": "DBT-broker_master_dash",
+    "PhysicalTableMap": {
+        "6a71af7a-ca67-4bc4-a4a5-7a2ead476828": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "broker_master_dash",
+                "InputColumns": [
+                    {
+                        "Name": "brokerage_code",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragename",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zip",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "cbmsa",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "st",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "zipcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "rc_name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "brokeragegroup",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rc_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rc_phone",
+                        "Type": "JSON"
+                    },
+                    {
+                        "Name": "leadcount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "updated_at",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

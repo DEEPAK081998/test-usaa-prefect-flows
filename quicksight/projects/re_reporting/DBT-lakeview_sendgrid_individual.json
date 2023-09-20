@@ -1,0 +1,88 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "0741e1fd-ee72-4708-8b1c-c1cc815c238e",
+    "Name": "DBT-lakeview_sendgrid_individual",
+    "PhysicalTableMap": {
+        "0741e1fd-ee72-4708-8b1c-c1cc815c238e": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "lakeview_sendgrid_individual",
+                "InputColumns": [
+                    {
+                        "Name": "msg_id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "status",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "subject",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "to_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "opens_count",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "clicks_count",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "first_event_time",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "last_event_time",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "email_no",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "unique_open",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "unique_click",
+                        "Type": "BIT"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

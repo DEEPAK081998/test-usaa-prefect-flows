@@ -1,0 +1,16 @@
+{
+  "connectionConfiguration": {
+    "ssl": true,
+    "host": "auth-service-db.re-prod.vast.com",
+    "port": 3306,
+    "database": "authentication_store_prod",
+    "password": "$SECRET_AUTHENTICATION_STORE_PROD_DB_AUTH_USER_PASSWORD",
+    "username": "$SECRET_AUTHENTICATION_STORE_PROD_DB_AUTH_USER_USERNAME",
+    "tunnel_method": {
+      "tunnel_method": "NO_TUNNEL"
+    },
+    "replication_method": "STANDARD"
+  },
+  "name": "AuthService",
+  "sourceDefinitionName": "MySQL"
+}

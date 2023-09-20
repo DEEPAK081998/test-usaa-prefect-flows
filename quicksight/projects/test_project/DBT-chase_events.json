@@ -1,0 +1,64 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "9f7fb1ea-eb16-47d5-8599-870b788a2d9f",
+    "Name": "DBT-chase_events",
+    "PhysicalTableMap": {
+        "9f7fb1ea-eb16-47d5-8599-870b788a2d9f": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "chase_events",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_eventlabel",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_eventaction",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_totalevents",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_eventcategory",
+                        "Type": "STRING"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

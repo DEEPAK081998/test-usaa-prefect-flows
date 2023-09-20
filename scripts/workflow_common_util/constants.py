@@ -1,0 +1,1 @@
+ZIP_FILES_DIRECTORY_PATH = '/tmp/'

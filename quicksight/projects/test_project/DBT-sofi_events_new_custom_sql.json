@@ -1,0 +1,72 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "b8bbf41c-7b73-45a5-b6a9-1a87fbfaab68",
+    "Name": "DBT-sofi_events_new_custom_sql",
+    "PhysicalTableMap": {
+        "b8bbf41c-7b73-45a5-b6a9-1a87fbfaab68": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "sofi_events_new_custom_sql",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "ga_eventlabel",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_eventaction",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_eventcategory",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_adcontent",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "ga_totalevents",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "ga_uniqueevents",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

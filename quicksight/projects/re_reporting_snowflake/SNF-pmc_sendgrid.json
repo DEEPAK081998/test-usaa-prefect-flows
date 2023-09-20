@@ -1,0 +1,193 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-132d8d90-f5ce-4066-9ca7-c927a7ffb26c",
+  "Name": "SNF-pmc_sendgrid",
+  "PhysicalTableMap": {
+    "SNF-770e398d-6ce3-4902-889e-2d84b6b1fbda": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PMC_SENDGRID",
+        "InputColumns": [
+          {
+            "Name": "MSG_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SUBJECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "OPENS_COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CLICKS_COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "EMAIL_NO",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FIRST_EVENT_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LAST_EVENT_TIME",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "IS_INVITE",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-770e398d-6ce3-4902-889e-2d84b6b1fbda": {
+      "Alias": "pmc_sendgrid",
+      "Source": {
+        "PhysicalTableId": "SNF-770e398d-6ce3-4902-889e-2d84b6b1fbda"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "IS_INVITE",
+            "NewColumnName": "is_invite"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_EVENT_TIME",
+            "NewColumnName": "last_event_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_EVENT_TIME",
+            "NewColumnName": "first_event_time"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL_NO",
+            "NewColumnName": "email_no"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLICKS_COUNT",
+            "NewColumnName": "clicks_count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "OPENS_COUNT",
+            "NewColumnName": "opens_count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TO_EMAIL",
+            "NewColumnName": "to_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SUBJECT",
+            "NewColumnName": "subject"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATUS",
+            "NewColumnName": "status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MSG_ID",
+            "NewColumnName": "msg_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/bwalker@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/RE-Prod_dev/dbolling@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "262726744",
+    "start_date": "2022-06-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"sofi-sg_conversions\",\"metrics\":[\"ga:goal1Completions\"],\"dimensions\":[\"ga:source\",\"ga:date\",\"ga:medium\",\"ga:adContent\",\"ga:campaign\"]}]",
+    "window_in_days": 1
+  },
+  "name": "sofi_sg_conversions",
+  "sourceDefinitionName": "Google Analytics"
+}

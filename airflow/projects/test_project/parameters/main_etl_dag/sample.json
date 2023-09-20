@@ -1,0 +1,126 @@
+{
+  "schedule": "<dag schedule> # more info here https://airflow.apache.org/docs/apache-airflow/1.10.1/scheduler.html",
+  "tags": [
+    "<project name>",
+    "<other list of tags>"
+  ],
+  "max_active_runs": "<Integer value which determines the maximum number of simultaneously running instances of a DAG>",
+  "lambda_name": "<Name of the lambda function to trigger>",
+  "wait_for_lambda_response": "<true (default) or false based on whether to wait for lambda response before moving to next task in the dag>",
+  "lambda_trigger_extra_kwargs": {
+    "<extra lambda trigger kwargs>": "# to see all supported kwargs, see https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/_api/airflow/providers/amazon/aws/operators/lambda_function/index.html#airflow.providers.amazon.aws.operators.lambda_function.LambdaInvokeFunctionOperator",
+    "execution_timeout": "the maximum time allowed for every execution of a task in seconds"
+  },
+  "connection_ids": [
+    "<airbyte connection ids>",
+    "specify ids in level one to run in sequence like [id_1,id_2]",
+    "specify ids in level two to run in parallel like [[id_1,id_2], id_3], id_1 and Id_2 will run in parallel while id_3 will run after id_1 and id_2 are finished "
+  ],
+  "airbyte_extra_kwargs":{
+    "timeout": "the maximum time allowed for any connection sync in seconds",
+    "<for more info>":"see https://airflow.apache.org/docs/apache-airflow-providers-airbyte/stable/operators/airbyte.html"
+  },
+  "dbt_project_path": "<s3 path where dbt project zip file is stored> # ex:- s3://mdp-sandbox-bucket/dbt/projects/sample.zip",
+  "dbt_conn_id": "<a airflow connection that has access to rds instance>",
+  "dbt_conn_macro": "<dbt macro name>",
+  "dbt_extra_kwargs": {
+    "<extra dbt kwargs>": "# to see all supported kwargs run `dbt run --help`",
+    "execution_timeout": "the maximum time allowed for every execution of a task in seconds"
+  },
+  "dbt_operations_extra_kwargs":{
+    "<extra dbt run-operation kwargs>": "# to see all supported kwargs run `dbt run-operation --help`"
+  },
+  "s3_bucket_name": "<s3 bucket name where quicksight datasets are stored>",
+  "dataset_s3_directory": "<path in s3 bucket where quicksight datasets are stored>",
+  "ecs_cluster_name": "<ecs cluster name in which to run task>",
+  "ecs_container_name": "<ecs container name to run>",
+  "ecs_task_arn": "<arn of ecs task>",
+  "ecs_run_command": [
+    "<command to run>",
+    "# ex:-",
+    "run",
+    "--select",
+    "leads"
+  ],
+  "ecs_extra_kwargs": {
+    "network_configuration": {
+      "awsvpcConfiguration": {
+        "subnets": [
+          "<subnet-id>",
+          "<subnet-id>"
+        ]
+      }
+    },
+    "execution_timeout": "the maximum time allowed for every execution of a task in seconds",
+    "tags": {
+      "Owner": "<owner name>",
+      "Project": "mdp",
+      "Environment": "<environment>"
+    }
+  },
+  "run_dbt": "<a bool value of either true or false denoting where to run dbt operator or not (by default set to true)>",
+  "run_dbt_test": "<a bool value of either true or false denoting where to run dbt test operator or not (by default set to false)>",
+  "run_dbt_source_freshness": "<a bool value of either true or false denoting where to run dbt source operator or not (by default set to false)>",
+  "dbt_test_extra_kwargs": {
+    "<extra dbt test kwargs>": "# to see all supported kwargs run `dbt test --help`",
+    "execution_timeout": "the maximum time allowed for every execution of a task in seconds"
+  },
+  "dbt_source_freshness_extra_kwargs": {
+    "<extra dbt source freshness kwargs>": "# to see all supported kwargs run `dbt source freshness --help`",
+    "execution_timeout": "the maximum time allowed for every execution of a task in seconds"
+  },
+  "local_docker_image_name": "local docker image name that runs dbt task",
+  "local_aws_cred_abs_path": "absolute path in host to aws credentials file",
+  "local_docker_additional_envs": {
+    "AWS_PROFILE": "default"
+  },
+  "aws_account_id": "aws account id",
+  "quicksight_dataset_ids": [
+    "<quicksight dataset ids to refresh>"
+  ],
+  "quicksight_data_run_extra_kwargs":{
+    "execution_timeout":"the maximum time  in seconds allowed for every execution of dataset_run_task",
+    "<for more info>":"see Passing parameters to PythonOperator https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/python.html#id3"
+  },
+  "quicksight_data_refresh_extra_kwargs":{
+    "execution_timeout":"the maximum time in seconds allowed for every execution of dataset_refresh_task",
+    "<for more info>":"see Passing parameters to PythonOperator https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/python.html#id3"
+  },
+  "partner_email": {
+    "report_type": "<partner>_<group>_<frequency> Examples: rbc_enrollments_daily, pennymac_lo_weekly",
+    "sent_to": "clients, dev, vic, tijana, marko, kris. Used during testing, this will send emails to clients or to someone from HomeStory",
+    "limit": "number of emails to be sent",
+    "email_tag": "email tag to trace emails sent by Postmark API",
+    "email_subject": "email subject",
+    "email_from": "email address that is sending the email",
+    "email_to": "recipient's email address, either here or in manifest in S3",
+    "manifest_path": "s3 key of the manifest file to send the emails",
+    "html_template_name": "html template stored in S3 to compose the email body"
+  },
+  "partner_email_extra_kwargs":{
+    "execution_timeout":"the maximum time in seconds allowed for every execution of partner_email_task",
+    "<for more info>":"see Passing parameters to PythonOperator https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/python.html#id3"
+  },
+  "copy_from_s3_to_sftp": {
+    "s3_bucket": "Source S3 bucket name, from where the file must be copied.",
+    "s3_key": "Source S3 bucket key, from where the file must be copied.",
+    "sftp_path": "Destination path in SFTP, where the file must be copied to.",
+    "sftp_conn_id": "SFTP connection name in Airflow.",
+    "date_format": "Date format should follow pandas convention, for instance: `%m_%d_%Y`. See https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.strftime.html"
+  },
+  "great_expectations_task_configurations": [
+    "This is a list of JSON objects, each representing a great_expectation_task_configuration.",
+    "A great_expectation_task_configuration object follows the schema below:",
+    {
+      "great_expectations_project_path (required)": "s3_uri to object containing the great_expectations project (or local path in case of mwaa_local_runner)",
+      "great_expectations_checkpoint (required)": "name of the checkpoint to be executed",
+      "great_expectations_extra_kwargs (optional)": {
+        "<extra kwargs for great expectations>": "For more info, refer to https://docs.astronomer.io/learn/airflow-great-expectations#operator-parameters"
+      }
+    },
+    "To run tasks sequentially, specify gx_task_configurations at level one, like [gx_1, gx_2].",
+    "To run tasks in parallel, specify gx_task_configurations at level two, like [[gx_1, gx_2], gx_3].",
+    "gx_1 and gx_2 will run in parallel, while gx_3 will run after gx_1 and gx_2 are finished.",
+    "In the context of this configuration, 'great_expectations' is referred to as 'gx'."
+  ]
+}

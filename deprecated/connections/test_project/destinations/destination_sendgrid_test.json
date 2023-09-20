@@ -1,0 +1,7 @@
+{
+  "destinationDefinitionName": "Local JSON",
+  "connectionConfiguration": {
+    "destination_path": "/tmp"
+  },
+  "name": "file-test"
+}

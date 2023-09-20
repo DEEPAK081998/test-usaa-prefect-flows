@@ -1,0 +1,8 @@
+{
+  "partner_email": {
+    "s3_bucket_name": "mdp-utils-prod-partner-email-bucket",
+    "postmark_api_secret_id": "PostmarkTokenSecret-DnfzixYHP2Qn",
+    "send_to": "clients",
+    "limit": 1
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "tags": [
+    "partner_email",
+    "rbc",
+    "enrollments"
+  ],
+  "schedule": "0 12 * * *",
+  "partner_email": {
+    "report_type": "rbc_enrollments_daily",
+    "email_tag": "rbc_enrollments_daily",
+    "email_subject": "HomeStory Enrollments File",
+    "email_from": "partner-reporting@homestoryrewards.com",
+    "email_cc": "bi@homestoryrewards.com",
+    "reply_to": "referrals@homestoryrewards.com",
+    "manifest_path": "plugins/partner_email/manifests/rbc_enrollments_daily.csv",
+    "html_template_name": "plugins/partner_email/html_templates/rbc_enrollments_daily.html",
+    "attachment_name_template": "homestory_rbc_enrollments_daily_{date}.csv",
+    "columns_order": [
+      "date",
+      "id",
+      "client_first_name",
+      "client_last_name",
+      "client_email",
+      "client_phone",
+      "agent_name",
+      "agent_email",
+      "agent_phone",
+      "lo_name",
+      "lo_email",
+      "lo_phone",
+      "purchase_location",
+      "bankcustomer",
+      "transaction_type",
+      "hb_status",
+      "closedate",
+      "propertyaddress",
+      "propertyprice",
+      "purchase_time_frame",
+      "avg_price"
+    ]
+  }
+}

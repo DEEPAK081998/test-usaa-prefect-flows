@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "168289245",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"tms-ga-event\",\"metrics\":[\"ga:totalEvents\"],\"dimensions\":[\"ga:EventLabel\",\"ga:EventCategory\",\"ga:EventAction\",\"ga:date\"]},{\"name\":\"tms-ga-goals\",\"metrics\":[\"ga:goal1Completions\",\"ga:goal2Completions\",\"ga:goal4Completions\",\"ga:goal5Completions\",\"ga:goal8Completions\",\"ga:goal9Completions\"],\"dimensions\":[\"ga:date\"]}]",
+    "window_in_days": 1
+  },
+  "name": "tms_goals_events",
+  "sourceDefinitionName": "Google Analytics"
+}

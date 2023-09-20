@@ -1,0 +1,21 @@
+{
+  "connectionConfiguration": {
+    "ssl": true,
+    "host": "vast-re-api-prod-replica.cn3pg5u9rj6s.us-east-1.rds.amazonaws.com",
+    "port": 5432,
+    "schemas": [
+      "public"
+    ],
+    "database": "vast_re_api_prod",
+    "password": "$SECRET_VREAPI_DB_PROD_AIRBYTE_PASSWORD",
+    "username": "$SECRET_VREAPI_DB_PROD_AIRBYTE_USERNAME",
+    "tunnel_method": {
+      "tunnel_method": "NO_TUNNEL"
+    },
+    "replication_method": {
+      "method": "Standard"
+    }
+  },
+  "name": "HS Read Replica",
+  "sourceDefinitionName": "Postgres"
+}

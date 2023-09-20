@@ -1,0 +1,360 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "c491d285-de5b-4097-94b0-201fc925ea26",
+    "Name": "DBT-fct_portal_finance",
+    "PhysicalTableMap": {
+        "c491d285-de5b-4097-94b0-201fc925ea26": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "fct_portal_finance",
+                "InputColumns": [
+                  {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "date_marked_closed_final",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "client_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "client_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "client_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "brokerage_code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "full_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rcname",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rcemail",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_office_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_mobile_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "transaction_type",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "bank_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "tstate_final",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ldstate1",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ldstate",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "transactionstate",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "address",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "closedate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "lsu_close_date",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "saleprice",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "agent_commission",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "commission_percent",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "lenderclosedwith",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "documentation_received",
+                    "Type": "BIT"
+                  },
+                  {
+                    "Name": "reviewer1name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "reviewer1date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "reviewer2name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "reviewer2date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "reviewer1delay",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "referralfeedate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "referralamountreceived",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "bankaccount",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "difference",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "expected_fee",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "referralfeedelay",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "rebate_amount",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "state_restrictions",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rewardpaiddate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "rebate_paid",
+                    "Type": "BIT"
+                  },
+                  {
+                    "Name": "rewardtype",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rewardamount_final",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "senderid",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "sendername",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "major_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "hb_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "enrolldate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "max_upadate_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "reward_ready_date_final",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "reward_ready_ordered_date_final",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "max_reward_created_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "documentation_received_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "feedate1",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "feedate2",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "referral_fee_1",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "referral_fee_2",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "row_id",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "referral_fee_type",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "aggregate_id",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "role",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "dateissued",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "reward_received",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "currency_code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "referenceorderid",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "referencelineitemid",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lsu_reference_id",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lsu_value",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "campaign",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lsu_reward_amount",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rewardamount_final_rewards",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "bank_name_rewards",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "brokerage_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "backfilled_columns",
+                    "Type": "STRING"
+                  }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

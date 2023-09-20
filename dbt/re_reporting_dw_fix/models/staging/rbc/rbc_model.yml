@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: unbounce_ga_metrics
+  - name: unbounce_ga4_metrics
+  - name: rbc_ga4_data_unbounce_v2

@@ -1,0 +1,133 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "401eafee-57d0-4031-b780-3eda1c8d24fc"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "freedom-event-totals",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_source": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_newusers": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_sessions": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_adContent": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_EventLabel": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_bouncerate": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_EventAction": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_totalEvents": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_uniqueEvents": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_EventCategory": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_avgTimeOnPage": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "freedom_event_totals",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_freedom-events-with_source.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

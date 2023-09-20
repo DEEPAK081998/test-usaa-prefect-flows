@@ -1,0 +1,676 @@
+definition_type: connection
+resource_name: HS_customer_io <> Warehouse DB
+source_configuration_path: sources/hs_customer_io/configuration.yaml
+destination_configuration_path: destinations/warehouse_db/configuration.yaml
+configuration:
+  sync_catalog:
+    streams:
+    - stream:
+        name: activities
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: string
+            data:
+              type: object
+              properties:
+                id:
+                  anyOf:
+                  - type: string
+                  - type: object
+                    properties:
+                      to:
+                        type: string
+                      from:
+                        type: string
+                role:
+                  type: string
+                email:
+                  anyOf:
+                  - type: string
+                  - type: object
+                    properties:
+                      to:
+                        type: string
+                      from:
+                        type: string
+                phone:
+                  anyOf:
+                  - type: string
+                  - type: object
+                    properties:
+                      to:
+                        type: string
+                      from:
+                        type: string
+                cio_id:
+                  type: string
+                opened:
+                  type: integer
+                phones:
+                  type: object
+                  properties:
+                    to:
+                      type: string
+                    from:
+                      type: string
+                reason:
+                  type: string
+                comment:
+                  type: string
+                lastName:
+                  anyOf:
+                  - type: string
+                  - type: object
+                    properties:
+                      to:
+                        type: string
+                      from:
+                        type: string
+                listings:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      price:
+                        type: integer
+                delivered:
+                  type: integer
+                firstName:
+                  anyOf:
+                  - type: string
+                  - type: object
+                    properties:
+                      to:
+                        type: string
+                      from:
+                        type: string
+                created_at:
+                  type: object
+                  properties:
+                    to:
+                      type: string
+                    from:
+                      type: string
+                delivery_id:
+                  type: string
+                purchaseLocation:
+                  type: object
+                  properties:
+                    to:
+                      type: string
+                    from:
+                      type: string
+            name:
+              type: string
+            type:
+              type: string
+            timestamp:
+              type: integer
+            customer_id:
+              type: string
+            delivery_id:
+              type: string
+            delivery_type:
+              type: string
+            customer_identifiers:
+              type: object
+              properties:
+                id:
+                  type: string
+                email:
+                  type: string
+                cio_id:
+                  type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        source_defined_cursor: true
+        default_cursor_field:
+        - timestamp
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field:
+        - timestamp
+        primary_key:
+        - - id
+        alias_name: activities
+        selected: true
+    - stream:
+        name: messages
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: string
+            type:
+              type: string
+            created:
+              type: integer
+            metrics:
+              type: object
+              properties:
+                undeliverable:
+                  type: integer
+            subject:
+              type: string
+            action_id:
+              type: integer
+            forgotten:
+              type: boolean
+            recipient:
+              type: string
+            content_id:
+              type: integer
+            campaign_id:
+              type: integer
+            customer_id:
+              type: string
+            broadcast_id:
+              type: integer
+            newsletter_id:
+              type: integer
+            deduplicate_id:
+              type: string
+            failure_message:
+              type: string
+            msg_template_id:
+              type: integer
+            parent_action_id:
+              type: integer
+            customer_identifiers:
+              type: object
+              properties:
+                id:
+                  type: string
+                email:
+                  type: string
+                cio_id:
+                  type: string
+            transactional_message_id:
+              type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        source_defined_cursor: true
+        default_cursor_field:
+        - created
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field:
+        - created
+        primary_key:
+        - - id
+        alias_name: messages
+        selected: true
+    - stream:
+        name: sender_identities
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            email:
+              type: string
+            phone:
+              type: string
+            address:
+              type: string
+            template_type:
+              type: string
+            auto_generated:
+              type: boolean
+            deduplicate_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        source_defined_cursor: true
+        default_cursor_field:
+        - id
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field:
+        - id
+        primary_key:
+        - - id
+        alias_name: sender_identities
+        selected: true
+    - stream:
+        name: broadcasts
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            tags:
+              type: array
+              items:
+                type: string
+            type:
+              type: string
+            active:
+              type: boolean
+            actions:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  type:
+                    type: string
+            created:
+              type: integer
+            updated:
+              type: integer
+            created_by:
+              type: string
+            first_started:
+              type: integer
+            deduplicate_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: broadcasts
+        selected: true
+    - stream:
+        name: campaigns
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            tags:
+              type: array
+              items:
+                type: string
+            type:
+              type: string
+            state:
+              type: string
+            active:
+              type: boolean
+            actions:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  type:
+                    type: string
+            created:
+              type: integer
+            updated:
+              type: integer
+            timezone:
+              type: string
+            frequency:
+              type: string
+            event_name:
+              type: string
+            start_hour:
+              type: integer
+            first_started:
+              type: integer
+            start_minutes:
+              type: integer
+            date_attribute:
+              type: string
+            deduplicate_id:
+              type: string
+            filter_segment_ids:
+              type: array
+              items:
+                type: integer
+            trigger_segment_ids:
+              type: array
+              items:
+                type: integer
+            use_customer_timezone:
+              type: boolean
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: campaigns
+        selected: true
+    - stream:
+        name: collections
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            rows:
+              type: integer
+            bytes:
+              type: integer
+            schema:
+              type: array
+              items:
+                type: string
+            created_at:
+              type: integer
+            updated_at:
+              type: integer
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: collections
+        selected: true
+    - stream:
+        name: exports
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: integer
+            type:
+              type: string
+            total:
+              type: integer
+            failed:
+              type: boolean
+            status:
+              type: string
+            user_id:
+              type: integer
+            downloads:
+              type: integer
+            created_at:
+              type: integer
+            updated_at:
+              type: integer
+            user_email:
+              type: string
+            description:
+              type: string
+            deduplicate_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: exports
+        selected: true
+    - stream:
+        name: newsletters
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            tags:
+              type: array
+              items:
+                type: string
+            created:
+              type: integer
+            sent_at:
+              type: integer
+            subject:
+              type: string
+            updated:
+              type: integer
+            content_ids:
+              type: array
+              items:
+                type: integer
+            deduplicate_id:
+              type: string
+            msg_template_ids:
+              type: array
+              items:
+                type: integer
+            recipient_filter_ids:
+              type: array
+              items:
+                type: integer
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: newsletters
+        selected: true
+    - stream:
+        name: reporting_webhooks
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            events:
+              type: array
+              items:
+                type: string
+            disabled:
+              type: boolean
+            endpoint:
+              type: string
+            with_content:
+              type: boolean
+            full_resolution:
+              type: boolean
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: reporting_webhooks
+        selected: true
+    - stream:
+        name: segments
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            tags:
+              type: array
+              items:
+                type: string
+            type:
+              type: string
+            state:
+              type: string
+            progress:
+              type: integer
+            description:
+              type: string
+            deduplicate_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: segments
+        selected: true
+    - stream:
+        name: snippets
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            name:
+              type: string
+            value:
+              type: string
+            updated_at:
+              type: integer
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - name
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - name
+        alias_name: snippets
+        selected: true
+    - stream:
+        name: transactional
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            created_at:
+              type: integer
+            updated_at:
+              type: integer
+            description:
+              type: string
+            queue_drafts:
+              type: boolean
+            link_tracking:
+              type: boolean
+            open_tracking:
+              type: boolean
+            hide_message_body:
+              type: boolean
+            send_to_unsubscribed:
+              type: boolean
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: transactional
+        selected: true
+    - stream:
+        name: customers
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/schema#
+          properties:
+            id:
+              type: string
+            email:
+              type: string
+            cio_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: customers
+        selected: true
+  status: active
+  namespace_definition: source
+  namespace_format: ${SOURCE_NAMESPACE}
+  prefix: ''
+  schedule_type: manual
+  operations:
+  - name: Normalization
+    operator_configuration:
+      operator_type: normalization
+      normalization:
+        option: basic

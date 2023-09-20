@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: leads_data_v3
+    description: Enrollments data.
+    columns:
+      - name: id
+    columns:
+      - name: lo_name
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null:
+              row_condition: "date >= NOW() - INTERVAL '2 DAYS'" 
+      - name: lo_email
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null:
+              row_condition: "date >= NOW() - INTERVAL '2 DAYS'" 
+      - name: agent_name
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null:
+              row_condition: "date >= NOW() - INTERVAL '2 DAYS'" 
+      - name: agent_email
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null:
+              row_condition: "date >= NOW() - INTERVAL '2 DAYS'" 

@@ -1,0 +1,9 @@
+{
+  "connectionConfiguration": {
+    "limit": 1000,
+    "query": "Contains(categories, \"SoFi Customer Profiles\")",
+    "apikey": "$SECRET_SENDGRID_APIKEY"
+  },
+  "name": "sofi_customer_profiles",
+  "sourceDefinitionName": "Sendgrid Homestory Connector"
+}

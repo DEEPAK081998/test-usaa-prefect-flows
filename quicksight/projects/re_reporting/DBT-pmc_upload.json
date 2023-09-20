@@ -1,0 +1,228 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "b96e2bca-09ca-4f6d-9331-3f19ee0e00c7",
+    "Name": "DBT-pmc_upload",
+    "PhysicalTableMap": {
+        "b96e2bca-09ca-4f6d-9331-3f19ee0e00c7": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "pmc_upload",
+                "InputColumns": [
+                  {
+                    "Name": "HomeStory ID",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "created",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "First Name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Last Name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Property City",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Property State",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Cell Phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Sales Group",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Marketing Source Code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Received from HomeStory",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Campaign Name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Lead Source",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Estimated Payment Savings",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Property Address",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Property Zip Code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Dialing Zip Code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Property County",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Mailing Address",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Mailing City",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Mailing State",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Mailing Zip Code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Current UPB",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Current Rate (%)",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Marketing Rate",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "MI Amount",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Home Phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "1st P&I",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Escrowed T&I",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "First Name (Co-Borrower)",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Last Name (Co-Borrower)",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Age of Loan",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Due Date",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Escrow Balance",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Original Loan Amount",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Note Date",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Maturity Date",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "MLS Listing Price",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "MLS Listing Date",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Bedroom Count",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Bathroom Count",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Year Built (Home Listed)",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "Square Footage",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "MLS Agent Name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "created_datetime_cst",
+                    "Type": "DATETIME"
+                  }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

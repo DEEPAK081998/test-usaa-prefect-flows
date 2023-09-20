@@ -1,0 +1,88 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "9cb780be-7104-4920-bee1-8e2c82080318",
+    "Name": "DBT-pmc_goals",
+    "PhysicalTableMap": {
+        "9cb780be-7104-4920-bee1-8e2c82080318": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "pmc_goals",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "homestory_lead_submitted",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "homestory_lead_submitted_search_landing_page",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "account_created",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "search_saved",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "homestory_lead_submitted_pdp",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "property_saved",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "viewed_detail_page",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "viewed_search_results",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "homestory_lead_submitted_about_landing_page",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "homestory_lead_submitted_lo",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,188 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-225c6d61-8e96-4aa6-847b-d1df97478bbe",
+  "Name": "SNF-DBT-sofi_invitations",
+  "PhysicalTableMap": {
+    "SNF-225c6d61-8e96-4aa6-847b-d1df97478bbe": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_INVITATIONS",
+        "InputColumns": [
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LEADS_DATA",
+            "Type": "JSON"
+          },
+          {
+            "Name": "LEAD_CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LEAD_UPDATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "FIRST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LAST_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PARTNER_DETAILS_CREATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "PARTNER_DETAILS_UPDATED",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOCAL_TIMEZONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-225c6d61-8e96-4aa6-847b-d1df97478bbe": {
+      "Alias": "sofi_invitations",
+      "Source": {
+        "PhysicalTableId": "SNF-225c6d61-8e96-4aa6-847b-d1df97478bbe"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOCAL_TIMEZONE",
+            "NewColumnName": "local_timezone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_DETAILS_UPDATED",
+            "NewColumnName": "partner_details_updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER_DETAILS_CREATED",
+            "NewColumnName": "partner_details_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONE",
+            "NewColumnName": "phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LAST_NAME",
+            "NewColumnName": "last_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_NAME",
+            "NewColumnName": "first_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_UPDATED",
+            "NewColumnName": "lead_updated"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_CREATED",
+            "NewColumnName": "lead_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADS_DATA",
+            "NewColumnName": "leads_data"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+    webserver:
+        image: amazon/mwaa-local:2_4
+        platform: "linux/amd64"
+        restart: always
+        environment:
+            - LOAD_EX=n
+            - EXECUTOR=Sequential
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
+        volumes:
+            - "${SOURCE_CODE_ROOT}/${LOCAL_AIRFLOW_DAGS_PATH}:/usr/local/airflow/dags"
+            - "${SOURCE_CODE_ROOT}/${LOCAL_AIRFLOW_PLUGINS_PATH}:/usr/local/airflow/plugins"
+            - "${SOURCE_CODE_ROOT}/${LOCAL_AIRFLOW_REQUIREMENTS_PATH}:/usr/local/airflow/requirements/requirements.txt"
+            - "${AWS_CREDS_FOLDER_PATH}:/usr/local/airflow/.aws"
+            - "${SOURCE_CODE_ROOT}/${LOCAL_DBT_PROJECT_DIR}:/usr/local/dbt"
+            - "${SOURCE_CODE_ROOT}/${LOCAL_GREAT_EXPECTATIONS_PROJECT_DIR}:/tmp/great_expectations"
+        ports:
+            - "8080:8080"
+        command: webserver
+        healthcheck:
+            test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
+            interval: 30s
+            timeout: 30s
+            retries: 3

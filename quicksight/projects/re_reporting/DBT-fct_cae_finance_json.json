@@ -1,0 +1,160 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "c197b4c6-eef5-4667-ba3a-6da89e3856e5",
+    "Name": "DBT-fct_cae_finance_json",
+    "PhysicalTableMap": {
+        "c197b4c6-eef5-4667-ba3a-6da89e3856e5": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "fct_cae_finance_json",
+                "InputColumns": [
+                    {
+                        "Name": "lead_id",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "referralamountreceived",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "referralfeedate",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "bankaccount",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "updatedate",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "saleprice",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "address",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "transactionstate",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "agentcommissionamount",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "updatedfield",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "commissionpercent",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "buytransaction",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rewardtype",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "senderid",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "sendername",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "rewardcreateddate",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "rebatetype",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "reviewer1id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "finalreviewname",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "finalreviewdate",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "finalreviewid",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "reviewer1name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "reviewer1date",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "reviewer2id",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "reviewer2name",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "reviewer2date",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "rewardpaiddate",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "transactionclosedate_unw",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "transactionclosedate",
+                        "Type": "DATETIME"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

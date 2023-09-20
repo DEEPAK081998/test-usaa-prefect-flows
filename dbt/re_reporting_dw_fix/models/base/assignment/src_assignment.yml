@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_import_agent_assignment_statuses
+  - name: raw_import_current_assignments
+  - name: raw_import_user_assignments

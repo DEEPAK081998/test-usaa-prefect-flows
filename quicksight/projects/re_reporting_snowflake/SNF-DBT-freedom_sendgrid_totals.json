@@ -1,0 +1,138 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-5ba20836-17c4-4c98-af0c-3779d2c83f6e",
+  "Name": "SNF-DBT-freedom_sendgrid_totals",
+  "PhysicalTableMap": {
+    "SNF-5ba20836-17c4-4c98-af0c-3779d2c83f6e": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_SENDGRID_TOTALS",
+        "InputColumns": [
+          {
+            "Name": "TO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_EMAIL_EVENT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "TOTAL_OPENS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TOTAL_CLICKS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "INVITING_LA",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL_SENT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_CAMPAIGN_OPEN",
+            "Type": "BIT"
+          },
+          {
+            "Name": "UNIQUE_CAMPAIGN_CLICK",
+            "Type": "BIT"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-5ba20836-17c4-4c98-af0c-3779d2c83f6e": {
+      "Alias": "freedom_sendgrid_totals",
+      "Source": {
+        "PhysicalTableId": "SNF-5ba20836-17c4-4c98-af0c-3779d2c83f6e"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CAMPAIGN_CLICK",
+            "NewColumnName": "unique_campaign_click"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CAMPAIGN_OPEN",
+            "NewColumnName": "unique_campaign_open"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL_SENT",
+            "NewColumnName": "email_sent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITING_LA",
+            "NewColumnName": "inviting_la"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_CLICKS",
+            "NewColumnName": "total_clicks"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_OPENS",
+            "NewColumnName": "total_opens"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_EMAIL_EVENT",
+            "NewColumnName": "first_email_event"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TO_EMAIL",
+            "NewColumnName": "to_email"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

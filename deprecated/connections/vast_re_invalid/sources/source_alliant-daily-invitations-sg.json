@@ -1,0 +1,9 @@
+{
+  "connectionConfiguration": {
+    "limit": 1000,
+    "query": "Contains(categories, \"Alliant REC Invites\")",
+    "apikey": "$SECRET_SENDGRID_APIKEY"
+  },
+  "name": "alliant-daily-invitations-sg",
+  "sourceDefinitionName": "Sendgrid Homestory Connector"
+}

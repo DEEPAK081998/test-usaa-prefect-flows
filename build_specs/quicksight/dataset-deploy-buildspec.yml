@@ -1,0 +1,53 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Registering/Updating all datasets"
+      - env=${ENVIRONMENT}
+      - business_unit=${BUSINESS_UNIT}
+      - quicksight_projects=""
+      - |
+        if [ $business_unit = "re" ]; then
+          case $env in
+            prod)
+              quicksight_projects="re_reporting re_reporting_snowflake"
+              ;;
+            *)
+              quicksight_projects="test_project"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "chase" ]; then
+          case $env in
+            prod)
+              quicksight_projects="chase"
+              ;;
+            *)
+              quicksight_projects="test_project"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "usaa" ]; then
+          case $env in
+            prod)
+              quicksight_projects=""
+              ;;
+            *)
+              quicksight_projects=""
+              ;;
+          esac
+        fi
+      - echo $env
+      - echo $business_unit
+      - echo $bucket_name
+      - echo $quicksight_projects
+      # - python scripts/quicksight_build --deploy-datasets --s3-bucket-name ${AIRFLOW_S3_BUCKET_NAME} --projects $quicksight_projects ${QUICKSIGHT_SCRIPT_EXTRA_ARGS}

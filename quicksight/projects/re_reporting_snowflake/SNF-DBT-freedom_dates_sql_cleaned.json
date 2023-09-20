@@ -1,0 +1,198 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-fd909a85-68cf-45dc-a9f7-f6a097883bfb",
+  "Name": "SNF-DBT-freedom_dates_sql_cleaned",
+  "PhysicalTableMap": {
+    "SNF-fd909a85-68cf-45dc-a9f7-f6a097883bfb": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_DATES_SQL_CLEANED",
+        "InputColumns": [
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONETYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMER_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLED_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LA_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LA_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "REGISTER_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LA_PHONETYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LA_PHONENUMBER",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-fd909a85-68cf-45dc-a9f7-f6a097883bfb": {
+      "Alias": "freedom_dates_sql_cleaned",
+      "Source": {
+        "PhysicalTableId": "SNF-fd909a85-68cf-45dc-a9f7-f6a097883bfb"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LA_PHONENUMBER",
+            "NewColumnName": "la_phonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LA_PHONETYPE",
+            "NewColumnName": "la_phonetype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REGISTER_DATE",
+            "NewColumnName": "register_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LA_NAME",
+            "NewColumnName": "la_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LA_EMAIL",
+            "NewColumnName": "la_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLED_DATE",
+            "NewColumnName": "enrolled_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_PHONE",
+            "NewColumnName": "customer_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_NAME",
+            "NewColumnName": "customer_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_EMAIL",
+            "NewColumnName": "customer_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONENUMBER",
+            "NewColumnName": "agent_phonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONETYPE",
+            "NewColumnName": "agent_phonetype"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

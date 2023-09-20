@@ -1,0 +1,1209 @@
+definition_type: connection
+resource_name: dbt_test1 <> Warehouse DB
+source_configuration_path: sources/dbt_test1/configuration.yaml
+destination_configuration_path: destinations/warehouse_db/configuration.yaml
+configuration:
+  sync_catalog:
+    streams:
+    - stream:
+        name: agent_assignment_statuses
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            status:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            broker_id:
+              type: string
+            agent_name:
+              type: string
+            agent_email:
+              type: string
+            agent_phone:
+              type: string
+            agent_external_id:
+              type: string
+            cancellation_reason:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: agent_assignment_statuses
+        selected: true
+    - stream:
+        name: listings
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            zip:
+              type: string
+            city:
+              type: string
+            data:
+              type: string
+            type:
+              type: string
+            state:
+              type: string
+            address:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            vast_id:
+              type: string
+            latitude:
+              type: number
+            longitude:
+              type: number
+            user_profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: listings
+        selected: true
+    - stream:
+        name: normalized_lead_locations
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            sell_state:
+              type: string
+            purchase_state:
+              type: string
+            normalized_sell_location:
+              type: string
+            normalized_purchase_location:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: normalized_lead_locations
+        selected: true
+    - stream:
+        name: brokerage_coverage_zips
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            zip:
+              type: string
+            city:
+              type: string
+            state:
+              type: string
+            county:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            brokerage_code:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: brokerage_coverage_zips
+        selected: true
+    - stream:
+        name: profile_nmlsids
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            nmlsid:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: profile_nmlsids
+        selected: true
+    - stream:
+        name: databasechangeloglock
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            locked:
+              type: boolean
+            lockedby:
+              type: string
+            lockgranted:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: databasechangeloglock
+        selected: true
+    - stream:
+        name: lead_inserts
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            body:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            aggregate_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: lead_inserts
+        selected: true
+    - stream:
+        name: reminders
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            data:
+              type: string
+            email:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            due_date:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            reminder:
+              type: string
+            reminder_id:
+              type: string
+            completion_status:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: reminders
+        selected: true
+    - stream:
+        name: partner_user_relationships
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            enabled:
+              type: boolean
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            child_profile_id:
+              type: number
+              airbyte_type: integer
+            parent_profile_id:
+              type: number
+              airbyte_type: integer
+            child_profile_uuid:
+              type: string
+            parent_profile_uuid:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: partner_user_relationships
+        selected: true
+    - stream:
+        name: profile_unavailable_dates
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            date_end:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            date_start:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: profile_unavailable_dates
+        selected: true
+    - stream:
+        name: current_lead_statuses
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            data:
+              type: string
+            role:
+              type: string
+            email:
+              type: string
+            status:
+              type: string
+            comment:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            profile:
+              type: string
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            category:
+              type: string
+            partner_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: current_lead_statuses
+        selected: true
+    - stream:
+        name: lead_status_updates
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            data:
+              type: string
+            role:
+              type: string
+            email:
+              type: string
+            status:
+              type: string
+            comment:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            profile:
+              type: string
+            category:
+              type: string
+            update_id:
+              type: string
+            partner_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: lead_status_updates
+        selected: true
+    - stream:
+        name: cbsa_locations
+        json_schema:
+          type: object
+          properties:
+            zip:
+              type: string
+            city:
+              type: string
+            state:
+              type: string
+            county:
+              type: string
+            cbsa_code:
+              type: string
+            cbsa_name:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key: []
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key: []
+        alias_name: cbsa_locations
+        selected: true
+    - stream:
+        name: lead_updates
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            updates:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: lead_updates
+        selected: true
+    - stream:
+        name: leads
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            hash:
+              type: string
+            email:
+              type: string
+            phone:
+              type: string
+            bank_id:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            prequal:
+              type: boolean
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            comments:
+              type: string
+            last_name:
+              type: string
+            first_name:
+              type: string
+            rebate_paid:
+              type: boolean
+            aggregate_id:
+              type: string
+            rc_assignable:
+              type: boolean
+            sell_location:
+              type: string
+            funds_received:
+              type: boolean
+            contact_methods:
+              type: string
+            selling_address:
+              type: string
+            current_location:
+              type: string
+            transaction_type:
+              type: string
+            purchase_location:
+              type: string
+            consumer_confirmed:
+              type: boolean
+            brokerage_contacted:
+              type: boolean
+            purchase_time_frame:
+              type: number
+              airbyte_type: integer
+            documentation_received:
+              type: boolean
+            price_range_lower_bound:
+              type: number
+              airbyte_type: integer
+            price_range_upper_bound:
+              type: number
+              airbyte_type: integer
+            purchase_location_detail:
+              type: string
+            referral_fee_transaction:
+              type: boolean
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: leads
+        selected: true
+    - stream:
+        name: profile_languages
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            language:
+              type: string
+            profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: profile_languages
+        selected: true
+    - stream:
+        name: profile_coverage_zips
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            zip:
+              type: string
+            city:
+              type: string
+            state:
+              type: string
+            county:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: profile_coverage_zips
+        selected: true
+    - stream:
+        name: leads_data
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            data:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: leads_data
+        selected: true
+    - stream:
+        name: lead_traffic_sources
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            term:
+              type: string
+            medium:
+              type: string
+            source:
+              type: string
+            content:
+              type: string
+            lead_id:
+              type: number
+              airbyte_type: integer
+            campaign:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: lead_traffic_sources
+        selected: true
+    - stream:
+        name: saved_searches
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            name:
+              type: string
+            params:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            user_profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: saved_searches
+        selected: true
+    - stream:
+        name: lead_status_sort_order
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            status:
+              type: string
+            sort_order:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: lead_status_sort_order
+        selected: true
+    - stream:
+        name: databasechangelog
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: string
+            tag:
+              type: string
+            author:
+              type: string
+            labels:
+              type: string
+            md5sum:
+              type: string
+            comments:
+              type: string
+            contexts:
+              type: string
+            exectype:
+              type: string
+            filename:
+              type: string
+            liquibase:
+              type: string
+            description:
+              type: string
+            dateexecuted:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            deployment_id:
+              type: string
+            orderexecuted:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key: []
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key: []
+        alias_name: databasechangelog
+        selected: true
+    - stream:
+        name: brokerage_assignments
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            brokerage_code:
+              type: string
+            lead_aggregate_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: brokerage_assignments
+        selected: true
+    - stream:
+        name: note_updates
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            data:
+              type: string
+            role:
+              type: string
+            email:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            profile:
+              type: string
+            partner_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: note_updates
+        selected: true
+    - stream:
+        name: current_notes
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            data:
+              type: string
+            role:
+              type: string
+            email:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            private:
+              type: boolean
+            profile:
+              type: string
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            partner_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: current_notes
+        selected: true
+    - stream:
+        name: brokerage_qualifications
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            qualification:
+              type: string
+            brokerage_code:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: brokerage_qualifications
+        selected: true
+    - stream:
+        name: property_search_statuses
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            status:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            lead_id:
+              type: number
+              airbyte_type: integer
+            category:
+              type: string
+            update_id:
+              type: string
+            external_id:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: property_search_statuses
+        selected: true
+    - stream:
+        name: partner_user_roles
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            role:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            user_profile_id:
+              type: number
+              airbyte_type: integer
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: partner_user_roles
+        selected: true
+    - stream:
+        name: brokerage_user
+        json_schema:
+          type: object
+          properties:
+            id:
+              type: number
+              airbyte_type: integer
+            email:
+              type: string
+            created:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            updated:
+              type: string
+              format: date-time
+              airbyte_type: timestamp_without_timezone
+            brokerage_code:
+              type: string
+            notify_on_assignment:
+              type: boolean
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        default_cursor_field: []
+        source_defined_primary_key:
+        - - id
+        namespace: public
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key:
+        - - id
+        alias_name: brokerage_user
+        selected: true
+  status: active
+  namespace_definition: source
+  namespace_format: ${SOURCE_NAMESPACE}
+  prefix: ''
+  schedule_type: manual
+  operations:
+  - name: Normalization
+    operator_configuration:
+      operator_type: normalization
+      normalization:
+        option: basic

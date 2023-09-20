@@ -1,0 +1,318 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-181e48e9-45d4-4d5c-83d5-e13d16c5abc9",
+  "Name": "SNF-DBT-freedom_dynamo_table",
+  "PhysicalTableMap": {
+    "SNF-181e48e9-45d4-4d5c-83d5-e13d16c5abc9": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FREEDOM_DYNAMO_TABLE",
+        "InputColumns": [
+          {
+            "Name": "INVITATION_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_SPECIALIST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_SUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SMS_INVITE_PERMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDGRID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SHORTHASH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UTMSOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DISCLOSURE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UTMCAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOPHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLOSUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMERCONNECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CURRENTBANKCUSTOMER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CONFIRMATIONREQUIRED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITATION_DYNAMO",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "UPDATED_AT",
+            "Type": "DATETIME"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-181e48e9-45d4-4d5c-83d5-e13d16c5abc9": {
+      "Alias": "freedom_dynamo_table",
+      "Source": {
+        "PhysicalTableId": "SNF-181e48e9-45d4-4d5c-83d5-e13d16c5abc9"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATED_AT",
+            "NewColumnName": "updated_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITATION_DYNAMO",
+            "NewColumnName": "invitation_dynamo"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CONFIRMATIONREQUIRED",
+            "NewColumnName": "confirmationrequired"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CURRENTBANKCUSTOMER",
+            "NewColumnName": "currentbankcustomer"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMERCONNECT",
+            "NewColumnName": "customerconnect"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLOSUBMISSION",
+            "NewColumnName": "mlosubmission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOPHONENUMBER",
+            "NewColumnName": "lophonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UTMCAMPAIGN",
+            "NewColumnName": "utmcampaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONENUMBER",
+            "NewColumnName": "phonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOFIRSTNAME",
+            "NewColumnName": "lofirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOLASTNAME",
+            "NewColumnName": "lolastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DISCLOSURE",
+            "NewColumnName": "disclosure"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UTMSOURCE",
+            "NewColumnName": "utmsource"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SHORTHASH",
+            "NewColumnName": "shorthash"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRSTNAME",
+            "NewColumnName": "firstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDGRID",
+            "NewColumnName": "sendgrid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LASTNAME",
+            "NewColumnName": "lastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "NMLSID",
+            "NewColumnName": "nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOEMAIL",
+            "NewColumnName": "loemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROLE",
+            "NewColumnName": "role"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SMS_INVITE_PERMISSION",
+            "NewColumnName": "sms_invite_permission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_SUBMISSION",
+            "NewColumnName": "mlo_submission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_SPECIALIST",
+            "NewColumnName": "purchase_specialist"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT",
+            "NewColumnName": "agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITATION_ID",
+            "NewColumnName": "invitation_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

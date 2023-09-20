@@ -1,0 +1,188 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-a591defb-a7ec-4dc0-9d81-ca631268931d",
+  "Name": "SNF-agent_coverage_info",
+  "PhysicalTableMap": {
+    "SNF-c3434cd6-a3ef-484d-a676-20e4e2fa8588": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "AGENT_COVERAGE_INFO",
+        "InputColumns": [
+          {
+            "Name": "AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTMOBILEPHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTOFFICEPHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LANGUAGES",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFICATION_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COUNTY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ZIPCOUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "COUNTYCOUNT",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-c3434cd6-a3ef-484d-a676-20e4e2fa8588": {
+      "Alias": "agent_coverage_info",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COUNTYCOUNT",
+            "NewColumnName": "countycount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIPCOUNT",
+            "NewColumnName": "zipcount"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COUNTY",
+            "NewColumnName": "county"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ST",
+            "NewColumnName": "st"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFICATION_STATUS",
+            "NewColumnName": "verification_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LANGUAGES",
+            "NewColumnName": "languages"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_NAME",
+            "NewColumnName": "brokerage_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTOFFICEPHONE",
+            "NewColumnName": "agentofficephone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTMOBILEPHONE",
+            "NewColumnName": "agentmobilephone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL",
+            "NewColumnName": "email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTNAME",
+            "NewColumnName": "agentname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGGREGATE_ID",
+            "NewColumnName": "aggregate_id"
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "county",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "COUNTY"
+              }
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-c3434cd6-a3ef-484d-a676-20e4e2fa8588"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

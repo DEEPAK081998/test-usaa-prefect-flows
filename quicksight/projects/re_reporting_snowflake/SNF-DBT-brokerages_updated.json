@@ -1,0 +1,228 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-5c720ed5-6d9f-4227-b909-8e18bf2d78c6",
+  "Name": "SNF-DBT-brokerages_updated",
+  "PhysicalTableMap": {
+    "SNF-5c720ed5-6d9f-4227-b909-8e18bf2d78c6": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "BROKERAGES_UPDATED",
+        "InputColumns": [
+          {
+            "Name": "BROKERAGE_CODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FULL_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "RC_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "COVERAGE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ENROLLDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "BUSINESSHOURS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGEQUALIFICATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTDIRECTSTARTDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNASSIGNEDENROLLMENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNACCEPTEDENROLLMENTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ACCEPTDELAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ASSIGNDELAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "CONTACTDELAY",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ACCEPTCONTACTDELAY",
+            "Type": "DECIMAL"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-5c720ed5-6d9f-4227-b909-8e18bf2d78c6": {
+      "Alias": "brokerages_updated",
+      "Source": {
+        "PhysicalTableId": "SNF-5c720ed5-6d9f-4227-b909-8e18bf2d78c6"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTCONTACTDELAY",
+            "NewColumnName": "acceptcontactdelay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CONTACTDELAY",
+            "NewColumnName": "contactdelay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ASSIGNDELAY",
+            "NewColumnName": "assigndelay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCEPTDELAY",
+            "NewColumnName": "acceptdelay"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNACCEPTEDENROLLMENTS",
+            "NewColumnName": "unacceptedenrollments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNASSIGNEDENROLLMENTS",
+            "NewColumnName": "unassignedenrollments"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COUNT",
+            "NewColumnName": "count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTDIRECTSTARTDATE",
+            "NewColumnName": "agentdirectstartdate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGEQUALIFICATION",
+            "NewColumnName": "brokeragequalification"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BUSINESSHOURS",
+            "NewColumnName": "businesshours"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLDATE",
+            "NewColumnName": "enrolldate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "COVERAGE",
+            "NewColumnName": "coverage"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_PHONE",
+            "NewColumnName": "rc_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_EMAIL",
+            "NewColumnName": "rc_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "RC_NAME",
+            "NewColumnName": "rc_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FULL_NAME",
+            "NewColumnName": "full_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_CODE",
+            "NewColumnName": "brokerage_code"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-bcbc161a-8c13-40cf-b0fd-5f65343fc5d1",
+  "Name": "SNF-DBT-agent_legacy_flag",
+  "PhysicalTableMap": {
+    "SNF-bcbc161a-8c13-40cf-b0fd-5f65343fc5d1": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "AGENT_LEGACY_FLAG",
+        "InputColumns": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AGENTFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ELIGIBILITY_STATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTFULLNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENTPHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGECODE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGENAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "REFERRALAGREEMENTEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGEEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BROKERAGE_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITER_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAELEGACYAGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "VERIFICATIONSTATUS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CAE_LEGACY_AGENT",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-bcbc161a-8c13-40cf-b0fd-5f65343fc5d1": {
+      "Alias": "agent_legacy_flag",
+      "Source": {
+        "PhysicalTableId": "SNF-bcbc161a-8c13-40cf-b0fd-5f65343fc5d1"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAE_LEGACY_AGENT",
+            "NewColumnName": "cae_legacy_agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VERIFICATIONSTATUS",
+            "NewColumnName": "verificationstatus"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CAELEGACYAGENT",
+            "NewColumnName": "caelegacyagent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITER_EMAIL",
+            "NewColumnName": "inviter_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGE_PHONE",
+            "NewColumnName": "brokerage_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGEEMAIL",
+            "NewColumnName": "brokerageemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "REFERRALAGREEMENTEMAIL",
+            "NewColumnName": "referralagreementemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGENAME",
+            "NewColumnName": "brokeragename"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BROKERAGECODE",
+            "NewColumnName": "brokeragecode"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTPHONE",
+            "NewColumnName": "agentphone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTEMAIL",
+            "NewColumnName": "agentemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFULLNAME",
+            "NewColumnName": "agentfullname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ELIGIBILITY_STATUS",
+            "NewColumnName": "eligibility_status"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTLASTNAME",
+            "NewColumnName": "agentlastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENTFIRSTNAME",
+            "NewColumnName": "agentfirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ID",
+            "NewColumnName": "id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

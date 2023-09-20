@@ -1,0 +1,11 @@
+{
+  "schedule": "@monthly",
+  "tags": [
+    "dbt",
+    "chase"
+  ],
+  "dbt_project_path": "s3://mdp-prod-chase-bucket/dbt/projects/chase.zip",
+  "dbt_conn_id": "warehouse_db",
+  "dbt_conn_macro": "snapshot_snapshot_agent_scorecard",
+  "dbt_extra_kwargs": {}
+}

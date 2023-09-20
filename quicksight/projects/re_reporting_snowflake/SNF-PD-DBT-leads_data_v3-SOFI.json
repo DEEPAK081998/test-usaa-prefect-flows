@@ -1,0 +1,544 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-8881411c-f09e-4966-b5d0-e7a57df4b802",
+  "Name": "SNF-PD-DBT-leads_data_v3-SOFI",
+  "PhysicalTableMap": {
+    "SNF-fc4a300b-37a9-422f-aa30-f782481e4294": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "RAW_PARTNER_HIERARCHY",
+        "InputColumns": [
+          {
+            "Name": "SLM_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LM_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_FIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DD_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UPDATE_DATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DIVISION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SLM_MANAGER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "BANK_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_LASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DD_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_AB_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_EMITTED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_NORMALIZED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_RAW_PARTNER_HIERARCHY_HASHID",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-2e783ce6-3f19-43a5-9a06-b253b1846cb5": {
+      "Alias": "Intermediate Table (2)",
+      "DataTransforms": [
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "ProjectCloseRate",
+                "ColumnId": "SNF-3231134a-f2cc-4b21-8fcc-7bd1e405e880",
+                "Expression": "ifelse(datediff(date,now()) < 60,0.01485,datediff(date,now()) < 90,0.06015,datediff(date,now()) < 120,0.093975,datediff(date,now()) < 150,0.11445,datediff(date,now()) < 180,0.127875,datediff(date,now()) < 210,0.133125,datediff(date,now()) < 240,0.13875,datediff(date,now()) < 270,0.14325,datediff(date,now()) < 300,0.1452,datediff(date,now()) < 330,0.146925,datediff(date,now()) < 360,0.147525,datediff(date,now()) >= 360,0.149925,0)"
+              }
+            ]
+          }
+        },
+        {
+          "FilterOperation": {
+            "ConditionExpression": "{bank_name}=\"SoFi\""
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "date",
+              "id",
+              "client_name",
+              "client_email",
+              "client_phone",
+              "agent_name",
+              "agent_email",
+              "agent_phone",
+              "lo_aggregate_id",
+              "lo_name",
+              "lo_email",
+              "lo_phone",
+              "purchase_location",
+              "purchase_time_frame",
+              "prequal",
+              "avg_price",
+              "comments",
+              "bank_name",
+              "transaction_type",
+              "mlo_status",
+              "mlo_status_time",
+              "rc_status",
+              "rc_status_time",
+              "agent_status",
+              "agent_status_time",
+              "closedate",
+              "propertyaddress",
+              "propertyprice",
+              "lenderclosedwith",
+              "agtcommpct",
+              "created",
+              "rc_accept_time_unadjusted",
+              "agent_assign_time_unadjusted",
+              "agent_assign_time",
+              "accept_time_delay_hrs",
+              "agentassign_time_delay_hrs",
+              "mnth_yr",
+              "brokerage_code",
+              "full_name",
+              "rc_name",
+              "rc_email",
+              "rc_phone",
+              "date_part",
+              "attachment",
+              "hb_status",
+              "dow",
+              "cst",
+              "cstdate",
+              "csthour",
+              "year",
+              "weeknum",
+              "businesshours",
+              "pending",
+              "mlosubmission",
+              "nmlsid",
+              "outofnetworkbrokerage",
+              "client_first_name",
+              "client_last_name",
+              "rc_contact_first",
+              "rc_contact_last",
+              "price_range_lower_bound",
+              "price_range_upper_bound",
+              "agentfirstname",
+              "agentlastname",
+              "rc_city",
+              "rc_state",
+              "selling_address",
+              "bankcustomer",
+              "source",
+              "first_contact_time",
+              "first_contact_delay_from_enrollment",
+              "accept_to_contact_delay",
+              "velocifyid",
+              "major_status",
+              "branchname",
+              "branchemployee",
+              "coverage",
+              "attached",
+              "lastpendingdate",
+              "inactivedate",
+              "timetoinactive",
+              "inactiverole",
+              "last_agent_update",
+              "last_rc_update",
+              "citizenssalesforceenrollment",
+              "pendingclosedate",
+              "pendingpropertyaddress",
+              "closeaddress",
+              "financeclosedate",
+              "networkid",
+              "customereci",
+              "brokerageroutingmethod",
+              "agent_assigned",
+              "escalatedtoconcierge",
+              "zip",
+              "city",
+              "state",
+              "lo_first_name",
+              "lo_last_name",
+              "hb_status_time",
+              "contactmethod",
+              "outofnetwork",
+              "failc",
+              "faild",
+              "first_agent_contact_time",
+              "actively_searching_status_time",
+              "pending_status_time",
+              "client_contact_approval",
+              "current_location",
+              "sell_location",
+              "category",
+              "homesaleprice",
+              "updated_at",
+              "lsuclosedate",
+              "ph_lm_name",
+              "ph_lm_email",
+              "ph_slm_name",
+              "ph_slm_manager",
+              "ph_dd_name",
+              "ph_dd_email",
+              "ph_dd_division",
+              "ph_lo_email",
+              "lo_nmlsid[DBT-leads_data_v3]",
+              "attachment_code",
+              "attachment_reason",
+              "rc_office_phone",
+              "rc_mobile_phone",
+              "system_invite_date",
+              "system_enroll_date",
+              "agent_aggregate_id",
+              "traffic_medium",
+              "traffic_campaign",
+              "ph_bank_name",
+              "level_1_manager",
+              "level_1_manager_email",
+              "level_3_manager_name",
+              "level_3_manager_email",
+              "level_3_manager_region",
+              "level_4_manager_region",
+              "mlo_assign_time",
+              "slm_name",
+              "lo_nmlsid",
+              "lm_name",
+              "lo_firstname",
+              "dd_name",
+              "update_date",
+              "division",
+              "lo_email[raw_partner_hierarchy]",
+              "slm_manager",
+              "lo_phone[raw_partner_hierarchy]",
+              "bank_name[raw_partner_hierarchy]",
+              "lm_email",
+              "lo_lastname",
+              "lo_name[raw_partner_hierarchy]",
+              "dd_email",
+              "_airbyte_ab_id",
+              "_airbyte_emitted_at",
+              "_airbyte_normalized_at",
+              "_airbyte_raw_partner_hierarchy_hashid",
+              "Partner",
+              "TrafficCategory",
+              "Source",
+              "ProjectCloseRate"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "JoinInstruction": {
+          "LeftOperand": "SNF-c898bc66-0f64-4d4a-8204-44b215d5294c",
+          "RightOperand": "SNF-899fdd9c-1cf9-47a7-8f7e-ff5d3f0f1356",
+          "Type": "LEFT",
+          "OnClause": "source = Source"
+        }
+      }
+    },
+    "SNF-63fed93d-28f7-482a-8458-26cc9e43ef6d": {
+      "Alias": "DBT-leads_data_v3",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_nmlsid",
+            "NewColumnName": "lo_nmlsid[DBT-leads_data_v3]"
+          }
+        }
+      ],
+      "Source": {
+        "DataSetArn": "arn:aws:quicksight:us-east-1:931422288647:dataset/SNF-f3a2ec6d-aa3f-43e1-8f19-399a770920b6"
+      }
+    },
+    "SNF-899fdd9c-1cf9-47a7-8f7e-ff5d3f0f1356": {
+      "Alias": "TrafficSources",
+      "Source": {
+        "DataSetArn": "arn:aws:quicksight:us-east-1:931422288647:dataset/debdbd77-ff34-40b8-a588-44904d2c06e2"
+      }
+    },
+    "SNF-c898bc66-0f64-4d4a-8204-44b215d5294c": {
+      "Alias": "Intermediate Table",
+      "Source": {
+        "JoinInstruction": {
+          "LeftOperand": "SNF-63fed93d-28f7-482a-8458-26cc9e43ef6d",
+          "RightOperand": "SNF-f0915c8f-d111-4b63-a2e6-57c4f1f6879b",
+          "Type": "LEFT",
+          "OnClause": "nmlsid = {lo_nmlsid}"
+        }
+      }
+    },
+    "SNF-f0915c8f-d111-4b63-a2e6-57c4f1f6879b": {
+      "Alias": "raw_partner_hierarchy",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_RAW_PARTNER_HIERARCHY_HASHID",
+            "NewColumnName": "_airbyte_raw_partner_hierarchy_hashid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_NORMALIZED_AT",
+            "NewColumnName": "_airbyte_normalized_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_EMITTED_AT",
+            "NewColumnName": "_airbyte_emitted_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_AB_ID",
+            "NewColumnName": "_airbyte_ab_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DD_EMAIL",
+            "NewColumnName": "dd_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NAME",
+            "NewColumnName": "lo_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_LASTNAME",
+            "NewColumnName": "lo_lastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LM_EMAIL",
+            "NewColumnName": "lm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_NAME",
+            "NewColumnName": "bank_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_PHONE",
+            "NewColumnName": "lo_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SLM_MANAGER",
+            "NewColumnName": "slm_manager"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_EMAIL",
+            "NewColumnName": "lo_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DIVISION",
+            "NewColumnName": "division"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UPDATE_DATE",
+            "NewColumnName": "update_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DD_NAME",
+            "NewColumnName": "dd_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_FIRSTNAME",
+            "NewColumnName": "lo_firstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LM_NAME",
+            "NewColumnName": "lm_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_NMLSID",
+            "NewColumnName": "lo_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SLM_NAME",
+            "NewColumnName": "slm_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_email",
+            "NewColumnName": "lo_email[raw_partner_hierarchy]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_phone",
+            "NewColumnName": "lo_phone[raw_partner_hierarchy]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "bank_name",
+            "NewColumnName": "bank_name[raw_partner_hierarchy]"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "lo_name",
+            "NewColumnName": "lo_name[raw_partner_hierarchy]"
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-fc4a300b-37a9-422f-aa30-f782481e4294"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/tijanag@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/dvillalon@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

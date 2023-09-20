@@ -1,0 +1,808 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-b1ce5a72-ea7b-49e7-8deb-029c013eaf65",
+  "Name": "SNF-PD-dbt-pennymac_lo_invitations_warm_transfers_deduped",
+  "PhysicalTableMap": {
+    "SNF-b35daee6-d80e-4c84-87f5-9c98051a6d28": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "PENNYMAC_LO_INVITATIONS_AND_WARM_TRANSFERS_DEDUPED",
+        "InputColumns": [
+          {
+            "Name": "ACTIVITY_COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ACTIVITY_TYPE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ACTIVITY_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LEADID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "INVITING_NMLSID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITING_LO",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LO_CONTACT_ATTEMPTED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PARTNER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DECLINED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DECLINE_REASON",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITEE_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ENROLLED_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "ENROLLMENT_LO",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLIENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_PHONE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_LOCATION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_TIME_FRAME",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PREQUAL",
+            "Type": "BIT"
+          },
+          {
+            "Name": "PRICE_RANGE_LOWER_BOUND",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PRICE_RANGE_UPPER_BOUND",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "BANK_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "TOTAL_OPENS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "TOTAL_CLICKS",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "EMAIL_SENT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_CAMPAIGN_OPEN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UNIQUE_CAMPAIGN_CLICK",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "INVITE_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOFIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOLASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PURCHASE_SPECIALIST",
+            "Type": "STRING"
+          },
+          {
+            "Name": "MLO_SUBMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SMS_INVITE_PERMISSION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROLE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOEMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LASTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRSTNAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SENDGRID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SHORTHASH",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UTMSOURCE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "DISCLOSURE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "UTMCAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "LOPHONENUMBER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CUSTOMERCONNECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CONFIRMATIONREQUIRED",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CLOSEDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "LSUCLOSEDATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "STATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "CITY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ZIP",
+            "Type": "STRING"
+          },
+          {
+            "Name": "ROW_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PH_LM_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_LM_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_SLM_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_SLM_MANAGER",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_DD_NAME",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_DD_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_DIVISION",
+            "Type": "STRING"
+          },
+          {
+            "Name": "PH_LO_NMLSID",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-f0d8d4cf-3792-4f99-b0e0-3a28edc21498": {
+      "Alias": "pennymac_lo_invitations_and_warm_transfers_deduped",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_LO_NMLSID",
+            "NewColumnName": "ph_lo_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_DIVISION",
+            "NewColumnName": "ph_division"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_DD_EMAIL",
+            "NewColumnName": "ph_dd_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_DD_NAME",
+            "NewColumnName": "ph_dd_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_SLM_MANAGER",
+            "NewColumnName": "ph_slm_manager"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_SLM_NAME",
+            "NewColumnName": "ph_slm_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_LM_EMAIL",
+            "NewColumnName": "ph_lm_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PH_LM_NAME",
+            "NewColumnName": "ph_lm_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROW_ID",
+            "NewColumnName": "row_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ZIP",
+            "NewColumnName": "zip"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CITY",
+            "NewColumnName": "city"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "STATE",
+            "NewColumnName": "state"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LSUCLOSEDATE",
+            "NewColumnName": "lsuclosedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLOSEDATE",
+            "NewColumnName": "closedate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CONFIRMATIONREQUIRED",
+            "NewColumnName": "confirmationrequired"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMERCONNECT",
+            "NewColumnName": "customerconnect"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOPHONENUMBER",
+            "NewColumnName": "lophonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UTMCAMPAIGN",
+            "NewColumnName": "utmcampaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PHONENUMBER",
+            "NewColumnName": "phonenumber"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DISCLOSURE",
+            "NewColumnName": "disclosure"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UTMSOURCE",
+            "NewColumnName": "utmsource"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SHORTHASH",
+            "NewColumnName": "shorthash"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SENDGRID",
+            "NewColumnName": "sendgrid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRSTNAME",
+            "NewColumnName": "firstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LASTNAME",
+            "NewColumnName": "lastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOEMAIL",
+            "NewColumnName": "loemail"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ROLE",
+            "NewColumnName": "role"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SMS_INVITE_PERMISSION",
+            "NewColumnName": "sms_invite_permission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "MLO_SUBMISSION",
+            "NewColumnName": "mlo_submission"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_SPECIALIST",
+            "NewColumnName": "purchase_specialist"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT",
+            "NewColumnName": "agent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOLASTNAME",
+            "NewColumnName": "lolastname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LOFIRSTNAME",
+            "NewColumnName": "lofirstname"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITE_EMAIL",
+            "NewColumnName": "invite_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITE_ID",
+            "NewColumnName": "invite_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CAMPAIGN_CLICK",
+            "NewColumnName": "unique_campaign_click"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CAMPAIGN_OPEN",
+            "NewColumnName": "unique_campaign_open"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL_SENT",
+            "NewColumnName": "email_sent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_CLICKS",
+            "NewColumnName": "total_clicks"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_OPENS",
+            "NewColumnName": "total_opens"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "BANK_NAME",
+            "NewColumnName": "bank_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRICE_RANGE_UPPER_BOUND",
+            "NewColumnName": "price_range_upper_bound"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PRICE_RANGE_LOWER_BOUND",
+            "NewColumnName": "price_range_lower_bound"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PREQUAL",
+            "NewColumnName": "prequal"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_TIME_FRAME",
+            "NewColumnName": "purchase_time_frame"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PURCHASE_LOCATION",
+            "NewColumnName": "purchase_location"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_PHONE",
+            "NewColumnName": "agent_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_EMAIL",
+            "NewColumnName": "agent_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_NAME",
+            "NewColumnName": "agent_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_PHONE",
+            "NewColumnName": "client_phone"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_EMAIL",
+            "NewColumnName": "client_email"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CLIENT_NAME",
+            "NewColumnName": "client_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_LO",
+            "NewColumnName": "enrollment_lo"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLED_DATE",
+            "NewColumnName": "enrolled_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITEE_NAME",
+            "NewColumnName": "invitee_name"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DECLINE_REASON",
+            "NewColumnName": "decline_reason"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLED",
+            "NewColumnName": "enrolled"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DECLINED",
+            "NewColumnName": "declined"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PARTNER",
+            "NewColumnName": "partner"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LO_CONTACT_ATTEMPTED",
+            "NewColumnName": "lo_contact_attempted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITING_LO",
+            "NewColumnName": "inviting_lo"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITING_NMLSID",
+            "NewColumnName": "inviting_nmlsid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEADID",
+            "NewColumnName": "leadid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACTIVITY_DATE",
+            "NewColumnName": "activity_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACTIVITY_TYPE",
+            "NewColumnName": "activity_type"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACTIVITY_COUNT",
+            "NewColumnName": "activity_count"
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "city",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "CITY"
+              }
+            ]
+          }
+        },
+        {
+          "TagColumnOperation": {
+            "ColumnName": "zip",
+            "Tags": [
+              {
+                "ColumnGeographicRole": "POSTCODE"
+              }
+            ]
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "activity_count",
+              "activity_type",
+              "activity_date",
+              "leadid",
+              "inviting_nmlsid",
+              "inviting_lo",
+              "lo_contact_attempted",
+              "partner",
+              "declined",
+              "enrolled",
+              "decline_reason",
+              "invitee_name",
+              "enrolled_date",
+              "enrollment_lo",
+              "client_name",
+              "client_email",
+              "client_phone",
+              "agent_name",
+              "agent_email",
+              "agent_phone",
+              "purchase_location",
+              "purchase_time_frame",
+              "prequal",
+              "price_range_lower_bound",
+              "price_range_upper_bound",
+              "bank_name",
+              "total_opens",
+              "total_clicks",
+              "email_sent",
+              "unique_campaign_open",
+              "unique_campaign_click",
+              "invite_id",
+              "invite_email",
+              "lofirstname",
+              "lolastname",
+              "agent",
+              "purchase_specialist",
+              "mlo_submission",
+              "sms_invite_permission",
+              "role",
+              "loemail",
+              "lastname",
+              "firstname",
+              "sendgrid",
+              "shorthash",
+              "utmsource",
+              "disclosure",
+              "phonenumber",
+              "utmcampaign",
+              "lophonenumber",
+              "customerconnect",
+              "confirmationrequired",
+              "closedate",
+              "lsuclosedate",
+              "state",
+              "city",
+              "zip",
+              "row_id",
+              "ph_lm_name",
+              "ph_lm_email",
+              "ph_slm_name",
+              "ph_slm_manager",
+              "ph_dd_name",
+              "ph_dd_email",
+              "ph_division",
+              "ph_lo_nmlsid"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-b35daee6-d80e-4c84-87f5-9c98051a6d28"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

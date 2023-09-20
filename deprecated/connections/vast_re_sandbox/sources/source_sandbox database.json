@@ -1,0 +1,21 @@
+{
+  "connectionConfiguration": {
+    "ssl": true,
+    "host": "vast-re-api-encypted-db.re-sandbox.homestoryrewards.com",
+    "port": 5432,
+    "schemas": [
+      "public"
+    ],
+    "database": "vast_re_api_sandbox",
+    "password": "$SECRET_VREAPI_DB_SANDBOX_AIRBYTE1_PASSWORD",
+    "username": "$SECRET_VREAPI_DB_SANDBOX_AIRBYTE1_USERNAME",
+    "tunnel_method": {
+      "tunnel_method": "NO_TUNNEL"
+    },
+    "replication_method": {
+      "method": "Standard"
+    }
+  },
+  "name": "sandbox database",
+  "sourceDefinitionName": "Postgres"
+}

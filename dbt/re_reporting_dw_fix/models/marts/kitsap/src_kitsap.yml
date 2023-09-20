@@ -1,0 +1,11 @@
+
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: kitsap_rep60_prod_ga_data
+  - name: kitsap_rep60_users
+  - name: kitsap_event_totals
+  - name: kitsap_sg_conversions
+  - name: kitsap_customer_profiles_messages

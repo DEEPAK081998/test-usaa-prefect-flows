@@ -1,0 +1,88 @@
+{
+    "AwsAccountId": "429533234373",
+    "DataSetId": "5e65e482-80bb-401c-8da8-c61ae4cc8672",
+    "Name": "DBT-sofi_goals",
+    "PhysicalTableMap": {
+        "5e65e482-80bb-401c-8da8-c61ae4cc8672": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:429533234373:datasource/8d691dbf-7ff4-4e7c-beef-ccdb6680cb48",
+                "Schema": "public",
+                "Name": "sofi_goals",
+                "InputColumns": [
+                    {
+                        "Name": "ga_date",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "homestory_lead_submitted",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "lead_submitted_search_landing_page",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "account_created",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "search_saved",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "lead_submitted_pdp",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "property_saved",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "viewed_pdp",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "viewed_search_results",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "teambuilder_completion",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "am_i_purchase_ready_profile_builder",
+                        "Type": "INTEGER"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:429533234373:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

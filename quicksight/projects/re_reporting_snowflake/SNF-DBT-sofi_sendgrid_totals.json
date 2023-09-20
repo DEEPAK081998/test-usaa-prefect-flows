@@ -1,0 +1,128 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-14e4fc2b-a017-4d38-a43f-6e8ad149ce88",
+  "Name": "SNF-DBT-sofi_sendgrid_totals",
+  "PhysicalTableMap": {
+    "SNF-14e4fc2b-a017-4d38-a43f-6e8ad149ce88": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_SENDGRID_TOTALS",
+        "InputColumns": [
+          {
+            "Name": "TO_EMAIL",
+            "Type": "STRING"
+          },
+          {
+            "Name": "FIRST_EMAIL_EVENT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "TOTAL_OPENS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TOTAL_CLICKS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "EMAIL_SENT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_CAMPAIGN_OPEN",
+            "Type": "BIT"
+          },
+          {
+            "Name": "UNIQUE_CAMPAIGN_CLICK",
+            "Type": "BIT"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-14e4fc2b-a017-4d38-a43f-6e8ad149ce88": {
+      "Alias": "sofi_sendgrid_totals",
+      "Source": {
+        "PhysicalTableId": "SNF-14e4fc2b-a017-4d38-a43f-6e8ad149ce88"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CAMPAIGN_CLICK",
+            "NewColumnName": "unique_campaign_click"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CAMPAIGN_OPEN",
+            "NewColumnName": "unique_campaign_open"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "EMAIL_SENT",
+            "NewColumnName": "email_sent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_CLICKS",
+            "NewColumnName": "total_clicks"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TOTAL_OPENS",
+            "NewColumnName": "total_opens"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "FIRST_EMAIL_EVENT",
+            "NewColumnName": "first_email_event"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TO_EMAIL",
+            "NewColumnName": "to_email"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

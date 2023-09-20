@@ -1,0 +1,273 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-e46be65d-4caf-43e0-853b-3b76ad13a2f1",
+  "Name": "SNF-sofi_ga_unbounce_cta",
+  "PhysicalTableMap": {
+    "SNF-cee652f3-df84-4df0-b910-f0006389f54e": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_GA_UNBOUNCE_CTA",
+        "InputColumns": [
+          {
+            "Name": "_AIRBYTE_UNIQUE_KEY",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "VIEW_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_USERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_CAMPAIGN",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_NEWUSERS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_SESSIONS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "GA_ADCONTENT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_BOUNCERATE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_SOURCEMEDIUM",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_GOAL1COMPLETIONS",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_AVGSESSIONDURATION",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "GA_GOAL1CONVERSIONRATE",
+            "Type": "STRING"
+          },
+          {
+            "Name": "GA_PAGEVIEWSPERSESSION",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "_AIRBYTE_AB_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "_AIRBYTE_EMITTED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_NORMALIZED_AT",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "_AIRBYTE_SOFI_GA_UNBOUNCE_CTA_HASHID",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-cee652f3-df84-4df0-b910-f0006389f54e": {
+      "Alias": "sofi_ga_unbounce_cta",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_SOFI_GA_UNBOUNCE_CTA_HASHID",
+            "NewColumnName": "_airbyte_sofi_ga_unbounce_cta_hashid"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_NORMALIZED_AT",
+            "NewColumnName": "_airbyte_normalized_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_EMITTED_AT",
+            "NewColumnName": "_airbyte_emitted_at"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_AB_ID",
+            "NewColumnName": "_airbyte_ab_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_PAGEVIEWSPERSESSION",
+            "NewColumnName": "ga_pageviewspersession"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_GOAL1CONVERSIONRATE",
+            "NewColumnName": "ga_goal1conversionrate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_AVGSESSIONDURATION",
+            "NewColumnName": "ga_avgsessionduration"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_GOAL1COMPLETIONS",
+            "NewColumnName": "ga_goal1completions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SOURCEMEDIUM",
+            "NewColumnName": "ga_sourcemedium"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_BOUNCERATE",
+            "NewColumnName": "ga_bouncerate"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_ADCONTENT",
+            "NewColumnName": "ga_adcontent"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_SESSIONS",
+            "NewColumnName": "ga_sessions"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_NEWUSERS",
+            "NewColumnName": "ga_newusers"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_CAMPAIGN",
+            "NewColumnName": "ga_campaign"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_USERS",
+            "NewColumnName": "ga_users"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEW_ID",
+            "NewColumnName": "view_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "_AIRBYTE_UNIQUE_KEY",
+            "NewColumnName": "_airbyte_unique_key"
+          }
+        },
+        {
+          "CastColumnTypeOperation": {
+            "ColumnName": "ga_goal1completions",
+            "NewColumnType": "INTEGER"
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "_airbyte_unique_key",
+              "ga_date",
+              "view_id",
+              "ga_users",
+              "ga_campaign",
+              "ga_newusers",
+              "ga_sessions",
+              "ga_adcontent",
+              "ga_bouncerate",
+              "ga_sourcemedium",
+              "ga_goal1completions",
+              "ga_avgsessionduration",
+              "ga_goal1conversionrate",
+              "ga_pageviewspersession",
+              "_airbyte_ab_id",
+              "_airbyte_emitted_at",
+              "_airbyte_normalized_at",
+              "_airbyte_sofi_ga_unbounce_cta_hashid"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-cee652f3-df84-4df0-b910-f0006389f54e"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/cary@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/sokamoto@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

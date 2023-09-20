@@ -1,0 +1,29 @@
+config_version: 1.0
+class_name: Checkpoint
+name: leads_data_checkpoint
+run_name_template: 'leads_data_checkpoint-%Y%m%d-%H:%M:%S'
+validations:
+  - batch_request:
+      datasource_name: hs_prod_warehouse
+      data_connector_name: default_inferred_data_connector_name
+      data_asset_name: public.leads_data_v3
+      data_connector_query:
+        index: -1
+    expectation_suite_name: leads_suite
+    action_list:
+        - name: store_validation_result
+          action:
+            class_name: StoreValidationResultAction
+        - name: store_evaluation_params
+          action:
+            class_name: StoreEvaluationParametersAction
+        - name: update_data_docs
+          action:
+            class_name: UpdateDataDocsAction
+        - name: store_metrics
+          action:
+            class_name: StoreMetricsAction
+            target_store_name: metric_store  #This should match the name of the store configured above
+            requested_metrics:
+              leads_suite:
+                - expect_table_row_count_to_be_between.result.observed_value

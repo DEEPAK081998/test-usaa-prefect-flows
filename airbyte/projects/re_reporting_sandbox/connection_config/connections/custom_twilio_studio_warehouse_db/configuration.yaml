@@ -1,0 +1,128 @@
+definition_type: connection
+resource_name: Custom Twilio Studio <> Warehouse DB
+source_configuration_path: sources/custom_twilio_studio/configuration.yaml
+destination_configuration_path: destinations/warehouse_db/configuration.yaml
+configuration:
+  sync_catalog:
+    streams:
+    - stream:
+        name: execution_context
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            url:
+              type: string
+            context:
+              type: object
+            flow_sid:
+              type: string
+            account_sid:
+              type: string
+            execution_sid:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        - incremental
+        source_defined_cursor: true
+        default_cursor_field: []
+        source_defined_primary_key: []
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key: []
+        alias_name: execution_context
+        selected: true
+    - stream:
+        name: step
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            sid:
+              type: string
+            url:
+              type: string
+            name:
+              type: string
+            links:
+              type: object
+              properties:
+                step_context:
+                  type: string
+            context:
+              type:
+              - object
+              - 'null'
+            flow_sid:
+              type: string
+            account_sid:
+              type: string
+            date_created:
+              type: string
+            date_updated:
+              type:
+              - string
+              - 'null'
+            execution_sid:
+              type: string
+            parent_step_sid:
+              type:
+              - string
+              - 'null'
+            transitioned_to:
+              type: string
+            transitioned_from:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key: []
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key: []
+        alias_name: step
+        selected: true
+    - stream:
+        name: step_context
+        json_schema:
+          type: object
+          $schema: http://json-schema.org/draft-04/schema#
+          properties:
+            url:
+              type: string
+            context:
+              type: object
+            flow_sid:
+              type: string
+            step_sid:
+              type: string
+            account_sid:
+              type: string
+            execution_sid:
+              type: string
+        supported_sync_modes:
+        - full_refresh
+        default_cursor_field: []
+        source_defined_primary_key: []
+      config:
+        sync_mode: full_refresh
+        destination_sync_mode: overwrite
+        cursor_field: []
+        primary_key: []
+        alias_name: step_context
+        selected: true
+  status: active
+  namespace_definition: source
+  namespace_format: ${SOURCE_NAMESPACE}
+  prefix: ''
+  schedule_type: manual
+  operations:
+  - name: Normalization
+    operator_configuration:
+      operator_type: normalization
+      normalization:
+        option: basic

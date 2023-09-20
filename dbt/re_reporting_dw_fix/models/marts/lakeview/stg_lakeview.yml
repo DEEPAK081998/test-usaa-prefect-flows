@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: lakeview_event_totals
+  - name: lakeview_sg_conversions
+  - name: lakeview_ga_event
+  - name: lakeview_rep60_prod_ga_data
+  - name: lakeview_rep60_users
+  - name: lakeview_ga_goals
+  - name: lakeview_prod_ga_data
+  - name: lakeview_users
+  - name: lakeview_ga_goals_final
+  - name: ga4_lakeview_ga_goals_final
+  - name: ga4_lakeview_prod_ga_data
+  - name: ga4_lakeview_users
+  - name: ga4_lakeview_event_totals
+  - name: ga4_lakeview_users_final_v2
+  - name: ga4_lakeview_ga_goals_final_v2
+  - name: ga4_lakeview_bouncerate
+  - name: ga4_lakeview_event_totals_v2
+
+  
+  

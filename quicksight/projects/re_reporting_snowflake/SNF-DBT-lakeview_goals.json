@@ -1,0 +1,128 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-3e495e1a-c38f-45f8-b571-81f30d148da4",
+  "Name": "SNF-DBT-lakeview_goals",
+  "PhysicalTableMap": {
+    "SNF-3e495e1a-c38f-45f8-b571-81f30d148da4": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "LAKEVIEW_GOALS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED_PDP",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "VIEWED_SEARCH_RESULTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "VIEWED_DETAILS_PAGE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ACCOUNT_CREATED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PROPERTY_SAVED",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-3e495e1a-c38f-45f8-b571-81f30d148da4": {
+      "Alias": "lakeview_goals",
+      "Source": {
+        "PhysicalTableId": "SNF-3e495e1a-c38f-45f8-b571-81f30d148da4"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY_SAVED",
+            "NewColumnName": "property_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCOUNT_CREATED",
+            "NewColumnName": "account_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_DETAILS_PAGE",
+            "NewColumnName": "viewed_details_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_SEARCH_RESULTS",
+            "NewColumnName": "viewed_search_results"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED_PDP",
+            "NewColumnName": "homestory_lead_submitted_pdp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED",
+            "NewColumnName": "homestory_lead_submitted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:ListIngestions",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

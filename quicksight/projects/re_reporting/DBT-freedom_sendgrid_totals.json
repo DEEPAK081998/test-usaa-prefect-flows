@@ -1,0 +1,76 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "5ba20836-17c4-4c98-af0c-3779d2c83f6e",
+    "Name": "DBT-freedom_sendgrid_totals",
+    "PhysicalTableMap": {
+        "5ba20836-17c4-4c98-af0c-3779d2c83f6e": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "freedom_sendgrid_totals",
+                "InputColumns": [
+                    {
+                        "Name": "to_email",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "first_email_event",
+                        "Type": "DATETIME"
+                    },
+                    {
+                        "Name": "total_opens",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "total_clicks",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "inviting_la",
+                        "Type": "STRING"
+                    },
+                    {
+                        "Name": "email_sent",
+                        "Type": "INTEGER"
+                    },
+                    {
+                        "Name": "unique_campaign_open",
+                        "Type": "BIT"
+                    },
+                    {
+                        "Name": "unique_campaign_click",
+                        "Type": "BIT"
+                    }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

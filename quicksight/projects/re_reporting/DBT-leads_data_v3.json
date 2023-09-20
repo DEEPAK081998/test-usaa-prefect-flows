@@ -1,0 +1,656 @@
+{
+    "AwsAccountId": "931422288647",
+    "DataSetId": "f3a2ec6d-aa3f-43e1-8f19-399a770920b6",
+    "Name": "DBT-leads_data_v3",
+    "PhysicalTableMap": {
+        "f3a2ec6d-aa3f-43e1-8f19-399a770920b6": {
+            "RelationalTable": {
+                "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/53683626-4527-4f33-a36d-f7cf91a9c44d",
+                "Schema": "public",
+                "Name": "leads_data_v3",
+                "InputColumns": [
+                  {
+                    "Name": "date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "client_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "client_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "client_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_aggregate_id",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "purchase_location",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "purchase_time_frame",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "prequal",
+                    "Type": "BIT"
+                  },
+                  {
+                    "Name": "avg_price",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "comments",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "bank_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "transaction_type",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "mlo_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "mlo_status_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "rc_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_status_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "agent_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_status_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "closedate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "propertyaddress",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "propertyprice",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lenderclosedwith",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agtcommpct",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "created",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "rc_accept_time_unadjusted",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "agent_assign_time_unadjusted",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "agent_assign_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "accept_time_delay_hrs",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "agentassign_time_delay_hrs",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "mnth_yr",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "brokerage_code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "full_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "date_part",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "attachment",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "hb_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "dow",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "cst",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "cstdate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "csthour",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "year",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "weeknum",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "businesshours",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "pending",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "mlosubmission",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "nmlsid",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "outofnetworkbrokerage",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "client_first_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "client_last_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_contact_first",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_contact_last",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "price_range_lower_bound",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "price_range_upper_bound",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "agentfirstname",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agentlastname",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_city",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "rc_state",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "selling_address",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "bankcustomer",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "source",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "first_contact_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "first_contact_delay_from_enrollment",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "accept_to_contact_delay",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "velocifyid",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "major_status",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "branchname",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "branchemployee",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "coverage",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "attached",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "lastpendingdate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "inactivedate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "timetoinactive",
+                    "Type": "DECIMAL"
+                  },
+                  {
+                    "Name": "inactiverole",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "last_agent_update",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "last_rc_update",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "citizenssalesforceenrollment",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "pendingclosedate",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "pendingpropertyaddress",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "closeaddress",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "financeclosedate",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "networkid",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "customereci",
+                    "Type": "JSON"
+                  },
+                  {
+                    "Name": "brokerageroutingmethod",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_assigned",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "escalatedtoconcierge",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "zip",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "city",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "state",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_first_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_last_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "hb_status_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "contactmethod",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "outofnetwork",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "failc",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "faild",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "first_agent_contact_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "actively_searching_status_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "pending_status_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "client_contact_approval",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "current_location",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "sell_location",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "category",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "homesaleprice",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "updated_at",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "lsuclosedate",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "ph_lm_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_lm_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_slm_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_slm_manager",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_dd_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_dd_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_dd_division",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_lo_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "lo_nmlsid",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "attachment_code",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "attachment_reason",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_office_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "rc_mobile_phone",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "system_invite_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "system_enroll_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "reporting_invite_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "reporting_enroll_date",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "first_time_wh",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "updated_in_wh",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "type_of_load_wh",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "enrollment_type",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "client_contact",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_aggregate_id",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "traffic_medium",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "traffic_campaign",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "ph_bank_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "level_1_manager",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "level_1_manager_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "level_3_manager_name",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "level_3_manager_email",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "level_3_manager_region",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "level_4_manager_region",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "mlo_assign_time",
+                    "Type": "DATETIME"
+                  },
+                  {
+                    "Name": "lo_email_final",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "agent_submitted",
+                    "Type": "BOOLEAN"
+                  },
+                  {
+                    "Name": "partner_internal_id",
+                    "Type": "STRING"
+                  },
+                  {
+                    "Name": "is_odp",
+                    "Type": "BOOLEAN"
+                  },
+                  {
+                    "Name": "odp_agentcount",
+                    "Type": "INTEGER"
+                  },
+                  {
+                    "Name": "odp_agenttype",
+                    "Type": "STRING"
+                  }
+                ]
+            }
+        }
+    },
+    "ImportMode": "SPICE",
+    "Permissions": [
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+            "Actions": [
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        },
+        {
+            "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+            "Actions": [
+                "quicksight:DeleteDataSet",
+                "quicksight:DescribeDataSet",
+                "quicksight:DescribeDataSetPermissions",
+                "quicksight:PassDataSet",
+                "quicksight:UpdateDataSet",
+                "quicksight:UpdateDataSetPermissions",
+                "quicksight:CreateIngestion",
+                "quicksight:CancelIngestion",
+                "quicksight:DescribeIngestion",
+                "quicksight:ListIngestions"
+            ]
+        }
+    ]
+}

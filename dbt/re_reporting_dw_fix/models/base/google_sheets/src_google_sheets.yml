@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+- name: public
+  tables:
+  - name: raw_warm_transfer_log
+  - name: raw_partner_hierarchy
+  - name: raw_partner_opportunities
+
+ 

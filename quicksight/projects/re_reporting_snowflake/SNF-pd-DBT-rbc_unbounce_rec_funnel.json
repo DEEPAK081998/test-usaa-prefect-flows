@@ -1,0 +1,246 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-74907f8d-167a-4674-9259-0617334f769b",
+  "Name": "SNF-pd-DBT-rbc_unbounce_rec_funnel",
+  "PhysicalTableMap": {
+    "SNF-deab4cda-9230-4aec-9793-2eb54727f328": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "STG_GA4_RBC_GA_UNBOUNCE",
+        "InputColumns": [
+          {
+            "Name": "DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "INVITE_COUNT",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_OPENS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_CLICKS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "UNIQUE_TRAFFIC_UNBOUNCE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "UNIQUE_TRAFFIC_REC",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ENROLLMENT_COUNT_UNBOUNCE",
+            "Type": "DECIMAL"
+          },
+          {
+            "Name": "ENROLLMENT_COUNT_REC",
+            "Type": "DECIMAL"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-c64f0d88-6fd0-46a1-a947-d93bd0bdf176": {
+      "Alias": "stg_ga4_rbc_ga_unbounce",
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_COUNT_REC",
+            "NewColumnName": "enrollment_count_rec"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ENROLLMENT_COUNT_UNBOUNCE",
+            "NewColumnName": "enrollment_count_unbounce"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_TRAFFIC_REC",
+            "NewColumnName": "unique_traffic_rec"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_TRAFFIC_UNBOUNCE",
+            "NewColumnName": "unique_traffic_unbounce"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_CLICKS",
+            "NewColumnName": "unique_clicks"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "UNIQUE_OPENS",
+            "NewColumnName": "unique_opens"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "INVITE_COUNT",
+            "NewColumnName": "invite_count"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "DATE",
+            "NewColumnName": "date"
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "Invite to Open %",
+                "ColumnId": "SNF-06ff02ee-2dc8-48ab-88a9-52bf60d75472",
+                "Expression": "ifelse(sum({invite_count}) = 0, 0 , sum({unique_opens})/sum({invite_count}))"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "Open to Click %",
+                "ColumnId": "SNF-3c48b6e3-09f4-454b-a470-18676033db35",
+                "Expression": "ifelse(sum({unique_opens}) = 0, 0, sum({unique_clicks})/sum({unique_opens}))"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "REC Traffic to Enrollment %",
+                "ColumnId": "SNF-4e2e5a56-903a-4ae1-a49e-cdf6569ff389",
+                "Expression": "ifelse(sum({unique_traffic_rec}) = 0, 0, sum({enrollment_count_rec})/sum({unique_traffic_rec}))"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "Unbounce Traffic to Enrollment %",
+                "ColumnId": "SNF-46ba46fb-836f-405a-a7db-bbc3cbc66c03",
+                "Expression": "ifelse(sum({unique_traffic_unbounce}) = 0, 0, sum({enrollment_count_unbounce})/sum({unique_traffic_unbounce}))"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "Total Enrollments",
+                "ColumnId": "SNF-f38d8d6f-4980-4e4f-9411-8b09115e2680",
+                "Expression": "sum({enrollment_count_rec})+sum({enrollment_count_unbounce})"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "Invite to Enrollment %",
+                "ColumnId": "SNF-8ccadeef-0da6-4769-9d63-b73b2dfd354a",
+                "Expression": "ifelse(sum({invite_count}) = 0, 0, {Total Enrollments}/sum({invite_count}))"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "MoM Unique Traffic Rec %",
+                "ColumnId": "SNF-0526c10c-f83b-4d29-a64e-e892318cf47c",
+                "Expression": "periodOverPeriodPercentDifference(sum({unique_traffic_rec}), \r\n\t{date}, \r\n\tMONTH, \r\n\t1)"
+              }
+            ]
+          }
+        },
+        {
+          "CreateColumnsOperation": {
+            "Columns": [
+              {
+                "ColumnName": "MoM Unique Traffic Unbounce %",
+                "ColumnId": "SNF-bada9b47-8c50-4385-bec3-739253761bbc",
+                "Expression": "periodOverPeriodPercentDifference(sum({unique_traffic_unbounce}), \r\n\t{date}, \r\n\tMONTH, \r\n\t1)"
+              }
+            ]
+          }
+        },
+        {
+          "ProjectOperation": {
+            "ProjectedColumns": [
+              "date",
+              "invite_count",
+              "unique_opens",
+              "unique_clicks",
+              "unique_traffic_unbounce",
+              "unique_traffic_rec",
+              "enrollment_count_unbounce",
+              "enrollment_count_rec",
+              "Invite to Open %",
+              "Open to Click %",
+              "REC Traffic to Enrollment %",
+              "Unbounce Traffic to Enrollment %",
+              "Total Enrollments",
+              "Invite to Enrollment %",
+              "MoM Unique Traffic Rec %",
+              "MoM Unique Traffic Unbounce %"
+            ]
+          }
+        }
+      ],
+      "Source": {
+        "PhysicalTableId": "SNF-deab4cda-9230-4aec-9793-2eb54727f328"
+      }
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:user/default/jchavarriacruz@homestoryrewards.com",
+      "Actions": [
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:PutDataSetRefreshProperties",
+        "quicksight:CreateRefreshSchedule",
+        "quicksight:CancelIngestion",
+        "quicksight:UpdateRefreshSchedule",
+        "quicksight:DeleteRefreshSchedule",
+        "quicksight:ListRefreshSchedules",
+        "quicksight:DescribeDataSetRefreshProperties",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeRefreshSchedule",
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DeleteDataSetRefreshProperties",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

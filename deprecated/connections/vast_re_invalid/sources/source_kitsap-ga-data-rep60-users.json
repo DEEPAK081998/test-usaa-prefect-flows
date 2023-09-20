@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "267042733",
+    "start_date": "2022-06-21",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"kitsap-rep60-users\",\"dimensions\":[\"ga:date\"],\"metrics\":[\"ga:users\"]}]",
+    "window_in_days": 1
+  },
+  "name": "kitsap-ga-data-rep60-users",
+  "sourceDefinitionName": "Google Analytics"
+}

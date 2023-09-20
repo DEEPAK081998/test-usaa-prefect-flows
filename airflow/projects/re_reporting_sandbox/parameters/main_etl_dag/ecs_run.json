@@ -1,0 +1,34 @@
+{
+  "tags": [
+    "ecs",
+    "dbt",
+    "vrathore",
+    "sandbox"
+  ],
+  "dbt_project_path": "s3://mdp-sandbox-bucket/dbt/projects/re_reporting_dw_fix.zip",
+  "dbt_conn_id": "dbt_test2",
+  "ecs_cluster_name": "vrathore-test-stack-sandbox-ecs-cluster",
+  "ecs_container_name": "vrathore-test-stack-sandbox-workers",
+  "ecs_task_arn": "arn:aws:ecs:us-east-1:429533234373:task-definition/vrathore-test-stack-sandbox-workers-task-definition:3",
+  "ecs_run_command": [
+    "run",
+    "--select",
+    "brokerage_assignments"
+  ],
+  "ecs_extra_kwargs": {
+    "network_configuration": {
+      "awsvpcConfiguration": {
+        "subnets": [
+          "subnet-a3b29de8",
+          "subnet-7f610822"
+        ]
+      }
+    },
+    "tags": {
+      "Owner": "vrathore",
+      "Project": "mdp",
+      "Environment": "sandbox"
+    }
+  },
+  "run_dbt": false
+}

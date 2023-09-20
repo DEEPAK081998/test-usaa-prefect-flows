@@ -1,0 +1,43 @@
+{
+  "tags": [
+    "partner_email",
+    "rbc",
+    "closings"
+  ],
+  "schedule": "0 12 * * 1",
+  "partner_email": {
+    "report_type": "rbc_closings_weekly",
+    "email_tag": "rbc_closings_weekly",
+    "email_subject": "HomeStory Closings File",
+    "email_from": "partner-reporting@homestoryrewards.com",
+    "email_cc": "bi@homestoryrewards.com",
+    "reply_to": "referrals@homestoryrewards.com",
+    "manifest_path": "plugins/partner_email/manifests/rbc_closings_weekly.csv",
+    "html_template_name": "plugins/partner_email/html_templates/rbc_closings_weekly.html",
+    "attachment_name_template": "homestory_rbc_closings_weekly_{date}.csv",
+    "columns_order": [
+      "date",
+      "id",
+      "client_first_name",
+      "client_last_name",
+      "client_email",
+      "client_phone",
+      "agent_name",
+      "agent_email",
+      "agent_phone",
+      "lo_name",
+      "lo_email",
+      "lo_phone",
+      "purchase_location",
+      "bankcustomer",
+      "transaction_type",
+      "hb_status",
+      "closedate",
+      "propertyaddress",
+      "propertyprice",
+      "lenderclosedwith",
+      "purchase_time_frame",
+      "avg_price"
+    ]
+  }
+}

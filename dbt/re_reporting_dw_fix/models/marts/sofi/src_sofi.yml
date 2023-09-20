@@ -1,0 +1,26 @@
+
+version: 2
+
+sources:
+- name: public
+  tables:
+    - name: sofi_campaign
+    - name: sofi_sg_conversions
+    - name: sofi_event_totals
+    - name: sofi_paths_with_source
+    - name: sofi_ga_goals
+    - name: sofi_daily_prod_ga_data
+    - name: sofi_daily_prod_ga_events
+    - name: sofi_lead_submissions
+    - name: sofi_rep60_users
+    - name: sofi_customer_profiles_messages
+    - name: sofi_user_id
+    - name: source_sofi_user_id
+    - name: sofi_rep60_prod_ga_data
+    - name: ga4_sofi_ga_goals_final_v2
+    - name: ga4_sofi_prod_ga_data
+    - name: ga4_sofi_users_final
+    - name: ga4_sofi_bouncerate
+    - name: ga4_sofi_event_totals
+    
+

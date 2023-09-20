@@ -1,0 +1,8 @@
+resource_name: Sendgrid Homestory
+definition_type: source
+definition_id: 8f00c041-3fb2-47c9-8ae1-767b89236c68
+definition_image: airbyte/source-sendgrid-homestory
+definition_version: latest
+configuration:
+  query: Contains(categories, "Pennymac PROD - Initial LO invite Series")
+  apikey: ${SECRET_SENDGRID_API_KEY}

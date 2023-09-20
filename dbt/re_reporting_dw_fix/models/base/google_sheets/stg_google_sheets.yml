@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: base_warm_transfer_log
+  - name : base_hs_campaigns
+    description: table that maps customerio campaign with internal company data

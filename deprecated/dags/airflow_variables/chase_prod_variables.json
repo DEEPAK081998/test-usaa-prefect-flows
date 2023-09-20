@@ -1,0 +1,3 @@
+{
+    "sns_task_failure_alert_topic_arn": "arn:aws:sns:us-east-1:579609403921:datapipeline-prod-errors-topic"
+}

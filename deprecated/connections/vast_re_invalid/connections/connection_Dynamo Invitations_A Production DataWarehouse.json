@@ -1,0 +1,112 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "d7e727ce-8e52-4c6d-a071-4751f48c31db"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "dynamodb_mlo_invites",
+          "jsonSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "data": {
+                "type": "object"
+              },
+              "role": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "nmlsID": {
+                "type": "string"
+              },
+              "loEmail": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "sendGrid": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "shortHash": {
+                "type": "string"
+              },
+              "utmSource": {
+                "type": "string"
+              },
+              "disclosure": {
+                "type": "string"
+              },
+              "loLastName": {
+                "type": "string"
+              },
+              "loFirstName": {
+                "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "utmCampaign": {
+                "type": "string"
+              },
+              "loPhoneNumber": {
+                "type": "string"
+              },
+              "mloSubmission": {
+                "type": "string"
+              },
+              "customerConnect": {
+                "type": "string"
+              },
+              "currentBankCustomer": {
+                "type": "string"
+              },
+              "confirmationRequired": {
+                "type": "string"
+              }
+            }
+          },
+          "supportedSyncModes": [
+            "full_refresh"
+          ],
+          "sourceDefinedCursor": null,
+          "defaultCursorField": [],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "dynamodb_mlo_invites",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 1,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_Dynamo Invitations.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

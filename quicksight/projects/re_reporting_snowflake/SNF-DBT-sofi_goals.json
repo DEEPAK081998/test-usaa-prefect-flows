@@ -1,0 +1,168 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-5e65e482-80bb-401c-8da8-c61ae4cc8672",
+  "Name": "SNF-DBT-sofi_goals",
+  "PhysicalTableMap": {
+    "SNF-5e65e482-80bb-401c-8da8-c61ae4cc8672": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "SOFI_GOALS",
+        "InputColumns": [
+          {
+            "Name": "GA_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "HOMESTORY_LEAD_SUBMITTED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LEAD_SUBMITTED_SEARCH_LANDING_PAGE",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "ACCOUNT_CREATED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "SEARCH_SAVED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "LEAD_SUBMITTED_PDP",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "PROPERTY_SAVED",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "VIEWED_PDP",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "VIEWED_SEARCH_RESULTS",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "TEAMBUILDER_COMPLETION",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "AM_I_PURCHASE_READY_PROFILE_BUILDER",
+            "Type": "INTEGER"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-5e65e482-80bb-401c-8da8-c61ae4cc8672": {
+      "Alias": "sofi_goals",
+      "Source": {
+        "PhysicalTableId": "SNF-5e65e482-80bb-401c-8da8-c61ae4cc8672"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AM_I_PURCHASE_READY_PROFILE_BUILDER",
+            "NewColumnName": "am_i_purchase_ready_profile_builder"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "TEAMBUILDER_COMPLETION",
+            "NewColumnName": "teambuilder_completion"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_SEARCH_RESULTS",
+            "NewColumnName": "viewed_search_results"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "VIEWED_PDP",
+            "NewColumnName": "viewed_pdp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "PROPERTY_SAVED",
+            "NewColumnName": "property_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_SUBMITTED_PDP",
+            "NewColumnName": "lead_submitted_pdp"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SEARCH_SAVED",
+            "NewColumnName": "search_saved"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "ACCOUNT_CREATED",
+            "NewColumnName": "account_created"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_SUBMITTED_SEARCH_LANDING_PAGE",
+            "NewColumnName": "lead_submitted_search_landing_page"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "HOMESTORY_LEAD_SUBMITTED",
+            "NewColumnName": "homestory_lead_submitted"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "GA_DATE",
+            "NewColumnName": "ga_date"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:CreateIngestion",
+        "quicksight:DescribeIngestion"
+      ]
+    }
+  ]
+}

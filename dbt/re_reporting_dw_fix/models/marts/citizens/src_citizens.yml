@@ -1,0 +1,18 @@
+
+version: 2
+
+sources:
+- name: public
+  tables:
+    - name: citizens_ga_event
+    - name: citizens_rep60_prod_ga_data
+    - name: citizens_rep60_users
+    - name: citizens_ga_goals
+    - name: ga4_citizens_ga_goals_final_v2
+    - name: ga4_citizens_prod_ga_data
+    - name: ga4_citizens_users_final
+    - name: ga4_citizens_bouncerate
+    - name: citizens_events_final
+    - name: ga4_citizens_event_totals
+
+

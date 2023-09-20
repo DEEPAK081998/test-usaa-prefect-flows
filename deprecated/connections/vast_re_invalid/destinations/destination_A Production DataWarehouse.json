@@ -1,0 +1,16 @@
+{
+  "connectionConfiguration": {
+    "ssl": true,
+    "host": "airbyte-infra-prod-data-warehouse.re-prod.homestoryrewards.com",
+    "port": 5432,
+    "schema": "public",
+    "database": "warehouse_db",
+    "password": "$SECRET_DATA_WAREHOUSE_PROD_AIRBYTE_USER_PASSWORD",
+    "username": "$SECRET_DATA_WAREHOUSE_PROD_AIRBYTE_USER_USERNAME",
+    "tunnel_method": {
+      "tunnel_method": "NO_TUNNEL"
+    }
+  },
+  "name": "A Production DataWarehouse",
+  "destinationDefinitionName": "Postgres"
+}

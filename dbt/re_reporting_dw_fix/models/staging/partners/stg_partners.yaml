@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_pup_phones
+    description: Phones from table 'partner user profiles'
+    columns:
+      - name: pup_id
+        type: integer
+        description: partner_user_profiles unique identifier.
+        tests:
+          - unique
+          - not_null
+      - name: phone_id
+        type: string
+        description: Normalized phone id from column 'phone'.
+      - name: mobile_phone_id
+        type: string
+        description: Normalized mobile phone id, extracted from nested column 'phones'.
+      - name: office_phone_id
+        type: string
+        description: Normalized office phone id, extracted from nested column 'phones'.

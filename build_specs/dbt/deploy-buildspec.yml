@@ -1,0 +1,58 @@
+version: 0.2
+
+phases: 
+  install:
+    runtime-versions:
+      python: 3.10
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Uploading all DBT projects"
+      - env=${ENVIRONMENT}
+      - business_unit=${BUSINESS_UNIT}
+      - bucket_name=${AIRFLOW_S3_BUCKET_NAME}
+      - dbt_projects=""
+      - |
+        if [ $business_unit = "re" ]; then
+          case $env in
+            prod)
+              dbt_projects="re_reporting_dw_fix"
+              ;;
+            *)
+              dbt_projects="re_reporting_dw_fix"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "chase" ]; then
+          case $env in
+            prod)
+              dbt_projects="chase"
+              ;;
+            *)
+              dbt_projects="chase"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "usaa" ]; then
+          case $env in
+            prod)
+              dbt_projects=""
+              ;;
+            *)
+              dbt_projects=""
+              ;;
+          esac
+        fi
+      - echo $dbt_projects
+      - echo $env
+      - echo $business_unit
+      - echo $bucket_name
+      # - |
+      #   if [ "${RUN_SQLFLUFF_CHECKS}" = "yes" ]; then    
+      #     sqlfluff lint dbt --dialect snowflake --rules L043,L045,L058,L042,L034,L032,L015
+      #   fi
+      # - python scripts/workflow_common_util --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --s3-path 'dbt/projects/' --projects $dbt_projects --projects-folder-path 'dbt' ${DBT_SCRIPT_EXTRA_ARGS}

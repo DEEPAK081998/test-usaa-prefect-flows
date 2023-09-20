@@ -1,0 +1,158 @@
+{
+  "AwsAccountId": "931422288647",
+  "DataSetId": "SNF-a4fd6d01-ceb5-4a82-9c2e-dde9a9674663",
+  "Name": "SNF-Closing_Survey_Response",
+  "PhysicalTableMap": {
+    "SNF-a4fd6d01-ceb5-4a82-9c2e-dde9a9674663": {
+      "RelationalTable": {
+        "DataSourceArn": "arn:aws:quicksight:us-east-1:931422288647:datasource/bc1d2355-dcab-462c-9fe6-1ec716bf0a15",
+        "Schema": "PUBLIC",
+        "Name": "FCT_CLOSING_SURVEY_RESPONSE",
+        "InputColumns": [
+          {
+            "Name": "LEAD_ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "CUSTOMER_AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "AGENT_AGGREGATE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SURVEY_RESPONSE_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SURVEY_SUBJECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "SURVEY_RESPONSE_DATE",
+            "Type": "DATETIME"
+          },
+          {
+            "Name": "QUESTION_ID",
+            "Type": "STRING"
+          },
+          {
+            "Name": "QUESTION_POSITION",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "QUESTION_SUBJECT",
+            "Type": "STRING"
+          },
+          {
+            "Name": "QUESTION_RESPONSE",
+            "Type": "STRING"
+          }
+        ]
+      }
+    }
+  },
+  "LogicalTableMap": {
+    "SNF-a4fd6d01-ceb5-4a82-9c2e-dde9a9674663": {
+      "Alias": "fct_closing_survey_response",
+      "Source": {
+        "PhysicalTableId": "SNF-a4fd6d01-ceb5-4a82-9c2e-dde9a9674663"
+      },
+      "DataTransforms": [
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "QUESTION_RESPONSE",
+            "NewColumnName": "question_response"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "QUESTION_SUBJECT",
+            "NewColumnName": "question_subject"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "QUESTION_POSITION",
+            "NewColumnName": "question_position"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "QUESTION_ID",
+            "NewColumnName": "question_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SURVEY_RESPONSE_DATE",
+            "NewColumnName": "survey_response_date"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SURVEY_SUBJECT",
+            "NewColumnName": "survey_subject"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "SURVEY_RESPONSE_ID",
+            "NewColumnName": "survey_response_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "AGENT_AGGREGATE_ID",
+            "NewColumnName": "agent_aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "CUSTOMER_AGGREGATE_ID",
+            "NewColumnName": "customer_aggregate_id"
+          }
+        },
+        {
+          "RenameColumnOperation": {
+            "ColumnName": "LEAD_ID",
+            "NewColumnName": "lead_id"
+          }
+        }
+      ]
+    }
+  },
+  "ImportMode": "SPICE",
+  "DataSetUsageConfiguration": {
+    "DisableUseAsDirectQuerySource": false,
+    "DisableUseAsImportedSource": false
+  },
+  "Permissions": [
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Readers",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion"
+      ]
+    },
+    {
+      "Principal": "arn:aws:quicksight:us-east-1:931422288647:group/default/Reporters",
+      "Actions": [
+        "quicksight:ListIngestions",
+        "quicksight:DeleteDataSet",
+        "quicksight:UpdateDataSetPermissions",
+        "quicksight:CancelIngestion",
+        "quicksight:DescribeDataSetPermissions",
+        "quicksight:UpdateDataSet",
+        "quicksight:DescribeDataSet",
+        "quicksight:PassDataSet",
+        "quicksight:DescribeIngestion",
+        "quicksight:CreateIngestion"
+      ]
+    }
+  ]
+}

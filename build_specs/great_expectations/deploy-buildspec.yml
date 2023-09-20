@@ -1,0 +1,54 @@
+version: 0.2
+
+phases: 
+  install:
+    runtime-versions:
+      python: 3.10
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Uploading GreatExpectations projects"
+      - env=${ENVIRONMENT}
+      - business_unit=${BUSINESS_UNIT}
+      - bucket_name=${AIRFLOW_S3_BUCKET_NAME}
+      - gx_projects=""
+      - |
+        if [ $business_unit = "re" ]; then
+          case $env in
+            prod)
+              gx_projects="great_expectations_prod"
+              ;;
+            *)
+              gx_projects="great_expectations_sandbox"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "chase" ]; then
+          case $env in
+            prod)
+              gx_projects="chase"
+              ;;
+            *)
+              gx_projects="chase"
+              ;;
+          esac
+        fi
+      - |
+        if [ $business_unit = "usaa" ]; then
+          case $env in
+            prod)
+              gx_projects=""
+              ;;
+            *)
+              gx_projects=""
+              ;;
+          esac
+        fi
+      - echo $env
+      - echo $business_unit
+      - echo $bucket_name
+      - echo $gx_projects
+      # - python scripts/workflow_common_util --s3-bucket ${AIRFLOW_S3_BUCKET_NAME} --s3-path 'great_expectations/projects/' --projects-folder-path 'great_expectations/' --projects $gx_projects ${GX_SCRIPT_EXTRA_ARGS}

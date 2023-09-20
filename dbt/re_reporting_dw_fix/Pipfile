@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dbt-core = "==1.4.1"
+dbt-postgres = "==1.4.1"
+dbt-snowflake = "==1.4.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

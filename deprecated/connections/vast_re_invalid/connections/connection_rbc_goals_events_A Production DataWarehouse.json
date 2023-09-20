@@ -1,0 +1,175 @@
+{
+  "name": "default",
+  "namespaceDefinition": "source",
+  "namespaceFormat": "${SOURCE_NAMESPACE}",
+  "prefix": "",
+  "operationIds": [
+    "d22b334b-26e7-4e82-88a4-3da999173a33"
+  ],
+  "syncCatalog": {
+    "streams": [
+      {
+        "stream": {
+          "name": "rbc-ga-event",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_EventLabel": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_EventAction": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_totalEvents": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "ga_EventCategory": {
+                "type": [
+                  "string"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "rbc_ga_event",
+          "selected": true
+        }
+      },
+      {
+        "stream": {
+          "name": "rbc-ga-goals",
+          "jsonSchema": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "ga_date": {
+                "type": [
+                  "string"
+                ],
+                "format": "date"
+              },
+              "view_id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "ga_goal1Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal2Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal4Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal5Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal8Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "ga_goal9Completions": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "supportedSyncModes": [
+            "full_refresh",
+            "incremental"
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "ga_date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "incremental",
+          "cursorField": [
+            "ga_date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [],
+          "aliasName": "rbc_ga_goals",
+          "selected": true
+        }
+      }
+    ]
+  },
+  "schedule": {
+    "units": 24,
+    "timeUnit": "hours"
+  },
+  "status": "active",
+  "resourceRequirements": {
+    "cpu_request": null,
+    "cpu_limit": null,
+    "memory_request": null,
+    "memory_limit": null
+  },
+  "sourceConnectorFile": "source_rbc_goals_events.json",
+  "destinationConnectorFile": "destination_A Production DataWarehouse.json"
+}

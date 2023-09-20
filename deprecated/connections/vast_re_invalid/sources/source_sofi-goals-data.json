@@ -1,0 +1,14 @@
+{
+  "connectionConfiguration": {
+    "view_id": "262726744",
+    "start_date": "2021-02-01",
+    "credentials": {
+      "auth_type": "Service",
+      "credentials_json": "$SECRET_GOOGLE_ANALYTICS_FREEDOM_REC_REPORT_CREDENTIALS_JSON"
+    },
+    "custom_reports": "[{\"name\":\"sofi-ga-goals\",\"metrics\":[\"ga:goal1Completions\",\"ga:goal3Completions\",\"ga:goal4Completions\",\"ga:goal5Completions\",\"ga:goal6Completions\",\"ga:goal7Completions\",\"ga:goal8Completions\",\"ga:goal9Completions\",\"ga:goal13Completions\",\"ga:goal14Completions\"],\"dimensions\":[\"ga:date\"]}]",
+    "window_in_days": 1
+  },
+  "name": "sofi-goals-data",
+  "sourceDefinitionName": "Google Analytics"
+}

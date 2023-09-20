@@ -1,0 +1,14 @@
+{
+  "tags": [
+    "dbt",
+    "vrathore",
+    "sandbox"
+  ],
+  "dbt_project_path": "/usr/local/dbt/re_reporting_dw_fix/",
+  "dbt_conn_id": "dbt_test2",
+  "run_dbt": false,
+  "run_dbt_test": true,
+  "run_dbt_source_freshness": true,
+  "dbt_test_extra_kwargs": {},
+  "dbt_source_freshness_extra_kwargs": {}
+}
