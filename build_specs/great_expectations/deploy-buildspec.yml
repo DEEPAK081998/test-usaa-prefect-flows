@@ -43,7 +43,7 @@ phases:
               gx_projects=""
               ;;
             *)
-              gx_projects="great_expectations_sandbox"
+              gx_projects=""
               ;;
           esac
         fi
